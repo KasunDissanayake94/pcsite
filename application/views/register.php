@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About</title>
+    <title>New Registration</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
@@ -102,44 +102,106 @@
                   <div class="grid_12">
 
                       <form action="" method="POST">
+                          <table>
+                            <tr>
+                              <div class="form-group">
+                                <td>
+                                  <label for="username" class="label-default">Username:</label>
+                                </td>
+                                <td>
+                                  <input class="form-control" name="username" id="username" type="text">
+                                </td>
+                              </div>
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr>
+                              <div class="form-group">
+                                <td>
+                                  <label for="email" class="label-default">Email:</label>
+                                </td>
+                                <td>
+                                  <input class="form-control" name="email" id="email" type="text">
+                                </td>
+                              </div>
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr>
+                              <div class="form-group">
+                                <td>
+                                  <label for="password" class="label-default">Password:</label>
+                                </td>
+                                <td>
+                                  <input class="form-control" name="password" id="password" type="password">
+                                </td>
+                              </div>
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr>
+                              <div class="form-group">
+                                <td>
+                                  <label for="password2" class="label-default">Confirm Password::</label>
+                                </td>
+                                <td>
+                                  <input class="form-control" name="password2" id="password2" type="password">
+                                </td>
+                              </div>
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr>
+                              <div class="form-group">
+                                <td>
+                                  <label for="gender" class="label-default">Gender:</label>
+                                </td>
+                                <td>
+                                  <select class="form-control" id="gender" name="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                  </select>
+                                </td>
+                              </div>
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr>
+                              <div class="form-group">
+                                <td>
+                                  <label for="telephone" class="label-default">Telephone:</label>
+                                </td>
+                                <td>
+                                  <input class="form-control" name="telephone" id="telephone" type="text">
+                                </td>
+                              </div>
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr>
+                              <div class="text-center">
+                                <td></td>
+                                <td>
+                                  <button class="btn btn-primary" name="register">Register</button>
+                                </td>
+                              </div>
+                            </tr>
 
-                          <div class="form-group">
-                              <label for="username" class="label-default">Username:</label>
-                              <input class="form-control" name="username" id="username" type="text">
-                          </div>
-
-                          <div class="form-group">
-                              <label for="email" class="label-default">Email:</label>
-                              <input class="form-control" name="email" id="email" type="text">
-                          </div>
-
-                          <div class="form-group">
-                              <label for="password" class="label-default">Password:</label>
-                              <input class="form-control" name="password" id="password" type="password">
-                          </div>
-
-                          <div class="form-group">
-                              <label for="password2" class="label-default">Confirm Password::</label>
-                              <input class="form-control" name="password2" id="password2" type="password">
-                          </div>
-
-                          <div class="form-group">
-                              <label for="gender" class="label-default">Gender:</label>
-                              <select class="form-control" id="gender" name="gender">
-                                  <option value="Male">Male</option>
-                                  <option value="Female">Female</option>
-                              </select>
-                          </div>
-
-                          <div class="form-group">
-                              <label for="telephone" class="label-default">Telephone:</label>
-                              <input class="form-control" name="telephone" id="telephone" type="text">
-                          </div>
-
-                          <div class="text-center">
-                              <button class="btn btn-primary" name="register">Register</button>
-                          </div>
-
+                          </table>                          
                       </form>
                   </div>
               </div>

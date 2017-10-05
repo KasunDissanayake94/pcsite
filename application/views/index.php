@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +19,9 @@
 <script src="<?php echo base_url();?>assets/tmStickUp.js"></script>
 <script src="<?php echo base_url();?>assets/jquery.ui.totop.js"></script>
 <script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
+  $(window).load(function(){
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    $('#stuck_container').tmStickUp({});  
  }); 
 </script>
 <!--[if lt IE 8]>
@@ -84,17 +86,18 @@
     <div class="container">
       <div class="row">
         <div class="grid_4">
-          <a href="#" class="banner "><div class="maxheight">
-            <div class="fa fa-globe"></div>Global Research</div>
+          <a href="#" class="banner ">
+            <div class="maxheight">
+              <div class="fa fa-globe"></div><a href="<?php echo base_url();?>view/sales.php">Sales</a></div>
           </a>
           <a href="#" class="banner "><div class="maxheight">
-            <div class="fa fa-lightbulb-o"></div>Creative Ideas</div>
+            <div class="fa fa-lightbulb-o"></div><a href="<?php echo base_url();?>view/marketing.php">Marketing Rental</a></div>
           </a>
           <a href="#" class="banner "><div class="maxheight1">
-            <div class="fa fa-cog"></div>New Services</div>
+            <div class="fa fa-cog"></div><a href="<?php echo base_url();?>view/services.php">Services</a></div>
           </a>
           <a href="#" class="banner "><div class="maxheight1">
-            <div class="fa fa-briefcase"></div>Pro Management</div>
+            <div class="fa fa-briefcase"></div><a href="<?php echo base_url();?>view/brands.php">Brands</a></div>
           </a>
         </div>
         <div class="grid_5">
