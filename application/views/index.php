@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>Home Page</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
 <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
@@ -86,18 +86,17 @@
     <div class="container">
       <div class="row">
         <div class="grid_4">
-          <a href="#" class="banner ">
-            <div class="maxheight">
-              <div class="fa fa-globe"></div><a href="<?php echo base_url();?>view/sales.php">Sales</a></div>
+          <a href="#" class="banner "><div class="maxheight">
+              <div class="fa fa-globe"></div>Sales</div>
           </a>
           <a href="#" class="banner "><div class="maxheight">
-            <div class="fa fa-lightbulb-o"></div><a href="<?php echo base_url();?>view/marketing.php">Marketing Rental</a></div>
+            <div class="fa fa-lightbulb-o"></div>Marketing Rental</div>
           </a>
           <a href="#" class="banner "><div class="maxheight1">
-            <div class="fa fa-cog"></div><a href="<?php echo base_url();?>view/services.php">Services</a></div>
+            <div class="fa fa-cog"></div>Services</div>
           </a>
           <a href="#" class="banner "><div class="maxheight1">
-            <div class="fa fa-briefcase"></div><a href="<?php echo base_url();?>view/brands.php">Brands</a></div>
+            <div class="fa fa-briefcase"></div>Brands</div>
           </a>
         </div>
         <div class="grid_5">
