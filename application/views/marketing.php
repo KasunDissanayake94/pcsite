@@ -4,6 +4,53 @@
 <html lang="en">
 <head>
     <title>Marketing Rental</title>
+    <style>
+        .art ul,
+        .art li,
+        .art a {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #nav1 a {
+            color: #FFFFFF;
+        }
+
+        #nav1 li ul li a:hover {
+            background-color: #394963;
+        }
+
+        div ul li ul {
+            background-color: #4a5b78;
+            list-style: none
+        }
+
+        #nav1 > li > a {
+            background-color: #343434;
+            padding: 16px 18px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 2px solid #212121;
+            background: linear-gradient(top, #343434, #111111);
+        }
+
+        #nav1 li ul li a {
+            padding: 10px 0;
+            padding-left: 30px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .art div {
+            background-color: #000000;
+            background-color: #343434;
+            width: 280px;
+        }
+        /* Hide Dropdowns by Default */
+        #nav1 li ul {
+            display: none;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
@@ -18,21 +65,26 @@
     <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
     <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
+    <script src="<?php echo base_url();?>assets/js/dropdown.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#nav1 li").hover(
+                function() {
+                    $(this).find('ul').slideDown();
+                },
+                function() {
+                    $(this).find('ul').slideUp();
+                });
+        });
+    </script>
     <script>
         $(window).load(function(){
             $().UItoTop({ easingType: 'easeOutQuart' });
             $('#stuck_container').tmStickUp({});
         });
     </script>
-    <script>
-        $('ul.sf-menu li.dropdown').hover(function() {
-            print("sdvvv");
 
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-        }, function() {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-        });
-    </script>
 
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
@@ -92,39 +144,37 @@
 =================================-->
 
       <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-          <div class="container">
-
-                      <h3>Marketing Rental</h3>
-
-
-                      <ul class="sf-menu">
-                          <li><label style="color: black;"><a href="index.html" >Notebooks</a></label></li>
-
-                          <li class="dropdown"><label style="color: black;">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a></label>
-                              <ul class="dropdown-menu">
-                                  <li><a href="#">Action</a></li>
-                                  <li><a href="#">Another action</a></li>
-                                  <li><a href="#">Something else here</a></li>
-                              </ul>
-                          </li>
-
-
-
-                          <li><label style="color: black;"><a href="index.html">Desktops</a></label></li>
-                          <li><label style="color: black;"><a href="index.html">Projectors</a></label></li>
-                          <li><label style="color: black;"><a href="index.html">Projector Screen</a></label></li>
-                          <li><label style="color: black;"><a href="index.html">LED TV</a></label></li>
+          <div class="art">
+          <div id="container">
+              <ul id="nav1">
+                  <li><a href="#">Menu Heading 1</a>
+                      <ul>
+                          <li><a href="#">Stage1</a></li>
+                          <li><a href="#">Stage2</a></li>
+                          <li><a href="#">Stage3</a></li>
+                          <li><a href="#">Stage4</a></li>
                       </ul>
-
-                  <div class="clear"></div>
-
-
-
-
-
+                  </li>
+                  <li><a href="#">Menu Heading 2</a>
+                      <ul>
+                          <li><a href="#">Stage1</a></li>
+                          <li><a href="#">Stage2</a></li>
+                          <li><a href="#">Stage3</a></li>
+                          <li><a href="#">Stage4</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Menu Heading 3</a>
+                      <ul>
+                          <li><a href="#">Stage1</a></li>
+                          <li><a href="#">Stage2</a></li>
+                          <li><a href="#">Stage3</a></li>
+                          <li><a href="#">Stage4</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <div>
               </div>
-          </div>
+
       </section>
 
 <!--==============================
@@ -142,5 +192,16 @@
     </div>
 </footer>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+
+    <script>
+    $('ul.sf-menu li.dropdown').hover(function() {
+
+
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+</script>
+
 </body>
 </html>
