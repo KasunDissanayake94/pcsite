@@ -62,11 +62,11 @@
                     <div class="navigation ">
                         <nav>
                             <ul class="sf-menu">
-                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/2">About</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="current"><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
                             </ul>
                         </nav>
                         <div class="clear"></div>
@@ -83,30 +83,22 @@
 
       <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
           <div class="container">
-              <div class="row">
-                  <div class="grid_12">
+
                       <h3>Marketing Rental</h3>
-                  </div>
+              <div class="navigation ">
+                  <nav>
+                      <ul class="sf-menu">
+                          <li><label style="color: black;"><a href="index.html">Notebooks</a></label></li>
+                          <li><label style="color: black;"><a href="index.html">Desktops</a></label></li>
+                          <li><label style="color: black;"><a href="index.html">Projectors</a></label></li> 
+                          <li><label style="color: black;"><a href="index.html">Projector Screen</a></label></li>
+                          <li><label style="color: black;"><a href="index.html">LED TV</a></label></li></ul>
+                  </nav>
+                  <div class="clear"></div>
+              </div>
 
-                  <?php if (isset($_SESSION['success'])){
 
-                      ?>
-                      <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-                      <?php
-                  }
-                  ?>
-                  <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-                  <div class="grid_12">
-                    <h4>
-                      <ul style="list-style-type:square">
-                        <li>Note Books</li>
-                        <li>Desktops</li>
-                        <li>Projectors</li>
-                        <li>Projector Screen</li>
-                        <li>LED TV</li>
-                      </ul>
-                    </h4>
-                  </div>
+
               </div>
           </div>
       </section>
