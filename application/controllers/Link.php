@@ -10,19 +10,19 @@ class Link extends CI_Controller{
         }
         elseif ($x==2){
 
-            $this->load->view('about.html');
+            $this->load->view('about.php');
         }
         elseif ($x==3){
 
-            $this->load->view('services.html');
+            $this->load->view('services.php');
         }
         elseif ($x==4){
 
-            $this->load->view('blog.html');
+            $this->load->view('blog.php');
         }
         elseif ($x==5){
 
-            $this->load->view('contacts.html');
+            $this->load->view('contacts.php');
         }
 
         elseif ($x=="sales"){

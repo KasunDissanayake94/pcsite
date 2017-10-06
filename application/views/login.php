@@ -110,9 +110,9 @@
                                     <input class="form-control" name="username" id="username" type="text">
                                 </td>
                             </div>
-                        <tr>
-                        <tr></tr>
-                        <tr></tr>
+                        </tr>
+                        <br><br>
+
                         <tr>
                             <div class="form-group">
                                 <td>
@@ -123,11 +123,7 @@
                                 </td>
                             </div>
                         </tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
+
                         <tr>
                             <div class="text-center">
                             <td></td>
