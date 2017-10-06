@@ -24,6 +24,16 @@
             $('#stuck_container').tmStickUp({});
         });
     </script>
+    <script>
+        $('ul.sf-menu li.dropdown').hover(function() {
+            print("sdvvv");
+
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+    </script>
+
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -85,17 +95,31 @@
           <div class="container">
 
                       <h3>Marketing Rental</h3>
-              <div class="navigation ">
-                  <nav>
+
+
                       <ul class="sf-menu">
-                          <li><label style="color: black;"><a href="index.html">Notebooks</a></label></li>
+                          <li><label style="color: black;"><a href="index.html" >Notebooks</a></label></li>
+
+                          <li class="dropdown"><label style="color: black;">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a></label>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                              </ul>
+                          </li>
+
+
+
                           <li><label style="color: black;"><a href="index.html">Desktops</a></label></li>
-                          <li><label style="color: black;"><a href="index.html">Projectors</a></label></li> 
+                          <li><label style="color: black;"><a href="index.html">Projectors</a></label></li>
                           <li><label style="color: black;"><a href="index.html">Projector Screen</a></label></li>
-                          <li><label style="color: black;"><a href="index.html">LED TV</a></label></li></ul>
-                  </nav>
+                          <li><label style="color: black;"><a href="index.html">LED TV</a></label></li>
+                      </ul>
+
                   <div class="clear"></div>
-              </div>
+
+
 
 
 
