@@ -181,28 +181,21 @@
                   </li>
                   <li><a href="#">LED TV</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">32"</a></li>
+                          <li><a href="#">40"</a></li>
+                          <li><a href="#">43"</a></li>
+                          <li><a href="#">50"</a></li>
+                          <li><a href="#">55"</a></li>
+                          <li><a href="#">60"</a></li>
+                          <li><a href="#">65"</a></li>
+                          <li><a href="#">70"</a></li>
+                          <li><a href="#">75"</a></li>
                       </ul>
                   </li>
               </ul>
               <div>
               </div>
-              <div class="col-md-3 col-sm-6 "  style="margin-bottom: 20px;">
-                  <div class="card h-100">
 
-                      <img class="card-img-top" ></a>
-                      <div class="card-body">
-                          <h4 class="card-title">
-
-                          </h4>
-
-                          <p class="card-text">jbjbjbjbj</p>
-                      </div>
-                  </div>
-              </div>
 
       </section>
 

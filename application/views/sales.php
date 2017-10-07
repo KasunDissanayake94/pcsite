@@ -81,33 +81,35 @@
               content
 =================================-->
 
-      <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-          <div class="container">
-              <div class="row">
-                  <div class="grid_12">
-                      <h3>Sales</h3>
-                  </div>
+<section class="page1_header" style="background-color: white">
+    <div class="grid_12">
+        <input type="text" class="form-control"  placeholder="Search"   id="search"  >
+    </div>
 
-                  <?php if (isset($_SESSION['success'])){
 
-                      ?>
-                      <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-                      <?php
-                  }
-                  ?>
-                  <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-                  <div class="grid_12">
-                    <h4>
-                      <ul style="list-style-type:square">
-                        <li>Assembled Desktop PCs / Branded PCs</li>
-                        <li>All Kind of Notebooks</li>
-                        <li>All Kind of Computer Accessories and Network Products</li>
-                      </ul>
-                    </h4>
-                  </div>
-              </div>
-          </div>
-      </section>
+        <div class="row">
+            <div class="grid_4">
+                <h1>1</h1>
+                <h1>2</h1>
+                <h1>3</h1>
+                <h1>4</h1>
+                <h1>5</h1>
+                <h1>6</h1>
+                <h1>7</h1>
+                <h1>8</h1>
+                <h1>9</h1>
+            </div>
+            <div class="grid_5">
+                <img src="<?php echo base_url();?>assets/images/desk1.jpg" alt="" class="img_inner fleft">
+                <img src="<?php echo base_url();?>assets/images/desk2.png" alt="" class="img_inner fleft">
+                <img src="<?php echo base_url();?>assets/images/proj1.jpg" alt="" class="img_inner fleft">
+                <img src="<?php echo base_url();?>assets/images/led1.jpg" alt="" class="img_inner fleft">
+            </div>
+        </div>
+
+    <br><br>
+</section>
+
 
 <!--==============================
               footer
