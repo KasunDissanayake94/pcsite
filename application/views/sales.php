@@ -9,6 +9,7 @@
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
     <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/search.css">
     <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
@@ -59,6 +60,7 @@
         <div class="container">
             <div class="row">
                 <div class="grid_12 ">
+
                     <div class="navigation ">
                         <nav>
                             <ul class="sf-menu">
@@ -82,13 +84,10 @@
 =================================-->
 
 <section class="page1_header" style="background-color: white">
-    <div class="grid_12">
-        <input type="text" class="form-control"  placeholder="Search"   id="search"  >
-    </div>
 
 
         <div class="row">
-            <div class="grid_4">
+            <div class="grid_3">
                 <h1>1</h1>
                 <h1>2</h1>
                 <h1>3</h1>
@@ -99,11 +98,35 @@
                 <h1>8</h1>
                 <h1>9</h1>
             </div>
-            <div class="grid_5">
-                <img src="<?php echo base_url();?>assets/images/desk1.jpg" alt="" class="img_inner fleft">
-                <img src="<?php echo base_url();?>assets/images/desk2.png" alt="" class="img_inner fleft">
-                <img src="<?php echo base_url();?>assets/images/proj1.jpg" alt="" class="img_inner fleft">
-                <img src="<?php echo base_url();?>assets/images/led1.jpg" alt="" class="img_inner fleft">
+            <div class="grid_9">
+                <h1>Search Item to find here</h1>
+                <br>
+                <form method="post">
+                    <input type="text" class="textbox" placeholder="Search">
+                    <input title="Search" value="" type="submit" class="button">
+                </form>
+                <br><br> 
+                <!-- Item images here -->
+                <div class="col-md-3 col-sm-6 "  style="margin-bottom: 20px; margin-top: 20px">
+                    <div class="card h-100">
+
+                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/proj1.jpg" alt="" class="img_inner fleft">
+                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/desk1.jpg" alt="" class="img_inner fleft">
+                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/desk2.png" alt="" class="img_inner fleft">
+                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/led1.jpg" alt="" class="img_inner fleft">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <?php
+                                echo "Projectors";
+                                ?>
+                                <?php echo "vjbsdjvsbdv"; ?>
+                            </h4>
+
+                            <p class="card-text"><?php echo "cjbnsdjvsbdj"; ?></p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
