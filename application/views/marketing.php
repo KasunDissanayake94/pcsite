@@ -147,7 +147,7 @@
           <div class="art">
           <div id="container">
               <ul id="nav1">
-                  <li><a href="#">Menu Heading 1</a>
+                  <li><a href="#">Notebooks</a>
                       <ul>
                           <li><a href="#">Stage1</a></li>
                           <li><a href="#">Stage2</a></li>
@@ -155,7 +155,7 @@
                           <li><a href="#">Stage4</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Menu Heading 2</a>
+                  <li><a href="#">Desktops</a>
                       <ul>
                           <li><a href="#">Stage1</a></li>
                           <li><a href="#">Stage2</a></li>
@@ -163,7 +163,23 @@
                           <li><a href="#">Stage4</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Menu Heading 3</a>
+                  <li><a href="#">Projectors</a>
+                      <ul>
+                          <li><a href="#">Stage1</a></li>
+                          <li><a href="#">Stage2</a></li>
+                          <li><a href="#">Stage3</a></li>
+                          <li><a href="#">Stage4</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Projectors Screen</a>
+                      <ul>
+                          <li><a href="#">Stage1</a></li>
+                          <li><a href="#">Stage2</a></li>
+                          <li><a href="#">Stage3</a></li>
+                          <li><a href="#">Stage4</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">LED TV</a>
                       <ul>
                           <li><a href="#">Stage1</a></li>
                           <li><a href="#">Stage2</a></li>
