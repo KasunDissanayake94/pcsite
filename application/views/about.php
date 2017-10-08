@@ -85,8 +85,8 @@
                 <h3>About Us</h3>
                 <img src="<?php echo base_url();?>assets/images/page2_img.jpg" alt="" class="img_inner fleft">
                 <div class="extra_wrapper">
-                    <p class="fwn"><a href="#">Livamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus liberoret. Praesenter faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequa. </a></p>
-                    Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet site amet est vel, commodo venenatis eros. Fusce adipiscing quam id risus sagittis, non consequat lacus interdumertolo mokiju werto nulla, eu sodales arcu. Quisque viverra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend sed, cursus sit amet. Huisque viverra nulla nunc, eu ultrices libero ultricies eget. Ohasellus accumsajusto vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend sed, cursus sit amet ertolomino kolinomi holo.
+                    <p class="fwn"><a href="#">This is a Company engaged in the business of selling and hiring of computer solutions. This company, WEBSTATION TECHNOLOGY, is located,at #30, Wickramasighepura, Battaramulla.</a></p>
+                    
                 </div>
             </div>
         </div>
@@ -167,7 +167,7 @@
         <div class="row">
             <div class="grid_12">
                 <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+                    <div class="sub-copy">Website designed by<a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> university of colombo school of computing</span></a></div>
                 </div>
             </div>
         </div>

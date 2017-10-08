@@ -92,24 +92,32 @@
                     </figure>
                 </div>
             </div>
-            <div class="grid_5">
+            <div class="grid_3">
                 <h3 class="head__1">Address:</h3>
                 <address class="text3">
-                    138 Atlantis Ln <br>Kingsport <br>Illinois121164
+                    <a href="https://www.google.lk/maps/place/Battaramulla/@6.9000592,79.9117393,15z/data=!3m1!4b1!4m5!3m4!1s0x3ae25755e928e7ff:0x85482fe919ac9ca1!8m2!3d6.8979941!4d79.9222869">Webstation Technology,<br>No:30,<br>Wickramasighepura,<br>Battaramulla.</a>
                 </address>
             </div>
-            <div class="grid_4">
+            <div class="grid_3">
                 <h3 class="head__1">Phone:</h3>
                 <div class="text3">
-                    +1 800 559 6580 <br>+1 504 889 9898
+                    0777239580<br>0775550223
                 </div>
             </div>
             <div class="grid_3">
-                <h3 class="head__1">E-mail:</h3>
+                <h3 class="head__1">Fax: </h3>
                 <div class="text3">
-                    <a href="#">mail@demolink.org</a><br><a href="#">Download</a>
+                    <a >011 208 209 7</a>
+                </div>
+
+            </div>
+            <div class="grid_3">
+                <h3 class="head__1">Gmail: </h3>
+                <div class="text3">
+                    <a href="#"></a><br><a href="#">Download</a>
                 </div>
             </div>
+
             <div class="grid_12">
                 <h3 class="head__1">Miscellaneous information:</h3>
                 <div class="fwn">
@@ -173,7 +181,7 @@
         <div class="row">
             <div class="grid_12">
                 <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+                    <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> university of colombo school of computing</span></a></div>
                 </div>
             </div>
         </div>

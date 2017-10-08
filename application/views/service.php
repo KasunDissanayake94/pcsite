@@ -110,16 +110,12 @@
                 <div class="grid_4">
                     <h3>Services List</h3>
                     <ul class="list-1">
-                        <li><a href="#">Vivamus at magna non nunc tristique </a></li>
-                        <li><a href="#">Aliquam nibh ante, egestas id</a></li>
-                        <li><a href="#">Ommodo luctus libero</a></li>
-                        <li><a href="#">Faucibus malesuada faucibusonec </a></li>
-                        <li><a href="#">Laoreet metus id laoreet</a></li>
-                        <li><a href="#">Jalesuadaorem ipsum dolor sit ame</a></li>
-                        <li><a href="#">Konsectetur adipiscing elitert</a></li>
-                        <li><a href="#">Tliquam nibh ante, egestas idi</a></li>
-                        <li><a href="#">Ammodo luctus liberom</a></li>
-                        <li><a href="#">Noaucibus malesuada faucibonecy </a></li>
+                        <li>All Kinds of Computers Service and Maintenance</li>
+                        <li>Server Repair and Maintenance</li>
+                        <li>CCTV Camera Configuration and Installation</li>
+                        <li>Door Lock Systems Configuration and Installation</li>
+                        <li>Security Alarm System Configuration and Installation</li>
+                        <li>GPS Trackers Configuration and Installation</li>
                     </ul>
                 </div>
                 <div class="grid_4">
@@ -193,7 +189,7 @@
         <div class="row">
             <div class="grid_12">
                 <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+                    <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> university of colombo school of computing</span></a></div>
                 </div>
             </div>
         </div>
