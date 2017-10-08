@@ -36,6 +36,45 @@
     <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
     <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $('#search').keyup(function()
+            {
+                var str=  $("#search").val();
+
+                var txt2 = "";
+
+                $.ajax(
+                    {
+                        url:"<?php echo base_url();?>index.php/fetch/live_search">",
+                        method:"get",
+                        data:{searchData:txt},
+                        dataType:"text",
+                        success:function(data)
+                        {
+                            $('#livesearch').html(data);
+                        }
+                    });
+
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#search").keyup(function(){
+                var str=  $("#search").val();
+                if(str == "") {
+                    $( "#livesearch" ).html("<b>Book information will be listed here...</b>");
+                }else {
+                    $.get( "<?php echo base_url();?>home/ajaxsearch?id="+str, function( data ){
+                        $( "#livesearch" ).html( data );
+                    });
+                }
+            });
+        });
+    </script>
         <script>
         $(document).ready(function() {
             $("#nav1 li").hover(
@@ -156,10 +195,11 @@
                 </div>
             </div>
             <div class="grid_9">
+                <div id="livesearch">
                 <h1>Search Item to find here</h1>
                 <br>
                 <form method="post">
-                    <input type="text" class="textbox" placeholder="Search">
+                    <input type="text" class="textbox" placeholder="Search" id="search">
                     <input title="Search" value="" type="submit" class="button">
                 </form>
                 <br><br> 
@@ -183,7 +223,7 @@
 
 
                 <?php }?>
-
+                </div>
 
             </div>
         </div>
