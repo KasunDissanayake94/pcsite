@@ -4,58 +4,13 @@
 <html lang="en">
 <head>
     <title>Marketing Rental</title>
-    <style>
-        .art ul,
-        .art li,
-        .art a {
-            padding: 0px;
-            margin: 0px;
-        }
 
-        #nav1 a {
-            color: #FFFFFF;
-        }
-
-        #nav1 li ul li a:hover {
-            background-color: #394963;
-        }
-
-        div ul li ul {
-            background-color: #4a5b78;
-            list-style: none
-        }
-
-        #nav1 > li > a {
-            background-color: #343434;
-            padding: 16px 18px;
-            text-decoration: none;
-            display: block;
-            border-bottom: 2px solid #212121;
-            background: linear-gradient(top, #343434, #111111);
-        }
-
-        #nav1 li ul li a {
-            padding: 10px 0;
-            padding-left: 30px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .art div {
-            background-color: #000000;
-            background-color: #343434;
-            width: 280px;
-        }
-        /* Hide Dropdowns by Default */
-        #nav1 li ul {
-            display: none;
-        }
-    </style>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
     <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/navigation.css">
     <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
@@ -193,7 +148,7 @@
                       </ul>
                   </li>
               </ul>
-              <div>
+              </div>
               </div>
 
 
@@ -215,15 +170,7 @@
 </footer>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
-    <script>
-    $('ul.sf-menu li.dropdown').hover(function() {
 
-
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-    });
-</script>
 
 </body>
 </html>
