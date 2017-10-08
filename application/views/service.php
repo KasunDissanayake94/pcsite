@@ -40,7 +40,6 @@
 =================================-->
 <header>
     <div class="container">
-<<<<<<< Updated upstream:application/views/service.php
         <div class="row">
             <div class="grid_12 rel">
                 <h1>
@@ -75,27 +74,6 @@
             </div>
         </div>
     </section>
-=======
-      <div class="row">
-        <div class="grid_12 ">
-          <div class="navigation ">
-            <nav>
-              <ul class="sf-menu">
-               <li class="current"><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-               <li><a href="<?php echo base_url();?>index.php/link/go/2">About</a></li>
-               <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-               <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-               <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
-             </ul>
-            </nav>
-            <div class="clear"></div>
-          </div>       
-         <div class="clear"></div>  
-        </div>
-     </div> 
-    </div>  
-  </section>
->>>>>>> Stashed changes:application/views/services.html
 </header>
 <!--=====================
           Content
