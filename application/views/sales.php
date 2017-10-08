@@ -195,6 +195,8 @@
                 <!-- Item images here -->
                 <?php foreach($item_list as $item){?>
                     <!-- insert each and every sales item in a loop -->
+                    <?php $name=$item->item_name?>
+
                     <div class="member">
                         <img style="font-size: 20px" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Click the link to see more info"  />
                         <div class="name">
@@ -203,7 +205,7 @@
 
                             </h4>
                             <p style="font-size: 15px"  class="card-text">Rs.<?=$item->price;?>/=</p>
-                            <p style="color: #003399; font-size: 15px"  class="card-text"><a href="#">more</a></p>
+                            <p style="color: #003399; font-size: 15px"  class="card-text"><a href="<?php echo base_url();?>index.php/link/getdata/<?=$item->item_id;?>">more</a></p>
                     </div>
                         <br>
 

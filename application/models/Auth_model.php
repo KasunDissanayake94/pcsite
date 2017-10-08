@@ -41,5 +41,15 @@ class Auth_model extends CI_Model{
 
         }
     }
+    public function find_details($name){
+
+        $this->db->select ('*');
+        $this->db->from('sales_item');
+
+        $this->db->where((array('item_id'=>$name)));
+        $query = $this->db->get();
+        $query=$query->result();
+        return $query;
+    }
 }
 
