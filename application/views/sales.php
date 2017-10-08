@@ -38,16 +38,25 @@
     <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
 
     <script>
-        $(document).ready(function(){
-            $("#search").keyup(function(){
-                var str=  $("#search").val();
-                if(str == "") {
-                    $( "#livesearch" ).html("<b>Book information will be listed here...</b>");
-                }else {
-                    $.get( "<?php echo base_url();?>index.php/fetch/live_search?id="+str, function( data ){
-                        $( "#livesearch" ).html( data );
+        $(document).ready(function()
+        {
+            $('#search').keyup(function()
+            {
+                var txt = document.getElementById('search').value;
+                var txt2 = "";
+
+                $.ajax(
+                    {
+                        url:"<?php echo base_url();?>index.php/fetch/livesearch",
+                        method:"get",
+                        data:{searchData:txt},
+                        dataType:"text",
+                        success:function(data)
+                        {
+                            $('#livesearch').html(data);
+                        }
                     });
-                }
+
             });
         });
     </script>
@@ -171,13 +180,17 @@
                 </div>
             </div>
             <div class="grid_9">
-                <div id="livesearch">
                 <h1>Search Item to find here</h1>
                 <br>
                 <form method="post">
                     <input type="text" class="textbox" placeholder="Search" id="search">
                     <input title="Search" value="" type="submit" class="button">
                 </form>
+                <br><br><br>
+                <div id="livesearch">
+
+                <br>
+
                 <br><br> 
                 <!-- Item images here -->
                 <?php foreach($item_list as $item){?>
