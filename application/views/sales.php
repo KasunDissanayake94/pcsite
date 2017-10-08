@@ -36,31 +36,7 @@
     <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
     <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
-    <script>
-        $(document).ready(function()
-        {
-            $('#search').keyup(function()
-            {
-                var str=  $("#search").val();
 
-                var txt2 = "";
-
-                $.ajax(
-                    {
-                        url:"<?php echo base_url();?>index.php/fetch/live_search">",
-                        method:"get",
-                        data:{searchData:txt},
-                        dataType:"text",
-                        success:function(data)
-                        {
-                            $('#livesearch').html(data);
-                        }
-                    });
-
-            });
-        });
-
-    </script>
     <script>
         $(document).ready(function(){
             $("#search").keyup(function(){
@@ -68,7 +44,7 @@
                 if(str == "") {
                     $( "#livesearch" ).html("<b>Book information will be listed here...</b>");
                 }else {
-                    $.get( "<?php echo base_url();?>home/ajaxsearch?id="+str, function( data ){
+                    $.get( "<?php echo base_url();?>index.php/fetch/live_search?id="+str, function( data ){
                         $( "#livesearch" ).html( data );
                     });
                 }

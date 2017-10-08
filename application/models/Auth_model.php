@@ -14,25 +14,22 @@ class Auth_model extends CI_Model{
         $query=$query->result();
         return $query;
     }
-    public function fetch_data(){
+    public function fetch_data($search){
 
-        $output = "";
-        $data = $_GET['searchData'];
-        if($data == "")
+        $query = $this
+            ->db
+            ->select('*')
+            ->from('sales_item')
+            ->or_like('item_name',$search)
+            ->get();
+
+        if($query->num_rows()>0)
         {
-            $this->db->select ('*');
-            $this->db->from('sales_item');
-            $query = $this->db->get();
-            $query=$query->result();
+            return $query->result();
         }
         else
         {
-            $this->db->select ('*');
-            $this->db->from('sales_item');
-            $this->like('item_name',$data);
-            $query = $this->db->get();
-            $query=$query->result();
-            return $query;
+            return null;
         }
     }
 }

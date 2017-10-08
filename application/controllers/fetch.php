@@ -15,12 +15,24 @@ class Auth extends CI_Controller
         $data = $_GET['searchData'];
 
         $result = $this->auth_model->fetch_data();
-        if ($result){
-            echo "Done";
+        if(is_null($this->input->get('id')))
+        {
+
+            $this->load->view('blog');
+
 
         }
-        else{
-            echo "No such user Found";
+        else
+        {
+            $this->load->model('auth_model');
+
+            $data['dataset']=$this->auth_model->fetch_data($this->input->get('id'));
+            foreach (dataset as){
+
+            }
+
+
+
         }
 
 
