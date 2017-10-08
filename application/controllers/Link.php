@@ -1,6 +1,18 @@
 <?php
 
 class Link extends CI_Controller{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('session');
+        $this->load->helper('form');
+        $this->load->helper('url');
+        $this->load->helper('html');
+        $this->load->database();
+        $this->load->library('form_validation');
+        //load the login model
+        $this->load->model('auth_model');
+    }
 
     public function go($x){
 
@@ -27,7 +39,15 @@ class Link extends CI_Controller{
 
         elseif ($x=="sales"){
 
-            $this->load->view('sales');
+            $result = $this->auth_model->find_all_items();
+            $data['item_list'] = null;
+            if ($result){
+                $data['item_list'] = $result;
+                $this->load->view('sales.php',$data);
+            }
+            else{
+                echo "Page Not Found";
+            }
         }
         elseif ($x=="marketing"){
 

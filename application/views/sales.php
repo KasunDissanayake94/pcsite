@@ -107,25 +107,27 @@
                 </form>
                 <br><br> 
                 <!-- Item images here -->
-                <div class="col-md-3 col-sm-6 "  style="margin-bottom: 20px; margin-top: 20px">
-                    <div class="card h-100">
+                <?php foreach($item_list as $item){?>
+                    <!-- insert each and every sales item in a loop -->
 
-                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/proj1.jpg" alt="" class="img_inner fleft">
-                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/desk1.jpg" alt="" class="img_inner fleft">
-                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/desk2.png" alt="" class="img_inner fleft">
-                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/led1.jpg" alt="" class="img_inner fleft">
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <?php
-                                echo "Projectors";
-                                ?>
-                                <?php echo "vjbsdjvsbdv"; ?>
-                            </h4>
+                    <div class="col-md-3 col-sm-6 "  style="margin-bottom: 20px; margin-top: 20px">
+                        <div class="card h-100">
 
-                            <p class="card-text"><?php echo "cjbnsdjvsbdj"; ?></p>
+                            <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="" class="img_inner fleft">
+
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <?=$item->item_name;?>
+
+                                </h4>
+
+                                <p class="card-text">Rs.<?=$item->price;?>/=</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                <?php }?>
+
 
             </div>
         </div>
