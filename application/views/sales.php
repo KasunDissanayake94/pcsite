@@ -7,7 +7,7 @@
     <style>
         .member {
             display: inline-block;
-            width:31%;
+            width:20%;
             vertical-align: top;
             text-align:center;
         }
@@ -15,8 +15,8 @@
             display: inline;
         }
         .member img {
-            width: 100%;
-            height:300px;
+            width: 250px;
+            height:180px;
             display: block;
         }
     </style>
@@ -167,16 +167,16 @@
                 <?php foreach($item_list as $item){?>
                     <!-- insert each and every sales item in a loop -->
                     <div class="member">
-                        <img src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Responsive image"  />
+                        <img style="font-size: 20px" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Click the link to see more info"  />
                         <div class="name">
-                            <h4 class="card-title">
+                            <h4 style="font-size: 20px" class="card-title">
                                 <?=$item->item_name;?>
 
                             </h4>
-                            <p class="card-text">Rs.<?=$item->price;?>/=</p>
+                            <p style="font-size: 15px"  class="card-text">Rs.<?=$item->price;?>/=</p>
+                            <p style="color: #003399; font-size: 15px"  class="card-text"><a href="#">more</a></p>
                     </div>
-
-
+                        <br>
 
 
                         </div>
