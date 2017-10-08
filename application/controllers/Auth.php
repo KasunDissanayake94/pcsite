@@ -78,6 +78,6 @@ class Auth extends CI_Controller{
         }
         //load view
 		$this->load->view('register');
-}
+    }
 }
 

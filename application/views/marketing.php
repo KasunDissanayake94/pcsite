@@ -4,58 +4,13 @@
 <html lang="en">
 <head>
     <title>Marketing Rental</title>
-    <style>
-        .art ul,
-        .art li,
-        .art a {
-            padding: 0px;
-            margin: 0px;
-        }
 
-        #nav1 a {
-            color: #FFFFFF;
-        }
-
-        #nav1 li ul li a:hover {
-            background-color: #394963;
-        }
-
-        div ul li ul {
-            background-color: #4a5b78;
-            list-style: none
-        }
-
-        #nav1 > li > a {
-            background-color: #343434;
-            padding: 16px 18px;
-            text-decoration: none;
-            display: block;
-            border-bottom: 2px solid #212121;
-            background: linear-gradient(top, #343434, #111111);
-        }
-
-        #nav1 li ul li a {
-            padding: 10px 0;
-            padding-left: 30px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .art div {
-            background-color: #000000;
-            background-color: #343434;
-            width: 280px;
-        }
-        /* Hide Dropdowns by Default */
-        #nav1 li ul {
-            display: none;
-        }
-    </style>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
     <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/navigation.css">
     <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
@@ -147,39 +102,52 @@
           <div class="art">
           <div id="container">
               <ul id="nav1">
-                  <li><a href="#">Notebooks</a>
+                  <li><a href="#">Notebook Brands</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Lenovo</a></li>
+                          <li><a href="#">Toshiba</a></li>
+                          <li><a href="#">Asus</a></li>
+                          <li><a href="#">Aspire</a></li>
+                          <li><a href="#">Acer</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Desktops</a>
+                  <li><a href="#">Desktop Brands</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Lenovo</a></li>
+                          <li><a href="#">Acer</a></li>
+                          <li><a href="#">Samsung</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Projectors</a>
+                  <li><a href="#">Computer Hardware Brands</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Toshiba</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Acer</a></li>
+                          <li><a href="#">Kingston</a></li>
+                          <li><a href="#">Trancend</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Projectors Screen</a>
+                  <li><a href="#">Projector Brands</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">Asus</a></li>
+                          <li><a href="#">View Sonic</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">LED TV</a>
+                  <li><a href="#">Camera Brands</a>
+                      <ul>
+                          <li><a href="#">HIVISION</a></li>
+                          <li><a href="#">TVT</a></li>
+                          <li><a href="#">HIKVISION</a></li>
+                          <li><a href="#">ZEUSTECH</a></li>
+                          <li><a href="#">L'VISION</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">LED TV Brands</a>
                       <ul>
                           <li><a href="#">32"</a></li>
                           <li><a href="#">40"</a></li>
@@ -215,15 +183,7 @@
 </footer>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
-    <script>
-    $('ul.sf-menu li.dropdown').hover(function() {
 
-
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-    });
-</script>
 
 </body>
 </html>

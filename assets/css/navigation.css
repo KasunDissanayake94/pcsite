@@ -1,0 +1,46 @@
+.art ul,
+.art li,
+.art a {
+    padding: 0px;
+    margin: 0px;
+    font-size: medium;
+}
+
+#nav1 a {
+    color: #FFFFFF;
+}
+
+#nav1 li ul li a:hover {
+    background-color: #394963;
+}
+
+div ul li ul {
+    background-color: #4a5b78;
+    list-style: none
+}
+
+#nav1 > li > a {
+    background-color: #343434;
+    padding: 16px 18px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid #212121;
+    background: linear-gradient(top, #343434, #111111);
+}
+
+#nav1 li ul li a {
+    padding: 10px 0;
+    padding-left: 30px;
+    text-decoration: none;
+    display: block;
+}
+
+.art div {
+    background-color: #000000;
+    background-color: #343434;
+    width: 280px;
+}
+/* Hide Dropdowns by Default */
+#nav1 li ul {
+    display: none;
+}

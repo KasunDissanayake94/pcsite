@@ -4,12 +4,29 @@
 <html lang="en">
 <head>
     <title>Sales</title>
+    <style>
+        .member {
+            display: inline-block;
+            width:20%;
+            vertical-align: top;
+            text-align:center;
+        }
+        .name {
+            display: inline;
+        }
+        .member img {
+            width: 250px;
+            height:180px;
+            display: block;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
     <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/search.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/navigation.css">
     <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
@@ -19,6 +36,17 @@
     <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
     <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
+        <script>
+        $(document).ready(function() {
+            $("#nav1 li").hover(
+                function() {
+                    $(this).find('ul').slideDown();
+                },
+                function() {
+                    $(this).find('ul').slideUp();
+                });
+        });
+    </script>
     <script>
         $(window).load(function(){
             $().UItoTop({ easingType: 'easeOutQuart' });
@@ -61,14 +89,14 @@
             <div class="row">
                 <div class="grid_12 ">
 
-                    <div class="navigation ">
+                    <div class="navigation">
                         <nav>
                             <ul class="sf-menu">
-                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/2">About</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="current"><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
                             </ul>
                         </nav>
                         <div class="clear"></div>
@@ -83,20 +111,49 @@
               content
 =================================-->
 
-<section class="page1_header" style="background-color: white">
+<section class="page1_header" style="background-color: white" >
 
 
         <div class="row">
             <div class="grid_3">
-                <h1>1</h1>
-                <h1>2</h1>
-                <h1>3</h1>
-                <h1>4</h1>
-                <h1>5</h1>
-                <h1>6</h1>
-                <h1>7</h1>
-                <h1>8</h1>
-                <h1>9</h1>
+                <div class="art">
+                    <div id="container">
+                        <ul id="nav1">
+                            <li><a href="#">Notebooks</a>
+                                <ul>
+                                    <li><a href="#">HP</a></li>
+                                    <li><a href="#">Dell</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Toshiba</a></li>
+                                    <li><a href="#">Asus</a></li>
+                                    <li><a href="#">Aspire</a></li>
+                                    <li><a href="#">Acer</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Desktops</a>
+                                <ul>
+                                    <li><a href="#">HP</a></li>
+                                    <li><a href="#">Dell</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Acer</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Computer Accessories</a>
+                                <ul>
+                                    <li><a href="#">CA 1</a></li>
+                                    <li><a href="#">CA 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Network Accessories</a>
+                                <ul>
+                                    <li><a href="#">NA 1</a></li>
+                                    <li><a href="#">NA 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="grid_9">
                 <h1>Search Item to find here</h1>
@@ -107,25 +164,26 @@
                 </form>
                 <br><br> 
                 <!-- Item images here -->
-                <div class="col-md-3 col-sm-6 "  style="margin-bottom: 20px; margin-top: 20px">
-                    <div class="card h-100">
+                <?php foreach($item_list as $item){?>
+                    <!-- insert each and every sales item in a loop -->
+                    <div class="member">
+                        <img style="font-size: 20px" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Click the link to see more info"  />
+                        <div class="name">
+                            <h4 style="font-size: 20px" class="card-title">
+                                <?=$item->item_name;?>
 
-                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/proj1.jpg" alt="" class="img_inner fleft">
-                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/desk1.jpg" alt="" class="img_inner fleft">
-                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/desk2.png" alt="" class="img_inner fleft">
-                        <img style="height: 200px; width: 200px;" src="<?php echo base_url();?>assets/images/led1.jpg" alt="" class="img_inner fleft">
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <?php
-                                echo "Projectors";
-                                ?>
-                                <?php echo "vjbsdjvsbdv"; ?>
                             </h4>
-
-                            <p class="card-text"><?php echo "cjbnsdjvsbdj"; ?></p>
-                        </div>
+                            <p style="font-size: 15px"  class="card-text">Rs.<?=$item->price;?>/=</p>
+                            <p style="color: #003399; font-size: 15px"  class="card-text"><a href="#">more</a></p>
                     </div>
-                </div>
+                        <br>
+
+
+                        </div>
+
+
+                <?php }?>
+
 
             </div>
         </div>
@@ -149,5 +207,6 @@
     </div>
 </footer>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+
 </body>
 </html>
