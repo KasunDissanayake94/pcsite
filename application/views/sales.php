@@ -92,11 +92,11 @@
                     <div class="navigation">
                         <nav>
                             <ul class="sf-menu">
-                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/2">About</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="current"><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
                             </ul>
                         </nav>
                         <div class="clear"></div>
@@ -121,28 +121,36 @@
                         <ul id="nav1">
                             <li><a href="#">Notebooks</a>
                                 <ul>
-                                    <li><a href="#">Stage1</a></li>
-                                    <li><a href="#">Stage2</a></li>
-                                    <li><a href="#">Stage3</a></li>
-                                    <li><a href="#">Stage4</a></li>
+                                    <li><a href="#">HP</a></li>
+                                    <li><a href="#">Dell</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Toshiba</a></li>
+                                    <li><a href="#">Asus</a></li>
+                                    <li><a href="#">Aspire</a></li>
+                                    <li><a href="#">Acer</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Desktops</a>
                                 <ul>
-                                    <li><a href="#">Stage1</a></li>
-                                    <li><a href="#">Stage2</a></li>
-                                    <li><a href="#">Stage3</a></li>
-                                    <li><a href="#">Stage4</a></li>
+                                    <li><a href="#">HP</a></li>
+                                    <li><a href="#">Dell</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Acer</a></li>
+                                    <li><a href="#">Samsung</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Projectors</a>
+                            <li><a href="#">Computer Accessories</a>
                                 <ul>
-                                    <li><a href="#">Stage1</a></li>
-                                    <li><a href="#">Stage2</a></li>
-                                    <li><a href="#">Stage3</a></li>
-                                    <li><a href="#">Stage4</a></li>
+                                    <li><a href="#">CA 1</a></li>
+                                    <li><a href="#">CA 2</a></li>
                                 </ul>
-
+                            </li>
+                            <li><a href="#">Network Accessories</a>
+                                <ul>
+                                    <li><a href="#">NA 1</a></li>
+                                    <li><a href="#">NA 2</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

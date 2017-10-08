@@ -4,6 +4,53 @@
 <html lang="en">
 <head>
     <title>Brands</title>
+    <style>
+        .art ul,
+        .art li,
+        .art a {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #nav1 a {
+            color: #FFFFFF;
+        }
+
+        #nav1 li ul li a:hover {
+            background-color: #394963;
+        }
+
+        div ul li ul {
+            background-color: #4a5b78;
+            list-style: none
+        }
+
+        #nav1 > li > a {
+            background-color: #343434;
+            padding: 16px 18px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 2px solid #212121;
+            background: linear-gradient(top, #343434, #111111);
+        }
+
+        #nav1 li ul li a {
+            padding: 10px 0;
+            padding-left: 30px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .art div {
+            background-color: #000000;
+            background-color: #343434;
+            width: 280px;
+        }
+        /* Hide Dropdowns by Default */
+        #nav1 li ul {
+            display: none;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
@@ -18,6 +65,19 @@
     <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
     <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
+    <script src="<?php echo base_url();?>assets/js/dropdown.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#nav1 li").hover(
+                function() {
+                    $(this).find('ul').slideDown();
+                },
+                function() {
+                    $(this).find('ul').slideUp();
+                });
+        });
+    </script>
     <script>
         $(window).load(function(){
             $().UItoTop({ easingType: 'easeOutQuart' });
@@ -62,11 +122,11 @@
                     <div class="navigation ">
                         <nav>
                             <ul class="sf-menu">
-                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/2">About</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="current"><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
                             </ul>
                         </nav>
                         <div class="clear"></div>
@@ -82,36 +142,72 @@
 =================================-->
 
       <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-          <div class="container">
-              <div class="row">
-                  <div class="grid_12">
-                      <h3>Brands</h3>
-                  </div>
-
-                  <?php if (isset($_SESSION['success'])){
-
-                      ?>
-                      <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-                      <?php
-                  }
-                  ?>
-                  <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-                  <div class="grid_12">
-                    <h4>
-                      <ul style="list-style-type:circle">
-                        <li>Camera Brands</li>
-                          <ul style="list-style-type:square">
-                            <li>HIVISION</li>
-                            <li>TVT</li>
-                            <li>HIKVISION</li>
-                            <li>ZEUSTECH</li>
-                            <li>L'VISION</li>
-                          </ul>
+          <div class="art">
+          <div id="container">
+              <ul id="nav1">
+                  <li><a href="#">Notebook Brands</a>
+                      <ul>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Lenovo</a></li>
+                          <li><a href="#">Toshiba</a></li>
+                          <li><a href="#">Asus</a></li>
+                          <li><a href="#">Aspire</a></li>
+                          <li><a href="#">Acer</a></li>
                       </ul>
-                    </h4>
-                  </div>
+                  </li>
+                  <li><a href="#">Desktop Brands</a>
+                      <ul>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Lenovo</a></li>
+                          <li><a href="#">Acer</a></li>
+                          <li><a href="#">Samsung</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Computer Hardware Brands</a>
+                      <ul>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Toshiba</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Acer</a></li>
+                          <li><a href="#">Kingston</a></li>
+                          <li><a href="#">Trancend</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Projector Brands</a>
+                      <ul>
+                          <li><a href="#">Asus</a></li>
+                          <li><a href="#">View Sonic</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Camera Brands</a>
+                      <ul>
+                          <li><a href="#">HIVISION</a></li>
+                          <li><a href="#">TVT</a></li>
+                          <li><a href="#">HIKVISION</a></li>
+                          <li><a href="#">ZEUSTECH</a></li>
+                          <li><a href="#">L'VISION</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">LED TV Brands</a>
+                      <ul>
+                          <li><a href="#">32"</a></li>
+                          <li><a href="#">40"</a></li>
+                          <li><a href="#">43"</a></li>
+                          <li><a href="#">50"</a></li>
+                          <li><a href="#">55"</a></li>
+                          <li><a href="#">60"</a></li>
+                          <li><a href="#">65"</a></li>
+                          <li><a href="#">70"</a></li>
+                          <li><a href="#">75"</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <div>
               </div>
-          </div>
+
+
       </section>
 
 <!--==============================

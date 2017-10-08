@@ -1,18 +1,6 @@
 <?php 
 
 class Auth extends CI_Controller{
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->library('session');
-        $this->load->helper('form');
-        $this->load->helper('url');
-        $this->load->helper('html');
-        $this->load->database();
-        $this->load->library('form_validation');
-        //load the login model
-        $this->load->model('auth_model');
-    }
 
     public function home(){
 
@@ -90,6 +78,6 @@ class Auth extends CI_Controller{
         }
         //load view
 		$this->load->view('register');
-}
+    }
 }
 

@@ -102,39 +102,52 @@
           <div class="art">
           <div id="container">
               <ul id="nav1">
-                  <li><a href="#">Notebooks</a>
+                  <li><a href="#">Notebook Brands</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Lenovo</a></li>
+                          <li><a href="#">Toshiba</a></li>
+                          <li><a href="#">Asus</a></li>
+                          <li><a href="#">Aspire</a></li>
+                          <li><a href="#">Acer</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Desktops</a>
+                  <li><a href="#">Desktop Brands</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Lenovo</a></li>
+                          <li><a href="#">Acer</a></li>
+                          <li><a href="#">Samsung</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Projectors</a>
+                  <li><a href="#">Computer Hardware Brands</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">HP</a></li>
+                          <li><a href="#">Toshiba</a></li>
+                          <li><a href="#">Dell</a></li>
+                          <li><a href="#">Acer</a></li>
+                          <li><a href="#">Kingston</a></li>
+                          <li><a href="#">Trancend</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">Projectors Screen</a>
+                  <li><a href="#">Projector Brands</a>
                       <ul>
-                          <li><a href="#">Stage1</a></li>
-                          <li><a href="#">Stage2</a></li>
-                          <li><a href="#">Stage3</a></li>
-                          <li><a href="#">Stage4</a></li>
+                          <li><a href="#">Asus</a></li>
+                          <li><a href="#">View Sonic</a></li>
                       </ul>
                   </li>
-                  <li><a href="#">LED TV</a>
+                  <li><a href="#">Camera Brands</a>
+                      <ul>
+                          <li><a href="#">HIVISION</a></li>
+                          <li><a href="#">TVT</a></li>
+                          <li><a href="#">HIKVISION</a></li>
+                          <li><a href="#">ZEUSTECH</a></li>
+                          <li><a href="#">L'VISION</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">LED TV Brands</a>
                       <ul>
                           <li><a href="#">32"</a></li>
                           <li><a href="#">40"</a></li>
@@ -148,7 +161,7 @@
                       </ul>
                   </li>
               </ul>
-              </div>
+              <div>
               </div>
 
 
