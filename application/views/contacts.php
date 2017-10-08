@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< Updated upstream:application/views/contacts.php
     <title>Contacts</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
@@ -37,7 +36,7 @@
     <script src="<?php echo base_url();?>assets/js/html5shiv.js"></script>
     <link rel="stylesheet" media="screen" href="<?php echo base_url();?>assets/css/ie.css">
     <![endif]-->
-=======
+
 <title>Contact Us</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
@@ -70,7 +69,7 @@
 <script src="js/html5shiv.js"></script>
 <link rel="stylesheet" media="screen" href="css/ie.css">
 <![endif]-->
->>>>>>> Stashed changes:application/views/contacts.html
+
 </head>
 <body>
 <!--==============================
@@ -78,7 +77,6 @@
 =================================-->
 <header>
     <div class="container">
-<<<<<<< Updated upstream:application/views/contacts.php
         <div class="row">
             <div class="grid_12 rel">
                 <h1>
@@ -111,23 +109,6 @@
                     <div class="clear"></div>
                 </div>
             </div>
-=======
-      <div class="row">
-        <div class="grid_12 ">
-          <div class="navigation ">
-            <nav>
-              <ul class="sf-menu">
-               <li class="current"><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-               <li><a href="<?php echo base_url();?>index.php/link/go/2">About</a></li>
-               <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-               <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-               <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
-             </ul>
-            </nav>
-            <div class="clear"></div>
-          </div>       
-         <div class="clear"></div>  
->>>>>>> Stashed changes:application/views/contacts.html
         </div>
     </section>
 </header>
@@ -135,7 +116,6 @@
           Content
 ======================-->
 <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-<<<<<<< Updated upstream:application/views/contacts.php
     <div class="container">
         <div class="row">
             <div class="grid_12">
