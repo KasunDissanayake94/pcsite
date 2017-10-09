@@ -186,18 +186,17 @@
                     <input type="text" class="textbox" placeholder="Search" id="search">
                     <input title="Search" value="" type="submit" class="button">
                 </form>
-                <br><br><br>
+                <br><br>
                 <div id="livesearch">
 
-                <br>
-
-                <br><br> 
+                
                 <!-- Item images here -->
                 <?php foreach($item_list as $item){?>
                     <!-- insert each and every sales item in a loop -->
                     <?php $name=$item->item_name?>
 
                     <div class="member">
+                        <br><br>
                         <img style="font-size: 20px" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Click the link to see more info"  />
                         <div class="name">
                             <h4 style="font-size: 20px" class="card-title">

@@ -39,6 +39,7 @@ class fetch extends CI_Controller
 
 
                 echo "<div class=\"member\">
+                        <br><br>
                         <img style=\"font-size: 20px\" src=".$link. " alt=\"Click the link to see more info\"  />
                         <div class=\"name\">
                             <h4 style=\"font-size: 20px\" class=\"card-title\">

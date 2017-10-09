@@ -51,8 +51,17 @@ class Link extends CI_Controller{
         }
         elseif ($x=="marketing"){
 
-            $this->load->view('marketing');
+            $result = $this->auth_model->find_all_items();
+            $data['item_list'] = null;
+            if ($result){
+                $data['item_list'] = $result;
+                $this->load->view('marketing.php',$data);
+            }
+            else{
+                echo "Page Not Found";
+            }
         }
+
         elseif ($x=="services"){
 
             $this->load->view('services');
