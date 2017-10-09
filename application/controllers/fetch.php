@@ -30,9 +30,11 @@ class fetch extends CI_Controller
         if ($result){
             foreach ($result as $key => $value) {
                 $i_name=($value['item_name']);
+                $i_id=($value['item_id']);
                 $i_price=($value['price']);
                 $i_image=($value['image']);
                 $link= base_url().'assets/'.$i_image.'.jpg';
+                $more_link=base_url().'index.php/link/getdata/'.$i_id;
                 $price='Rs.'.$i_price.'/=';
 
 
@@ -44,7 +46,7 @@ class fetch extends CI_Controller
 
                             </h4>
                             <p style=\"font-size:15px\"  class=\"card-text\">$price</p>
-                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=\"#\">more</a></p>
+                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$more_link.">more</a></p>
                     </div>
                         <br>
 
