@@ -230,8 +230,8 @@
     <div class="container">
         <div class="row">
             <div class="grid_12">
-                <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+                <div class="copyright"><span class="brand">WebStation Technology (Pvt) Ltd</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+                    <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> university of colombo school of computing</span></a></div>
                 </div>
             </div>
         </div>
