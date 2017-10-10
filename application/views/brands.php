@@ -122,11 +122,11 @@
                     <div class="navigation ">
                         <nav>
                             <ul class="sf-menu">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="current"><a href="about.html">About</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
+                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/2"">About</a></li>
+                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
+                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
+                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
                             </ul>
                         </nav>
                         <div class="clear"></div>
