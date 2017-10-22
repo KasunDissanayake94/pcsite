@@ -1,9 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Log In</title>
+    <title>Services</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
@@ -80,14 +78,11 @@
 <!--=====================
           Content
 ======================-->
-
 <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
     <div class="container">
         <div class="row">
             <div class="grid_12">
                 <h3>Login</h3>
-
-            </div>
 
             <?php if (isset($_SESSION['success'])){
 
@@ -97,46 +92,70 @@
             }
             ?>
             <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-            <div class="grid_12">
-                
-                <form action="" method="POST">
-                    <table>
-                        <tr>
-                            <div class="form-group">
-                                <td>
-                                    <label for="username" class="label-default">Username:</label>
-                                </td>
-                                <td>
-                                    <input class="form-control" name="username" id="username" type="text">
-                                </td>
-                            </div>
-                        </tr>
-                        <br><br>
 
-                        <tr>
-                            <div class="form-group">
-                                <td>
-                                    <label for="password" class="label-default">Password:</label>
-                                </td>
-                                <td>
-                                    <input class="form-control" name="password" id="password" type="password">
-                                </td>
-                            </div>
-                        </tr>
 
-                        <tr>
-                            <div class="text-center">
+
+            <form action="" method="POST">
+                <table>
+                    <tr>
+                        <div class="form-group">
+                            <td>
+                                <label style="font-family: sans-serif" for="username" class="label-default">Username:</label>
+                            </td>
+                            <br>
+                            <td>
+                                <input class="form-control" name="username" id="username" type="text">
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="form-group">
+                            <td>
+                                <br>
+                            </td>
+                            <br><br>
+                            <td>
+
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="form-group">
+                            <td>
+                                <label style="margin-right: 20px;font-family: sans-serif" for="password" class="label-default">Password:</label>
+                            </td>
+                            <td>
+                                <input class="form-control" name="password" id="password" type="password">
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="form-group">
+                            <td>
+                                <br>
+                            </td>
+                            <br><br>
+                            <td>
+
+                            </td>
+                        </div>
+                    </tr>
+
+                    <tr>
+                        <div class="text-center">
                             <td></td>
                             <td>
                                 <button class="btn btn-primary" name="login">Login</button>
                             </td>
-                        </tr>
-                    </div>
+                    </tr>
+                </table>
 
-                </form>
+            </form>
+
+
             </div>
-        </div>
-    </div>
+        </div></div>
+    </article>
 </section>
 <!--==============================
               footer
@@ -145,8 +164,8 @@
     <div class="container">
         <div class="row">
             <div class="grid_12">
-                <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+                <div class="copyright"><span class="brand">WebStation Technology (Pvt) Ltd</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+                    <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> University of Colombo School of Computing</span></a></div>
                 </div>
             </div>
         </div>

@@ -224,15 +224,15 @@
               footer
 =================================-->
 <footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="grid_12"> 
-        <div class="copyright"><span class="brand">WebStation Technology (Pvt) Ltd</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-          <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> university of colombo school of computing</span></a></div>
+    <div class="container">
+        <div class="row">
+            <div class="grid_12">
+                <div class="copyright"><span class="brand">WebStation Technology (Pvt) Ltd</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+                    <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> University of Colombo School of Computing</span></a></div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>  
 </footer>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 </body>

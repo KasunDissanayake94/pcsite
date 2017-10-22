@@ -80,133 +80,175 @@
 <!--==============================
               content
 =================================-->
+<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
+    <div class="container">
+        <div class="row">
+            <div class="grid_12">
+                <h3>User Registration</h3>
 
-      <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-          <div class="container">
-              <div class="row">
-                  <div class="grid_12">
-                      <h3>Register</h3>
-                      <p>Fill the details to register our website</p>
+                <?php if (isset($_SESSION['success'])){
 
-                  </div>
+                    ?>
+                    <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
+                    <?php
+                }
+                ?>
+                <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
+                <br>
 
 
-                  <?php if (isset($_SESSION['success'])){
 
-                      ?>
-                      <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-                      <?php
-                  }
-                  ?>
-                  <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-                  <div class="grid_12">
+                <form action="" method="POST">
+                    <table>
+                        <tr>
+                            <div class="form-group">
+                                <td>
+                                    <label style="margin-right: 20px;font-family: sans-serif" for="username" class="label-default">Username:</label>
+                                </td>
+                                <td>
+                                    <input class="form-control" name="username" id="username" type="text">
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
+                                <td>
+                                    <br>
+                                </td>
+                                <td>
+                                </td>
+                            </div>
+                        </tr>
 
-                      <form action="" method="POST">
-                          <table>
-                            <tr>
-                              <div class="form-group">
+                        <tr>
+                            <div class="form-group">
                                 <td>
-                                  <label for="username" class="label-default">Username:</label>
+                                    <label style="margin-right: 20px;font-family: sans-serif" for="email" class="label-default">Email:</label>
                                 </td>
                                 <td>
-                                  <input class="form-control" name="username" id="username" type="text">
+                                    <input class="form-control" name="email" id="email" type="text">
                                 </td>
-                              </div>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr>
-                              <div class="form-group">
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
                                 <td>
-                                  <label for="email" class="label-default">Email:</label>
+                                    <br>
                                 </td>
                                 <td>
-                                  <input class="form-control" name="email" id="email" type="text">
                                 </td>
-                              </div>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr>
-                              <div class="form-group">
+                            </div>
+                        </tr>
+
+
+                        <tr>
+                            <div class="form-group">
                                 <td>
-                                  <label for="password" class="label-default">Password:</label>
+                                    <label style="margin-right: 20px;font-family: sans-serif" for="password" class="label-default">Password:</label>
                                 </td>
                                 <td>
-                                  <input class="form-control" name="password" id="password" type="password">
+                                    <input class="form-control" name="password" id="password" type="password">
                                 </td>
-                              </div>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr>
-                              <div class="form-group">
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
                                 <td>
-                                  <label for="password2" class="label-default">Confirm Password::</label>
+                                    <br>
                                 </td>
                                 <td>
-                                  <input class="form-control" name="password2" id="password2" type="password">
                                 </td>
-                              </div>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr>
-                              <div class="form-group">
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div class="form-group">
                                 <td>
-                                  <label for="gender" class="label-default">Gender:</label>
+                                    <label style="margin-right: 20px;font-family: sans-serif" for="password2" class="label-default">Confirm Password:</label>
                                 </td>
                                 <td>
-                                  <select class="form-control" id="gender" name="gender">
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                  </select>
+                                    <input class="form-control" name="password2" id="password2" type="password">
                                 </td>
-                              </div>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr>
-                              <div class="form-group">
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
                                 <td>
-                                  <label for="telephone" class="label-default">Telephone:</label>
+                                    <br>
                                 </td>
                                 <td>
-                                  <input class="form-control" name="telephone" id="telephone" type="text">
                                 </td>
-                              </div>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr>
-                              <div class="text-center">
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div class="form-group">
+                                <td>
+                                    <label style="margin-right: 20px;font-family: sans-serif" for="gender" class="label-default">Gender:</label>
+                                </td>
+                                <td>
+                                    <select class="form-control" id="gender" name="gender">
+                                        <option style="margin-right: 20px;font-family: sans-serif" value="Male">Male</option>
+                                        <option style="margin-right: 20px;font-family: sans-serif" value="Female">Female</option>
+                                    </select>
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
+                                <td>
+                                    <br>
+                                </td>
+                                <td>
+                                </td>
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div class="form-group">
+                                <td>
+                                    <label style="margin-right: 20px;font-family: sans-serif" for="telephone" class="label-default">Telephone:</label>
+                                </td>
+                                <td>
+                                    <input class="form-control" name="telephone" id="telephone" type="text">
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
+                                <td>
+                                    <br>
+                                </td>
+                                <td>
+                                </td>
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div class="text-center">
                                 <td></td>
                                 <td>
-                                  <button class="btn btn-primary" name="register">Register</button>
+                                    <button class="btn btn-primary" name="register">Register</button>
                                 </td>
-                              </div>
-                            </tr>
+                            </div>
+                        </tr>
 
-                          </table>                          
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </section>
+                    </table>
+                </form>
+
+
+            </div>
+        </div></div>
+    </article>
+</section>
 
 <!--==============================
               footer
@@ -215,8 +257,8 @@
     <div class="container">
         <div class="row">
             <div class="grid_12">
-                <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+                <div class="copyright"><span class="brand">WebStation Technology (Pvt) Ltd</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+                    <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> University of Colombo School of Computing</span></a></div>
                 </div>
             </div>
         </div>
