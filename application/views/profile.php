@@ -96,22 +96,13 @@
                         <h4 class="modal-title">Add User Form</h4>
                     </div>
                     <div class="modal-body">
-                        <form class="form-horizontal" action="../controller/admin_controller.php" method="post" id="myform">
+                        <form class="form-horizontal" action="<?php echo base_url();?>index.php/manager/add_user_details" method="post" id="myform">
 
 
                             <div class="form-group">
                                 <label class="control-label col-sm-2">Username :</label>
                                 <div class="col-sm-10">
                                     <input class="form-control" id="username" type="email" name="username" placeholder="Valid Email here" required/>
-                                </div>
-                            </div>
-
-
-
-                            <div class="form-group">
-                                <label class="control-label col-sm-2">NIC :</label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="nic" type="text" name="nic" placeholder="xxxxxxxxxV" required maxlength="10" minlength="10" size="10"/>
                                 </div>
                             </div>
 
@@ -132,13 +123,9 @@
                                 <label class="control-label col-sm-2">Type :</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" name="type">
-                                        <option value="admin">Admin</option>
-                                        <option value="student">Student</option>
-                                        <option value="ar_acedamic">Assistant Registrar(Acadamic)</option>
-                                        <option value="caa_academic">Computer Application Assistant(Acadamic)</option>
-                                        <option value="SAR_exam">Senior Assistant Registrar(Examination)</option>
-                                        <option value="CAA_exam">Computer Application Assistant(Examination)</option>
-
+                                        <option value="manager">Manager</option>
+                                        <option value="shop_director">Shop Director</option>
+                                        <option value="editor">Editor</option>
                                     </select>
                                 </div>
                             </div>
