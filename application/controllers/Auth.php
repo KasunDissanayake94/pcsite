@@ -9,6 +9,11 @@ class Auth extends CI_Controller{
 
     public function login(){
 
+        $msg = '<font color=green>Enter your username and password here to sign in.</font><br />';
+        $data['msg'] = $msg;
+        $this->load->view('login1', $data);
+	}
+	public function login_user(){
         $this->form_validation->set_rules('username','Username','required');
         $this->form_validation->set_rules('password','Password','required|min_length[5]');
 
@@ -24,22 +29,31 @@ class Auth extends CI_Controller{
             $query = $this->db->get();
             $user = $query->row();
 
-            if ($user->email){
+            if ($user->type=="manager"){
                 $this->session->set_flashdata("success","You are logged in");
 
+                //maintain a session to user status already logged in or not
                 $_SESSION['user_logged']= TRUE;
-                $_SESSION['username'] =$user->username;
+                $_SESSION['fname'] =$user->first_name;
+                $_SESSION['lname'] =$user->last_name;
 
                 //redirect to the profile page
                 redirect("user/profile","refresh");
             }else{
-                $this->session->set_flashdata("error","No such user found");
-                redirect("auth/login","refresh");
+                // If user did not validate, then show them login page again
+                $msg = '<font color=red>Please Enter your Username and Password First</font><br />';
+                $data['msg'] = $msg;
+                $this->load->view('login1', $data);
+
             }
 
+        }else{
+            $msg = '<font color=red>Invalid username and/or password.</font><br />';
+            $data['msg'] = $msg;
+            $this->load->view('login1', $data);
         }
-		$this->load->view('login1');
-	}
+
+    }
 	public function logout(){
 
 	    unset($_SESSION);

@@ -88,7 +88,7 @@
 
             </div>
                 Hello <?php
-                echo $_SESSION['username'];
+                echo $_SESSION['fname']."".$_SESSION['lname'];
                 ?>
                 <br> <br>
                 <a href="<?php echo base_url(); ?>index.php/auth/logout">Logout</a>

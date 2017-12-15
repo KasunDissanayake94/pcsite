@@ -30,20 +30,22 @@
   </div>
   <div class="form">
     <h2>Sign in to your account</h2>
-    <form>
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
-      <button>Sign in</button>
+    <form action="<?php echo base_url();?>index.php/Auth/login_user" method="post" id="loginform">
+        <?php if(! is_null($msg)) echo $msg;?>
+        <br>
+      <input type="email" name="username" placeholder="username"/>
+      <input type="password" name="password" placeholder="Password" maxlength="10" minlength="5"/>
+      <button type="submit">Sign in</button>
     </form>
   </div>
   <div class="form">
     <h2>Create an account</h2>
-    <form>
+    <form action="" method="post" id="createuserform">
       <input type="text" placeholder="Username"/>
       <input type="password" placeholder="Password"/>
       <input type="email" placeholder="Email Address"/>
       <input type="tel" placeholder="Phone Number"/>
-      <button>Register</button>
+      <button type="submit" value="login">Register</button>
     </form>
   </div>
   <div class="cta"><a href="http://andytran.me">Forgot your password?</a></div>
