@@ -54,7 +54,7 @@
                     <div class="col-md-5">
                         <div class="header-rightside">
                             <ul class="list-inline header-top pull-left">
-                                <li><a href="#"></a>Home</li>
+                                <a href="#">Home</a>
                                 <li><a href="#"></a>About</li>
                                 <li><a href="#"></a>Services</li>
                                 <li><a href="#"></a>Blog</li>
@@ -64,10 +64,10 @@
                             <ul class="list-inline header-top pull-right">
                                 <!-- <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li> -->
 
+
                                 <li>
                                     <a href="#" class="icon-info">
                                         <i class="fa fa-bell" aria-hidden="true"></i>
-                                        <span class="label label-primary">3</span>
                                     </a>
                                 </li>
                                 <li class="dropdown">

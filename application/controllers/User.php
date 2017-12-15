@@ -33,7 +33,7 @@ class User extends CI_Controller{
             redirect("auth/login1");
         }
         else{
-            $this->load->view('shopdirector_profile');
+            $this->load->view('shop_director');
         }
     }
     public function editor(){
@@ -43,7 +43,7 @@ class User extends CI_Controller{
             redirect("auth/login1");
         }
         else{
-            $this->load->view('editor_profile');
+            $this->load->view('editor');
         }
     }
 }

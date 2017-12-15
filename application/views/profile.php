@@ -54,12 +54,11 @@
                     <div class="col-md-5">
                         <div class="header-rightside">
                             <ul class="list-inline header-top pull-left">
-                                <li><a href="#"></a>Home</li>
-                                <li><a href="#"></a>About</li>
-                                <li><a href="#"></a>Services</li>
-                                <li><a href="#"></a>Blog</li>
-                                <li><a href="#"></a>Contacts</li>
-                                <li><a href="#"></a></li>
+                                <a href="#" style="color: black">Home</a>
+                                <a href="#" style="color: black">Services</a>
+                                <a href="#" style="color: black">Blog</a>
+                                <a href="#" style="color: black">Contacts</a>
+
                             </ul>
                             <ul class="list-inline header-top pull-right">
                                 <!-- <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li> -->
@@ -70,6 +69,7 @@
                                         <span class="label label-primary">3</span>
                                     </a>
                                 </li>
+
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['type'] ?>
                                         <b class="caret"></b></a>
