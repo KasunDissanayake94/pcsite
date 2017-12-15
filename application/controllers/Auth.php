@@ -38,7 +38,7 @@ class Auth extends CI_Controller{
             }
 
         }
-		$this->load->view('login');
+		$this->load->view('login1');
 	}
 	public function logout(){
 
