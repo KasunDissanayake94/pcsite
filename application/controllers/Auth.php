@@ -21,6 +21,7 @@ class Auth extends CI_Controller{
             $username=$_POST['username'];
             $password=$_POST['password'];
 
+
             //check the user from the database
             $this->db->select ('*');
             $this->db->from('users');
@@ -28,17 +29,37 @@ class Auth extends CI_Controller{
 
             $query = $this->db->get();
             $user = $query->row();
+            //maintain a session for prticular user
+            $_SESSION['type']=$user->type;
 
             if ($user->type=="manager"){
-                $this->session->set_flashdata("success","You are logged in");
-
                 //maintain a session to user status already logged in or not
                 $_SESSION['user_logged']= TRUE;
                 $_SESSION['fname'] =$user->first_name;
                 $_SESSION['lname'] =$user->last_name;
 
                 //redirect to the profile page
-                redirect("user/profile","refresh");
+                redirect("user/manager","refresh");
+            }
+            elseif($user->type=='editor'){
+                //maintain a session to user status already logged in or not
+                $_SESSION['user_logged']= TRUE;
+                $_SESSION['fname'] =$user->first_name;
+                $_SESSION['lname'] =$user->last_name;
+
+                //redirect to the profile page
+                redirect("user/editor","refresh");
+
+            }
+            elseif($user->type=='shop_director'){
+                //maintain a session to user status already logged in or not
+                $_SESSION['user_logged']= TRUE;
+                $_SESSION['fname'] =$user->first_name;
+                $_SESSION['lname'] =$user->last_name;
+
+                //redirect to the profile page
+                redirect("user/shop_editor","refresh");
+
             }else{
                 // If user did not validate, then show them login page again
                 $msg = '<font color=red>Please Enter your Username and Password First</font><br />';

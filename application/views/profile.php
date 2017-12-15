@@ -50,6 +50,13 @@
                         <img src="<?php echo base_url();?>assets/images/logo.png" alt="Logo alt">
                     </a>
                 </h1>
+                <ul class="sf-menu">
+                    <li style="float: right;"><a href="<?php echo base_url(); ?>index.php/auth/logout">Logout</a></li>
+                    <label style="float: right"> | </label>
+                    <li style="float: right;">You logged as <?php
+                        echo $_SESSION['type'];
+                        ?> </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -91,7 +98,7 @@
                 echo $_SESSION['fname']."".$_SESSION['lname'];
                 ?>
                 <br> <br>
-                <a href="<?php echo base_url(); ?>index.php/auth/logout">Logout</a>
+
             </div>
             </div>
         </div>
