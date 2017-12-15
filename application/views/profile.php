@@ -28,8 +28,8 @@
             </div>
             <div class="navi">
                 <ul>
-                    <li><a href="../controller/admin_controller.php?op=Profile"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">My Profile</span></a></li>
-                    <li class="active"><a href="../controller/admin_controller.php?op=Add User"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Add User</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/manager/my_profile"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">My Profile</span></a></li>
+                    <li class="active"><a href="<?php echo base_url();?>index.php/manager/add_user"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Add User</span></a></li>
                     <li><a href="../controller/admin_controller.php?op=Search User"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Search User</span></a></li>
                     <li><a href="../controller/admin_controller.php?op=Update User"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Update User</span></a></li>
                 </ul>
@@ -77,9 +77,7 @@
                                         <li>
                                             <div class="navbar-content">
                                                 <span><?php echo $_SESSION['fname'] ?> <?php echo $_SESSION['lname'] ?></span>
-                                                <p class="text-muted small">
-                                                    <?php echo $_SESSION['username'] ?>
-                                                </p>
+
                                                 <div class="divider">
                                                 </div>
                                                 <a href="../index.php?op=logout" class="view btn-sm active">log out</a>
