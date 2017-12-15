@@ -28,10 +28,10 @@
             </div>
             <div class="navi">
                 <ul>
-                    <li><a href="<?php echo base_url();?>index.php/manager/add_user"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">My Profile</span></a></li>
-                    <li class="active"><a href="<?php echo base_url();?>index.php/manager/my_profile"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Add User</span></a></li>
-                    <li><a href="../controller/admin_controller.php?op=Search User"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Search User</span></a></li>
-                    <li><a href="../controller/admin_controller.php?op=Update User"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Update User</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/manager/my_profile"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">My Profile</span></a></li>
+                    <li class="active"><a href="<?php echo base_url();?>index.php/manager/add_user"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Add User</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/manager/search_user"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Search User</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/manager/update_user"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Update User</span></a></li>
                 </ul>
             </div>
         </div>

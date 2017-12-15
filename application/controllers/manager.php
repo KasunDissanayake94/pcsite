@@ -9,10 +9,10 @@ class manager extends CI_Controller{
         $this->load->view('profile');
     }
     public function search_user(){
-        $this->load->view('search');
+        $this->load->view('search_user');
     }
     public function update_user(){
-        $this->load->view('update');
+        $this->load->view('update_user');
     }
 }
 
