@@ -391,7 +391,7 @@ header {
   position: relative;
   z-index: 999;
   padding: 18px 0 77px;
-  background: url(../images/slide.jpg) center 0 no-repeat;
+  background: url(../images/background.jpg) center 0 no-repeat;
 }
 header .rel {
   z-index: 999;

@@ -33,7 +33,6 @@
 <![endif]-->
 <!--[if lt IE 9]>
 <script src="<?php echo base_url();?>assets/js/html5shiv.js"></script>
-<link rel="stylesheet" media="screen" href="<?php echo base_url();?>assets/css/ie.css">
 <![endif]-->
 </head>
 <body class="page1" id="top">
