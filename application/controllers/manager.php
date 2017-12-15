@@ -25,12 +25,17 @@ class manager extends CI_Controller{
         $data = array(
             'username' => $username,
             'password' => $password,
-            'fname' => $fname,
-            'lname' => $lname,
+            'first_name' => $fname,
+            'last_name' => $lname,
             'type' => $type
         );
 
-        $this->load->model('add_user',$data);
+        $this->load->model('manager_model');
+        $this->manager_model->add_user($data);
+        $data['message'] = 'Data Inserted Successfully';
+//Loading View
+        $this->load->view('profile', $data);
+
     }
     public function logout(){
 

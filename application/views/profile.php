@@ -97,6 +97,10 @@
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal" action="<?php echo base_url();?>index.php/manager/add_user_details" method="post" id="myform">
+                            <?php if (isset($message)) { ?>
+                                <CENTER><h3 style="color:green;">Data inserted successfully</h3></CENTER><br>
+                            <?php } ?>
+                            
 
 
                             <div class="form-group">

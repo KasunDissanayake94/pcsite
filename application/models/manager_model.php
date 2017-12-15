@@ -52,7 +52,9 @@ class manager_model extends CI_Model{
         return $query;
     }
 
-    public function add_user(){
+    public function add_user($data){
+        $this->db->insert('users', $data);
+
 
     }
 }
