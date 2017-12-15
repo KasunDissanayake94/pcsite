@@ -80,7 +80,7 @@
 
                                                 <div class="divider">
                                                 </div>
-                                                <a href="../index.php?op=logout" class="view btn-sm active">log out</a>
+                                                <a href="<?php echo base_url();?>index.php/manager/logout" class="view btn-sm active">log out</a>
                                             </div>
                                         </li>
                                     </ul>

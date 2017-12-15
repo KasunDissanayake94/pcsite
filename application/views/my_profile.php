@@ -80,7 +80,7 @@
 
                                                 <div class="divider">
                                                 </div>
-                                                <a href="../index.php?op=logout" class="view btn-sm active">log out</a>
+                                                <a href="<?php echo base_url();?>index.php/manager/logout" class="view btn-sm active">log out</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -91,13 +91,36 @@
                 </header>
             </div>
             <div class="user-dashboard">
-                <div class="modal-content">
-                    <div class="modal-header login-header">
-                        <h4 class="modal-title">Add User Form</h4>
-                    </div>
-                    <div class="modal-body">
 
+                <div id="content">
+                    <h3>Profile</h3>
+                    <div id="line"></div>
+
+                    <div id="table_lecturer">
+                        <table class="zui-table zui-table-horizontal">
+                            <tbody>
+                            <tr>
+                                <td><b>First Name</b></td>
+                                <td><?php echo $_SESSION['fname']?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Last Name</b></td>
+                                <td><?php echo $_SESSION['lname']?></td>
+                            </tr>
+                            <tr>
+                                <td><b>Email</b></td>
+                                <td><?php echo $_SESSION['username'];?></td>
+                            </tr>
+                            <tr>
+                                <td><b>User Role</b></td>
+                                <td><?php echo $_SESSION['type'];?></td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
                     </div>
+
                 </div>
             </div>
         </div>
