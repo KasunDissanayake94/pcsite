@@ -191,39 +191,40 @@
 
 
                 <!-- Item images here -->
-                <?php foreach($item_list as $item){?>
-                    <!-- insert each and every sales item in a loop -->
-                    <?php $name=$item->item_name?>
-
-                    <div class="member">
-                        <br>
-                        <img style="font-size: 5px" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Click the link to see more info"  />
-                        <div class="name">
-                            <h4 style="font-size: 20px" class="card-title">
-                                <?=$item->item_name;?>
-
-                            </h4>
-                            <p style="font-size: 15px"  class="card-text">Rs.<?=$item->price;?>/=</p>
-                            <p style="color: #003399; font-size: 15px"  class="card-text"><a href="<?php echo base_url();?>index.php/link/getdata/<?=$item->item_id;?>">more</a></p>
-                            <button  style="padding: 15px 25px;
-                              font-size: 9px;
-                              text-align: center;
-                              cursor: pointer;
-                              outline: none;
-                              color: #fff;
-                              background-color: #00B4CC;
-                              border: none;
-                              border-radius: 15px;
-                              box-shadow: 0 9px #999;"><a href="<?php echo base_url();?>index.php/link/getdata/<?=$item->item_id;?>">more</a>
-                            </button>
-                    </div>
-                        <br>
-
-
-                        </div>
+                <?php foreach($item_list as $item){
+                    $item_name=($item->item_name);
+                    $category=($item->category);
+                    $description=($item->description);
+                    $image=($item->image);
+                    $link= '../view/images/profile_pic/'.$image.'.jpg';
+                    //Call the admin controller calss to get the more information about the student
+                    echo "<div class=\"member\" style='float:left;
+    width:210px;
+    height:350px;
+    background:#fff;
+    padding:3px;
+    margin-right:3px;
+    margin-left:3px;
+    -moz-box-shadow: 1px 2px 2px #ccc;
+    -webkit-box-shadow: 1px 2px 2px #ccc;
+    box-shadow: 1px 2px 2px #ccc;'>
+    
+    <br><br>
+    <img style=\"width: 200px;\" src=".$link. " alt=\"Click the link to see more info\"  />
+    <div class=\"name\">
+        <h4 style=\"font-size: 20px\" class=\"card-title\">
+        $item_name
+        </h4>
+        <p style=\"font-size:15px\"  class=\"card-text\"></p>
+        <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$category.">More Information</a></p>
+    </div>
+    
 
 
-                <?php }?>
+</div>";
+
+
+                 }?>
                 </div>
 
             </div>

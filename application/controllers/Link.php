@@ -47,7 +47,7 @@ class Link extends CI_Controller{
             $data['item_list'] = null;
             if ($result){
                 $data['item_list'] = $result;
-                $this->load->view('sales.php',$data);
+                $this->load->view('sales1.php',$data);
             }
             else{
                 echo "Page Not Found";

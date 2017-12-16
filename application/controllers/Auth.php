@@ -245,9 +245,11 @@ class Auth extends CI_Controller
             foreach ($data['booktable'] as $objects)  {
                 $item_name=$objects->item_name;
                 $category=$objects->category;
-                $price=$objects->price;
+                $item_id=($objects->item_id);
+                $price="Rs.".$objects->price;
                 $image=$objects->image;
                 $link= base_url().'assets/'.$image.'.jpg';
+                $more_link=base_url().'index.php/link/getdata/'.$item_id;
                 //Call the admin controller calss to get the more information about the student
                 echo "<div class=\"member\" style='float:left;
     width:210px;
@@ -266,8 +268,8 @@ class Auth extends CI_Controller
         <h4 style=\"font-size: 20px\" class=\"card-title\">
         $item_name 
         </h4>
-        <p style=\"font-size:15px\"  class=\"card-text\"></p>
-        <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$category.">More Information</a></p>
+        <p style=\"font-size:15px\"  class=\"card-text\">$price</p>
+        <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$more_link.">More </a></p>
     </div>
     
 
