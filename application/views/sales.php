@@ -120,7 +120,8 @@
                                 <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
                                 <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
                                 <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
-                            </ul>
+                                <li><a href="<?php echo base_url();?>index.php/link/go/6">Sales1</a></li>
+                           </ul>
                         </nav>
                         <div class="clear"></div>
                     </div>
@@ -213,7 +214,7 @@
                               background-color: #00B4CC;
                               border: none;
                               border-radius: 15px;
-                              box-shadow: 0 9px #999;"><a href="<?php echo base_url();?>index.php/link/addcart/<?=$item->item_id;?>">Add to cart</a>
+                              box-shadow: 0 9px #999;"><a href="<?php echo base_url();?>index.php/link/getdata/<?=$item->item_id;?>">more</a>
                             </button>
                     </div>
                         <br>

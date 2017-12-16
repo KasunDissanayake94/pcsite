@@ -83,5 +83,45 @@ class Auth_model extends CI_Model{
 
 
     }
+    //live search
+    public function booktable($search){
+
+        $query = $this
+            ->db
+            ->select('*')
+            ->from('sales_item')
+            ->like('item_name',$search)
+            ->or_like('description',$search)
+            ->get();
+
+        if($query->num_rows()>0)
+        {
+            return $query->result();
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+    public function booktable1(){
+
+        $query = $this
+            ->db
+            ->select('*')
+            ->from('sales_item')
+            ->get();
+
+        if($query->num_rows()>0)
+        {
+            return $query->result();
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
 }
 
