@@ -101,7 +101,10 @@
         </div>
         <div class="grid_5">
           <h2>Strong <br> Stable <br> Safe</h2>
-          We help you run your business  in a successful way
+          <br>
+          <br>
+          <font color="black"><b>
+          We help you run your business  in a successful way</font></b>
         </div>
       </div>
     </div>
@@ -111,18 +114,23 @@
   <div class="container">
     <div class="row">
       <div class="grid_3">
-        <div class="block-1_count">10</div>
-        Years of <br> Experience
+        <div class="block-1_count">1</div>
+        Year of <br> Experience
         <div class="clear"></div>
       </div>
       <div class="grid_3">
-        <div class="block-1_count">30</div>
-        Successful <br> Projects
+        <div class="block-1_count"></div>
+        Computer Hardware <br> Sellers
         <div class="clear"></div>
       </div>
       <div class="grid_3">
-        <div class="block-1_count">20</div>
-        Partner <br> Projects
+        <div class="block-1_count"></div>
+        CCTV Camera <br> Fitting
+        <div class="clear"></div>
+      </div>
+      <div class="grid_3">
+        <div class="block-1_count"></div>
+        Trusted Service<br> Crew
         <div class="clear"></div>
       </div>
       <div class="grid_3">
@@ -134,7 +142,7 @@
 <!--=====================
           Content
 ======================-->
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
+<section id="content"><div class="ic"></div>
   <div class="container">
     <div class="row">
       <div class="grid_10 preffix_1 ta__center">
@@ -142,8 +150,9 @@
           <h2 class="head__1">
             Welcome
           </h2>
-          <p>Read more about the <a href=" http://blog.templatemonster.com/free-website-templates/" rel="nofollow" class="color1">freebie</a> here. <br> Go to TemplateMonster.com and find more <a href="http://www.templatemonster.com/properties/topic/business-services/" rel="nofollow" class="color1">goodies</a> of this kind </p>
-          Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet site amet est vel, commodo venenatis eros. Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. nulla, eu sodales arcu. Quisque viverra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan 
+          <!--
+          <p>Read more about the <a href=" http://blog.templatemonster.com/free-website-templates/" rel="nofollow" class="color1">freebie</a> here. <br> Go to TemplateMonster.com and find more <a href="http://www.templatemonster.com/properties/topic/business-services/" rel="nofollow" class="color1">goodies</a> of this kind </p>-->
+          WebStation Technologies is the newly established company in Battaramulla. Mainly we are focusing on selling and renting Computer Hardware, PCs and Laptops. At the same time we are working on fitting CCTV cameras. Our official website will be helpful to you to find your needs and services. There is more friendly and active service crew with us. So welcome you all to visit our site and make your dreams true. 
         </div>
       </div>
     </div>
@@ -159,7 +168,9 @@
               <div class="text1"><a href="#">Experience</a></div>
               <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert varius augue, eu consectetur ligulaam dui eros dertoli.</p>Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tinciduntol nulla, eu sodales vertomin
               <br>
+              <!--
               <a href="#" class="link-1">more</a>
+              -->
             </div>
           </div>
           <div class="block-2">
@@ -168,7 +179,9 @@
               <div class="text1"><a href="#">Marketing</a></div>
               <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert varius augue, eu consectetur ligulaam dui eros dertoli.</p>Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tinciduntol nulla, eu sodales vertomin
               <br>
+              <!--
               <a href="#" class="link-1">more</a>
+              -->
             </div>
           </div>
         </div>
@@ -191,9 +204,9 @@
       <div class="grid_5">
         <h4>About Company</h4>
         <img src="<?php echo base_url();?>assets/images/page1_img3.jpg" alt="" class="img_inner fleft">
-          <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert arius augue, eu consectetur </p>
-          <p class="offset__1">Eligulaam dui eros dertolisce dertolo adipiscing quam id risus sagittis</p>
-          Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert rius augue, eu consectetur larem dui eros dertolisce dertolo 
+          <p>WebStation Technologies is the newly established company in Battaramulla..</p>
+          <p class="offset__1"> Mainly we are focusing on selling and renting Computer Hardware, PCs and Laptops.</p>
+           At the same time we are working on fitting CCTV cameras.
       </div>
       <div class="grid_4">
         <h4>Solutions</h4>
@@ -210,7 +223,7 @@
         <h4>Contact Info</h4>
         <address>
           <ul class="cont_address">
-            <li>8901 Marmora Road, Glasgow, D04 89GR</li>
+            <li>No:80, Wickramasinghepura, Battaramulla</li>
             <li>+1 (800) 123 9876</li>
             <li><a href="#">info@demolink.org</a></li>
             <li><a href="#">www.demolink.org</a></li>

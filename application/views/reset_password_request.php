@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Sign in</title>
+  <title>Reset Password</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -13,40 +13,19 @@
 
   
 </head>
-
 <body>
-  
-<!-- Form Mixin-->
-<!-- Input Mixin-->
-<!-- Button Mixin-->
-<!-- Pen Title-->
 <div class="pen-title">
-  <h1>Sign in</h1>
+  <h1>Reset Password</h1>
 </div>
 <!-- Form Module-->
-<div class="module form-module">
-  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
-    <div class="tooltip">New User</div>
-  </div>
+<div class="module form-module">  
   <div class="form">
-    <h2>Sign in to your account</h2>
+    <h2>Send Request</h2>
     <form>
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
-      <button>Sign in</button>
-    </form>
-  </div>
-  <div class="form">
-    <h2>Create an account</h2>
-    <form>
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
       <input type="email" placeholder="Email Address"/>
-      <input type="tel" placeholder="Phone Number"/>
-      <button>Register</button>
+      <button type="Submit">Submit</button>
     </form>
   </div>
-  <div class="cta"><a href= "<?php echo base_url();?>application/views/reset_password_request">Forgot your password?</a></div>
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
