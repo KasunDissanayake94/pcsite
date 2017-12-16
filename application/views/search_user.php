@@ -91,14 +91,19 @@
                 </header>
             </div>
             <div class="user-dashboard">
-                <div class="modal-content">
-                    <div class="modal-header login-header">
-                        <h4 class="modal-title">Add User Form</h4>
-                    </div>
-                    <div class="modal-body">
+                <div class="panel-heading">
+                    <div class="form-group">
 
                     </div>
+                    <h4>
+                        <b>User Details</b>
+                    </h4>
+                    <label><input type="text" name="search_text" id="search_text" placeholder="Search by User Details" class="form-control" /></label>
                 </div>
+
+
+                <div id="result"></div>
+
             </div>
         </div>
     </div>
@@ -124,5 +129,35 @@
             }
         });
 
+    });
+</script>
+<script>
+    $(document).ready(function(){
+
+        load_data();
+
+        function load_data(query)
+        {
+            $.ajax({
+                url:"<?php echo base_url();?>index.php/fetch/fetch_users",
+                method:"POST",
+                data:{query:query},
+                success:function(data)
+                {
+                    $('#result').html(data);
+                }
+            });
+        }
+        $('#search_text').keyup(function(){
+            var search = $(this).val();
+            if(search != '')
+            {
+                load_data(search);
+            }
+            else
+            {
+                load_data();
+            }
+        });
     });
 </script>

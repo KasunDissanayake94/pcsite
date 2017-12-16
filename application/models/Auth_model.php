@@ -41,6 +41,33 @@ class Auth_model extends CI_Model{
 
         }
     }
+    public function fetch_users(){
+
+        $output = "";
+
+        $data = $_GET['searchData'];
+        if($data == "")
+        {
+            $this->db->select ('*');
+            $this->db->from('users');
+            $query = $this->db->get();
+            $query=$query->result_array();
+            return $query;
+        }
+        else
+        {
+
+
+            $this->db->select ('*');
+            $this->db->from('users');
+            $this->db->like('first_name',$data);
+            $query = $this->db->get();
+            $query=$query->result_array();
+            return $query;
+
+
+        }
+    }
     public function find_details($name){
 
         $this->db->select ('*');

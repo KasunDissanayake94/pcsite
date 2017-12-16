@@ -100,7 +100,7 @@
                             <?php if (isset($message)) { ?>
                                 <CENTER><h3 style="color:green;">Data inserted successfully</h3></CENTER><br>
                             <?php } ?>
-                            
+
 
 
                             <div class="form-group">

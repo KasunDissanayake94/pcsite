@@ -37,6 +37,7 @@ class manager extends CI_Controller{
         $this->load->view('profile', $data);
 
     }
+
     public function logout(){
 
         unset($_SESSION);
