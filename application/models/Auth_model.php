@@ -78,5 +78,10 @@ class Auth_model extends CI_Model{
         $query=$query->result();
         return $query;
     }
+    public function add_customer($data){
+        $this->db->insert('customer', $data);
+
+
+    }
 }
 

@@ -85,35 +85,43 @@ class Auth extends CI_Controller{
     }
 
 	public function register(){
+        $this->form_validation->set_rules('name','Username','required');
+        $this->form_validation->set_rules('email','Email','required|min_length[5]');
+        $this->form_validation->set_rules('password','Password','required|min_length[5]');
+        $this->form_validation->set_rules('repassword','RePassowrd','required|min_length[5]');
 
-	    if (isset($_POST['register'])){
-	        $this->form_validation->set_rules('username','Username','required');
-            $this->form_validation->set_rules('password','Password','required');
-            $this->form_validation->set_rules('email','Email','required|min_length[5]');
-            $this->form_validation->set_rules('password','Password','required|min_length[5]');
-            $this->form_validation->set_rules('password','Confirm Password','required|min_length[5]|matches[password]');
-            $this->form_validation->set_rules('telephone','Telephone','required|min_length[10]');
-
-	        if ($this->form_validation->run() == TRUE){
-	            echo "form validated";
-
-	            //add user to the database
-                $data=array(
-                    'username'=>$_POST['username'],
-                    'password'=>$_POST['password'],
-                    'email'=>$_POST['email']
-
+        if ($this->form_validation->run() == TRUE){
+            $name=$_POST['name'];
+            $email=$_POST['email'];
+            $password=$_POST['password'];
+            $repassword=$_POST['repassword'];
+            if($password==$repassword){
+                $data = array(
+                    'full_name' => $name,
+                    'email' => $email,
+                    'password' => $password
 
                 );
-                $this->db->insert('users',$data);
 
-                $this->session->set_flashdata("success","Your Account has been created");
-                redirect("auth/register","refresh");
+                $this->load->model('auth_model');
+                $this->auth_model->add_customer($data);
+                $data['message'] = 'Data Inserted Successfully';
+//Loading View
+                $this->load->view('index');
 
+            }else{
+                $msg = '<font color=red>Password Different.Try Again</font><br />';
+                $data['msg'] = $msg;
+                $this->load->view('login1', $data);
             }
+
+
+        }else{
+            $msg = '<font color=red>Invalid email and/or name.</font><br />';
+            $data['msg'] = $msg;
+            $this->load->view('login1', $data);
         }
-        //load view
-		$this->load->view('register');
+
     }
 }
 
