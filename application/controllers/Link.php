@@ -78,7 +78,23 @@ class Link extends CI_Controller{
 
 
     }
+    //get item details
     public function getdata($name){
+
+        $result = $this->auth_model->find_details($name);
+
+
+        $data['item_list'] = null;
+        if ($result){
+            $data['item_list'] = $result;
+            $this->load->view('moreinfo',$data);
+        }
+        else{
+            echo "Page Not Found";
+        }
+    }
+    //add item to the cart
+    public function addcart($item){
 
         $result = $this->auth_model->find_details($name);
 

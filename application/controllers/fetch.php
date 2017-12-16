@@ -39,16 +39,26 @@ class fetch extends CI_Controller
 
 
                 echo "<div class=\"member\">
-                        <br><br>
-                        <img style=\"font-size: 20px\" src=".$link. " alt=\"Click the link to see more info\"  />
+                        <br>
+                        <img style=\"font-size: 10px\" src=".$link. " alt=\"Click the link to see more info\"  />
                         <div class=\"name\">
                             <h4 style=\"font-size: 20px\" class=\"card-title\">
                                 $i_name
 
                             </h4>
                             <p style=\"font-size:15px\"  class=\"card-text\">$price</p>
-                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$more_link.">morexcx</a></p>
-                            <button>Add to cart</button>
+                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$more_link.">more</a></p>
+                            <button style=\"padding: 15px 25px;
+                              font-size: 9px;
+                              text-align: center;
+                              cursor: pointer;
+                              outline: none;
+                              color: #fff;
+                              background-color: #00B4CC;
+                              border: none;
+                              border-radius: 15px;
+                              box-shadow: 0 9px #999;\">Add to cart
+                            </button>   
                     </div>
                         <br>
 
