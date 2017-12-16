@@ -3,12 +3,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Services</title>
+    <title>Sales</title>
+    <style>
+        .member {
+            display: inline-block;
+            width:20%;
+            vertical-align: top;
+            text-align:center;
+        }
+        .name {
+            display: inline;
+        }
+        .member img {
+            width: 250px;
+            height:180px;
+            display: block;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
     <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/search.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/navigation.css">
     <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
@@ -18,6 +36,41 @@
     <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
     <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
+
+    <script>
+        $(document).ready(function()
+        {
+            $('#search').keyup(function()
+            {
+                var txt = document.getElementById('search').value;
+                var txt2 = "";
+
+                $.ajax(
+                    {
+                        url:"<?php echo base_url();?>index.php/fetch/livesearch",
+                        method:"get",
+                        data:{searchData:txt},
+                        dataType:"text",
+                        success:function(data)
+                        {
+                            $('#livesearch').html(data);
+                        }
+                    });
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#nav1 li").hover(
+                function() {
+                    $(this).find('ul').slideDown();
+                },
+                function() {
+                    $(this).find('ul').slideUp();
+                });
+        });
+    </script>
     <script>
         $(window).load(function(){
             $().UItoTop({ easingType: 'easeOutQuart' });
@@ -59,7 +112,8 @@
         <div class="container">
             <div class="row">
                 <div class="grid_12 ">
-                    <div class="navigation ">
+
+                    <div class="navigation">
                         <nav>
                             <ul class="sf-menu">
                                 <li><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
@@ -81,36 +135,17 @@
               content
 =================================-->
 
-      <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-          <div class="container">
-              <div class="row">
-                  <div class="grid_12">
-                      <h3>Services</h3>
-                  </div>
+<section class="page1_header" style="background-color: white" >
+    <h1 style="margin-top: 5px; margin-bottom: 5px;margin-left: 5px;"> Shopping Cart</h1>
 
-                  <?php if (isset($_SESSION['success'])){
+    <div class="row">
 
-                      ?>
-                      <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-                      <?php
-                  }
-                  ?>
-                  <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-                  <div class="grid_12">
-                    <h4>
-                      <ul style="list-style-type:square">
-                        <li>All Kinds of Computers Service and Maintenance</li>
-                        <li>Server Repair and Maintenance</li>
-                        <li>CCTV Camera Configuration and Installation</li>
-                        <li>Door Lock Systems Configuration and Installation</li>
-                        <li>Security Alarm System Configuration and Installation</li>
-                        <li>GPS Trackers Configuration and Installation</li>
-                      </ul>
-                    </h4>
-                  </div>
-              </div>
-          </div>
-      </section>
+
+    </div>
+
+    <br><br>
+</section>
+
 
 <!--==============================
               footer

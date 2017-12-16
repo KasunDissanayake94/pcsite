@@ -36,6 +36,9 @@
       <input type="email" name="username" placeholder="username"/>
       <input type="password" name="password" placeholder="Password" maxlength="10" minlength="5"/>
       <button type="submit" value="sign in">Sign in</button>
+        <div class="cta"><a href="<?php echo base_url();?>index.php/link/go/1"">Go to Home</a></div>
+
+
     </form>
   </div>
   <div class="form">
