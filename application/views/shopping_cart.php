@@ -16,11 +16,11 @@
             {
                 echo '
     <div class="col-md-4" style="padding:16px; background-color:#f1f1f1; border:1px solid #ccc; margin-bottom:16px; height:400px" align="center">
-     <img src="'.base_url().'images/'.$row->product_image.'" class="img-thumbnail" /><br />
-     <h4>'.$row->product_name.'</h4>
-     <h3 class="text-danger">$'.$row->product_price.'</h3>
-     <input type="text" name="quantity" class="form-control quantity" id="'.$row->product_id.'" /><br />
-     <button type="button" name="add_cart" class="btn btn-success add_cart" data-productname="'.$row->product_name.'" data-price="'.$row->product_price.'" data-productid="'.$row->product_id.'" />Add to Cart</button>
+     <img src="'.base_url().'assets/'.$row->image.'" class="img-thumbnail" /><br />
+     <h4>'.$row->item_name.'</h4>
+     <h3 class="text-danger">$'.$row->price.'</h3>
+     <input type="text" name="quantity" class="form-control quantity" id="'.$row->item_id.'" /><br />
+     <button type="button" name="add_cart" class="btn btn-success add_cart" data-productname="'.$row->item_name.'" data-price="'.$row->price.'" data-productid="'.$row->item_id.'" />Add to Cart</button>
     </div>
     ';
             }
@@ -48,7 +48,7 @@
             if(quantity != '' && quantity > 0)
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/add",
+                    url:"<?php echo base_url(); ?>/index.php/auth/add",
                     method:"POST",
                     data:{product_id:product_id, product_name:product_name, product_price:product_price, quantity:quantity},
                     success:function(data)
@@ -65,14 +65,14 @@
             }
         });
 
-        $('#cart_details').load("<?php echo base_url(); ?>shopping_cart/load");
+        $('#cart_details').load("<?php echo base_url(); ?>/index.php/shopping_cart/load");
 
         $(document).on('click', '.remove_inventory', function(){
             var row_id = $(this).attr("id");
             if(confirm("Are you sure you want to remove this?"))
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/remove",
+                    url:"<?php echo base_url(); ?>/index.php/auth/remove",
                     method:"POST",
                     data:{row_id:row_id},
                     success:function(data)
@@ -92,7 +92,7 @@
             if(confirm("Are you sure you want to clear cart?"))
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/clear",
+                    url:"<?php echo base_url(); ?>auth/clear",
                     success:function(data)
                     {
                         alert("Your cart has been clear...");
