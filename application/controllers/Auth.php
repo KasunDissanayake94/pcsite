@@ -96,6 +96,7 @@ class Auth extends CI_Controller{
             $password=$_POST['password'];
             $repassword=$_POST['repassword'];
             if($password==$repassword){
+                $_SESSION['full_name']=$name;
                 $data = array(
                     'full_name' => $name,
                     'email' => $email,
