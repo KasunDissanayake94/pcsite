@@ -47,7 +47,8 @@ class fetch extends CI_Controller
 
                             </h4>
                             <p style=\"font-size:15px\"  class=\"card-text\">$price</p>
-                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$more_link.">more</a></p>
+                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$more_link.">morexcx</a></p>
+                            <button>Add to cart</button>
                     </div>
                         <br>
 
@@ -87,7 +88,8 @@ class fetch extends CI_Controller
 
                             </h4>
                             <p style=\"font-size:15px\"  class=\"card-text\">$last_name</p>
-                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a >more</a></p>
+                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a>more</a></p>
+                            <button>Add to cart</button>
                     </div>
                         <br>
 

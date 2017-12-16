@@ -36,6 +36,10 @@ class Link extends CI_Controller{
 
             $this->load->view('contacts.php');
         }
+        elseif ($x==6){
+
+            $this->load->view('sales1.php');
+        }
 
         elseif ($x=="sales"){
 

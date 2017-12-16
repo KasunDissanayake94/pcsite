@@ -99,7 +99,6 @@
             <div class="grid_12 rel">
                 <h1>
                     <a href="index.html">
-                        <img src="<?php echo base_url();?>assets/images/logo.png" alt="Logo alt">
                     </a>
                 </h1>
             </div>
