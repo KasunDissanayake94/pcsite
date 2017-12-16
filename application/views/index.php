@@ -49,11 +49,11 @@
           </a>
         </h1>
           <ul class="sf-menu">
-              <li style="float: right;height: 30px;width: 30px;"><img src="<?php echo base_url();?>assets/images/shopping_cart.jpg" alt="Logo alt"></li>
-              <label style="float: right"> | </label>
-              <li style="float: right;"><a href="<?php echo base_url();?>index.php/auth/login"> Login </a></li>
-              <label style="float: right"> | </label>
-              <li style="float: right;"><?php if(isset($_SESSION['full_name'])){
+              <li style="float: right;height: 70px;width: 70px;margin-left: 20px"><a href="shopping_cart.php"><img src="<?php echo base_url();?>assets/images/shopping_cart1.png" alt="Logo alt"></a></li>
+
+              <li style="float: right;margin-left: 20px"><a href="<?php echo base_url();?>index.php/auth/login"> Login </a></li>
+
+              <li style="float: right;margin-left: 20px"><?php if(isset($_SESSION['full_name'])){
                       echo "Hello ".$_SESSION['full_name']." ";
                   }
                   else{
