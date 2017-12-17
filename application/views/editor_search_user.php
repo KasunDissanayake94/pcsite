@@ -91,37 +91,56 @@
                 </header>
             </div>
             <div class="user-dashboard">
+                <div class="panel-heading">
+                    <div class="form-group">
 
-                <div id="content">
-                    <h3>Profile</h3>
-                    <div id="line"></div>
-
-                    <div id="table_lecturer">
-                        <table class="zui-table zui-table-horizontal">
-                            <tbody>
-                            <tr>
-                                <td><b>First Name</b></td>
-                                <td><?php echo $_SESSION['fname']?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Last Name</b></td>
-                                <td><?php echo $_SESSION['lname']?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Email</b></td>
-                                <td><?php echo $_SESSION['username'];?></td>
-                            </tr>
-                            <tr>
-                                <td><b>User Role</b></td>
-                                <td><?php echo $_SESSION['type'];?></td>
-                            </tr>
-
-
-                            </tbody>
-                        </table>
                     </div>
-
+                    <h4>
+                        <b>User Details</b>
+                    </h4>
+                    <label><input type="text" name="search_text" id="search_text" placeholder="Search by User Details" class="form-control" /></label>
                 </div>
+
+
+                <div id="result">
+
+                    <?php
+
+                    if (!empty($user_list)){
+                        echo '<table class="table" >
+    <tr>
+     <th>User ID</th>
+     <th>User Name</th>
+     <th>First Name</th>
+     <th>Last Name</th>
+     <th>Type</th>
+
+     
+     
+    </tr>';
+                        foreach ($user_list as $objects)  {
+                            $id=$objects->id;
+                            //Call the admin controller calss to get the more information about the student
+                            echo '<tr>
+    <td>'.$objects->id.'</td>
+    <td>'.$objects->username.'</td>
+    <td>'.$objects->first_name.'</td>
+    <td>'.$objects->last_name.'</td>
+    <td>'.$objects->type.'</td>
+    
+        
+    
+   </tr>';
+
+
+                        }
+
+                    } else {
+                        echo 'Data Not Found';
+                    }
+                    ?>
+                </div>
+
             </div>
         </div>
     </div>
@@ -132,20 +151,35 @@
 </body>
 
 </html>
+
 <script>
-    $(document).ready(function () {
-        $('#myform').validate({ // initialize the plugin
-            rules: {
-                nic: {
-                    required: true,
-                    minlength: 5
+    $(document).ready(function(){
+
+
+        load_data();
+
+        function load_data(query)
+        {
+            $.ajax({
+                url:"<?php echo base_url();?>index.php/fetch/fetch1_users",
+                method:"POST",
+                data:{query:query},
+                success:function(data)
+                {
+                    $('#result').html(data);
                 }
-            },
-            submitHandler: function (form) { // for demo
-                alert('valid form submitted'); // for demo
-                return false; // for demo
+            });
+        }
+        $('#search_text').keyup(function(){
+            var search = $(this).val();
+            if(search != '')
+            {
+                load_data(search);
+            }
+            else
+            {
+                load_data();
             }
         });
-
     });
 </script>

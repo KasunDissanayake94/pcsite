@@ -215,6 +215,60 @@ class fetch extends CI_Controller
 
 
     }
+    public function fetch1_users(){
+        {
+            $output = '';
+            if (isset($_POST["query"])) {
+                $this->load->model('fetch_model');
+
+                $data['booktable']= $this->fetch_model->booktable($_POST["query"]);
+
+
+
+
+            } else {
+                $data['booktable'] = $this->Auth_model->booktable1();
+            }
+
+            if (!empty($data['booktable'])){
+                echo '<table class="table" >
+    <tr>
+     <th>User ID</th>
+     <th>User Name</th>
+     <th>First Name</th>
+     <th>Last Name</th>
+     <th>Type</th>
+ 
+     
+     
+    </tr>';
+                foreach ($data['booktable'] as $objects)  {
+                    $id=$objects->id;
+                    //Call the admin controller calss to get the more information about the student
+                    echo '<tr>
+    <td>'.$objects->id.'</td>
+    <td>'.$objects->username.'</td>
+    <td>'.$objects->first_name.'</td>
+    <td>'.$objects->last_name.'</td>
+    <td>'.$objects->type.'</td>
+
+    
+   </tr>
+   
+ 
+   ';
+
+
+                }
+
+            } else {
+                echo 'Data Not Found';
+            }
+
+        }
+
+
+    }
 
 
 }

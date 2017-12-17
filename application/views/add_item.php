@@ -91,36 +91,84 @@
                 </header>
             </div>
             <div class="user-dashboard">
-
-                <div id="content">
-                    <h3>Profile</h3>
-                    <div id="line"></div>
-
-                    <div id="table_lecturer">
-                        <table class="zui-table zui-table-horizontal">
-                            <tbody>
-                            <tr>
-                                <td><b>First Name</b></td>
-                                <td><?php echo $_SESSION['fname']?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Last Name</b></td>
-                                <td><?php echo $_SESSION['lname']?></td>
-                            </tr>
-                            <tr>
-                                <td><b>Email</b></td>
-                                <td><?php echo $_SESSION['username'];?></td>
-                            </tr>
-                            <tr>
-                                <td><b>User Role</b></td>
-                                <td><?php echo $_SESSION['type'];?></td>
-                            </tr>
-
-
-                            </tbody>
-                        </table>
+                <div class="modal-content">
+                    <div class="modal-header login-header">
+                        <h4 class="modal-title">Add Item Form</h4>
                     </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" action="<?php echo base_url();?>index.php/editor/add_item_details" method="post" id="myform" >
+                            <?php if (isset($message)) { ?>
+                                <CENTER><h3 style="color:green;">Data inserted successfully</h3></CENTER><br>
+                            <?php } ?>
 
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Item ID :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="id" type="text" name="id" placeholder="Item ID Here" required/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Item Name :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="itemname" type="text" name="itemname" placeholder="Item Name Here" required/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Colour :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="colour" type="text" name="colour" placeholder="Colour here" required/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Price :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="price" type="text" name="price" placeholder="Price here" required/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Category :</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="category">
+                                        <option value="desktop">Desktop</option>
+                                        <option value="computer_accessories">Computer Accessories</option>
+                                        <option value="network_accessories">Network Accessories</option>
+                                        <option value="notebook">NoteBook</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">In Stock :</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="in_stock">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Description :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="description" type="text" name="description" placeholder="Description here" />
+                                </div>
+                            </div>
+
+
+                            <input type = "file" name = "userfile" size = "20" />
+
+
+                            <div class="modal-footer">
+                                <button type="submit" class="add-project" data-dismiss="modal" name="op" value="upload">Add</button>
+                            </div>
+
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

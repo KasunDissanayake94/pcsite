@@ -51,6 +51,7 @@ class Auth extends CI_Controller
                 $_SESSION['user_logged'] = TRUE;
                 $_SESSION['fname'] = $user->first_name;
                 $_SESSION['lname'] = $user->last_name;
+                $_SESSION['username'] = $user->username;
 
                 //redirect to the profile page
                 redirect("user/editor", "refresh");
@@ -60,6 +61,7 @@ class Auth extends CI_Controller
                 $_SESSION['user_logged'] = TRUE;
                 $_SESSION['fname'] = $user->first_name;
                 $_SESSION['lname'] = $user->last_name;
+                $_SESSION['username'] = $user->username;
 
                 //redirect to the profile page
                 redirect("user/shop_editor", "refresh");
