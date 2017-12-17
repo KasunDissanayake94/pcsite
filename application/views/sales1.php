@@ -95,6 +95,7 @@
                     <?php foreach($item_list as $item){
                         $item_name=($item->item_name);
                         $item_id=($item->item_id);
+                        $val_price=($item->price);
                         $price="Rs.".($item->price);
                         $category=($item->category);
                         $description=($item->description);
@@ -102,7 +103,7 @@
                         $link= base_url().'assets/'.$image.'.jpg';
                         $more_link=base_url().'index.php/link/getdata/'.$item_id;
                         //Call the admin controller calss to get the more information about the student
-                        echo "<div class=\"member\" style='float:left;
+                        echo '<div class="member" style="float:left;
     width:210px;
     height:500px;
     background:#fff;
@@ -111,24 +112,24 @@
     margin-left:3px;
     -moz-box-shadow: 1px 2px 2px #ccc;
     -webkit-box-shadow: 1px 2px 2px #ccc;
-    box-shadow: 1px 2px 2px #ccc;'>
+    box-shadow: 1px 2px 2px #ccc;">
     
     <br><br>
-    <img style=\"width: 200px;\" src=".$link. " alt=\"Click the link to see more info\"  />
-    <div class=\"name\">
-        <h4 style=\"font-size: 20px;text-align: center\" class=\"card-title\">
-        $item_name
+    <img style="width:210px;height:200px;" src="'.$link.' " alt="Click the link to see more info"  />
+    <div class="name">
+        <h4 style="font-size: 20px;text-align: center" class="card-title">
+        '.$item_name.'
         </h4>
-        <p style=\"font-size:15px;text-align: center\"  class=\"card-text\">$price</p>
-        <p style=\"color: #003399; font-size: 15px;text-align: center\"  class=\"card-text\"><a href=".$more_link.">More</a></p>
-        <input type=\"text\" name=\"quantity\" placeholder=\"Enter quantity\" class=\"form-control quantity\" id=\"'.$item_id.'\" /><br />
-     <button style='margin-left: 50px' type=\"button\" name=\"add_cart\" class=\"btn btn-success add_cart\" data-productname=\"'.$item_name.'\" data-price=\"'.$price.'\" data-productid=\"'.$item_id.'\" />Add to Cart</button>
+        <p style="font-size:15px;text-align: center"  class="card-text">'.$price.'</p>
+        <p style="color: #003399; font-size: 15px;text-align: center"  class="card-text"><a href=".$more_link.">More</a></p>
+        <input type="text" name="quantity" placeholder="Enter quantity" class="form-control quantity" id="'.$item_id.'" /><br />
+     <button type="button" style="margin-left: 50px" name="add_cart" class="btn btn-success add_cart" data-productname="'.$item_name.'" data-price="'.$val_price.'" data-productid="'.$item_id.'" />Add to Cart</button>
 
     </div>
     
 
 
-</div>";
+</div>';
 
 
                     }?>
@@ -151,10 +152,11 @@
             var product_name = $(this).data("productname");
             var product_price = $(this).data("price");
             var quantity = $('#' + product_id).val();
+            alert(product_price);
             if(quantity != '' && quantity > 0)
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/add",
+                    url:"<?php echo base_url(); ?>/index.php/auth/add",
                     method:"POST",
                     data:{product_id:product_id, product_name:product_name, product_price:product_price, quantity:quantity},
                     success:function(data)
@@ -171,14 +173,14 @@
             }
         });
 
-        $('#cart_details').load("<?php echo base_url(); ?>shopping_cart/load");
+        $('#cart_details').load("<?php echo base_url(); ?>/index.php/auth/load");
 
         $(document).on('click', '.remove_inventory', function(){
             var row_id = $(this).attr("id");
             if(confirm("Are you sure you want to remove this?"))
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/remove",
+                    url:"<?php echo base_url(); ?>/index.php/auth/remove",
                     method:"POST",
                     data:{row_id:row_id},
                     success:function(data)
@@ -198,7 +200,7 @@
             if(confirm("Are you sure you want to clear cart?"))
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/clear",
+                    url:"<?php echo base_url(); ?>/index.php/auth/clear",
                     success:function(data)
                     {
                         alert("Your cart has been clear...");
