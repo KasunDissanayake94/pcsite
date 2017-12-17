@@ -118,7 +118,7 @@
         '.$item_name.'
         </h4>
         <p style="font-size:15px;text-align: center"  class="card-text">'.$price.'</p>
-        <p style="color: #003399; font-size: 15px;text-align: center"  class="card-text"><a href=".$more_link.">More</a></p>
+        <p style="color: #003399; font-size: 15px;text-align: center"  class="card-text"><a href='.$more_link.'>More</a></p>
         <input type="text" name="quantity" placeholder="Enter quantity" class="form-control quantity" id="'.$item_id.'" /><br />
      <button type="button" style="margin-left: 50px" name="add_cart" class="btn btn-success add_cart" data-productname="'.$item_name.'" data-price="'.$val_price.'" data-productid="'.$item_id.'" />Add to Cart</button>
 
@@ -149,7 +149,6 @@
             var product_name = $(this).data("productname");
             var product_price = $(this).data("price");
             var quantity = $('#' + product_id).val();
-            alert(product_price);
             if(quantity != '' && quantity > 0)
             {
                 $.ajax({

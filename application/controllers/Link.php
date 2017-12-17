@@ -96,7 +96,7 @@ class Link extends CI_Controller{
     //add item to the cart
     public function addcart($item){
 
-        $result = $this->auth_model->find_details($name);
+        $result = $this->auth_model->find_details($item);
 
 
         $data['item_list'] = null;

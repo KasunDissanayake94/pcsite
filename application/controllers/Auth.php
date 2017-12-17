@@ -369,9 +369,10 @@ class Auth extends CI_Controller
                 $more_link=base_url().'index.php/link/getdata/'.$item_id;
                 //Call the admin controller calss to get the more information about the student
                 echo '
+
                 <div class="member" style="float:left;
     width:210px;
-    height:500px;
+    height:450px;
     background:#fff;
     padding:3px;
     margin-right:3px;
@@ -381,16 +382,14 @@ class Auth extends CI_Controller
     box-shadow: 1px 2px 2px #ccc;">
     
     <br><br>
-    <img style="width: 200px;" src="'.$link.' " alt="Click the link to see more info"  />
+    <img style="width: 200px;height: 200px" src="'.$link.' " alt="Click the link to see more info"  />
     <div class="name">
         <h4 style="font-size: 20px;text-align: center" class="card-title">
         '.$item_name.'
         </h4>
         <p style="font-size:15px;text-align: center"  class="card-text">'.$price.'</p>
-        <p style="color: #003399; font-size: 15px;text-align: center"  class="card-text"><a href=".$more_link.">More</a></p>
-        <input type="text" name="quantity" placeholder="Enter quantity" class="form-control quantity" id="'.$item_id.'" /><br />
-     <button type="button" style="margin-left: 50px" name="add_cart" class="btn btn-success add_cart" data-productname="\'.$row->product_name.\'" data-price="\'.$row->product_price.\'" data-productid="\'.$row->product_id.\'" />Add to Cart</button>
-
+        <p style="color: #003399; font-size: 15px;text-align: center"  class="card-text"><a href='.$more_link.'>More</a></p>
+     <button type="button" style="margin-left: 80px" name="add_cart" class="btn btn-success add_cart"  >Buy</button>
     </div>
     
 
@@ -399,22 +398,22 @@ class Auth extends CI_Controller
 <script>
     $(document).ready(function(){
 
-        $(\'.add_cart\').click(function(){
+        $(".add_cart").click(function(){
             var product_id = $(this).data("productid");
             var product_name = $(this).data("productname");
             var product_price = $(this).data("price");
-            var quantity = $(\'#\' + product_id).val();
-            if(quantity != \'\' && quantity > 0)
+            var quantity = $("#" + product_id).val();
+            if(quantity != "" && quantity > 0)
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/add",
+                    url:"<?php echo base_url(); ?>index.php/auth/add",
                     method:"POST",
                     data:{product_id:product_id, product_name:product_name, product_price:product_price, quantity:quantity},
                     success:function(data)
                     {
                         alert("Product Added into Cart");
-                        $(\'#cart_details\').html(data);
-                        $(\'#\' + product_id).val(\'\');
+                        $("#v'.$item_id.'").html(data);
+                        $("#" + product_id).val("");
                     }
                 });
             }
@@ -424,20 +423,20 @@ class Auth extends CI_Controller
             }
         });
 
-        $(\'#cart_details\').load("<?php echo base_url(); ?>shopping_cart/load");
+        $("#v'.$item_id.'").load("<?php echo base_url(); ?>index.php/auth/load");
 
-        $(document).on(\'click\', \'.remove_inventory\', function(){
+        $(document).on("click", ".remove_inventory", function(){
             var row_id = $(this).attr("id");
             if(confirm("Are you sure you want to remove this?"))
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/remove",
+                    url:"<?php echo base_url(); ?>index.php/auth/remove",
                     method:"POST",
                     data:{row_id:row_id},
                     success:function(data)
                     {
                         alert("Product removed from Cart");
-                        $(\'#cart_details\').html(data);
+                        $("#v'.$item_id.'").html(data);
                     }
                 });
             }
@@ -447,15 +446,15 @@ class Auth extends CI_Controller
             }
         });
 
-        $(document).on(\'click\', \'#clear_cart\', function(){
+        $(document).on("click", "#clear_cart", function(){
             if(confirm("Are you sure you want to clear cart?"))
             {
                 $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/clear",
+                    url:"<?php echo base_url(); ?>index.php/auth/clear",
                     success:function(data)
                     {
                         alert("Your cart has been clear...");
-                        $(\'#cart_details\').html(data);
+                        $("#v'.$item_id.'").html(data);
                     }
                 });
             }
