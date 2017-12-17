@@ -102,7 +102,50 @@
                 </div>
 
 
-                <div id="result"></div>
+                <div id="result">
+                    
+                    <?php
+
+                    if (!empty($data['booktable'])){
+                        echo '<table class="table" >
+    <tr>
+     <th>User ID</th>
+     <th>User Name</th>
+     <th>First Name</th>
+     <th>Last Name</th>
+     <th>Type</th>
+     <th>New</th>
+     <th>Delete</th>
+     
+     
+    </tr>';
+                        foreach ($data['booktable'] as $objects)  {
+                            $id=$objects->id;
+                            //Call the admin controller calss to get the more information about the student
+                            echo '<tr>
+    <td>'.$objects->id.'</td>
+    <td>'.$objects->username.'</td>
+    <td>'.$objects->first_name.'</td>
+    <td>'.$objects->last_name.'</td>
+    <td>'.$objects->type.'</td>
+    <td id="'.$objects->id.'">
+        <button class="btn btn-basic" data-toggle="modal" data-target="#v'.$objects->id.'"">View</button>
+    </td>
+ 
+    <td id="'.$objects->id.'">
+        <button class="btn btn-basic" data-toggle="modal" data-target="#d'.$objects->id.'"">Delete</button>
+    </td>
+    
+   </tr>';
+
+
+                        }
+
+                    } else {
+                        echo 'Data Not Found';
+                    }
+                    ?>
+                </div>
 
             </div>
         </div>
@@ -114,25 +157,10 @@
 </body>
 
 </html>
-<script>
-    $(document).ready(function () {
-        $('#myform').validate({ // initialize the plugin
-            rules: {
-                nic: {
-                    required: true,
-                    minlength: 5
-                }
-            },
-            submitHandler: function (form) { // for demo
-                alert('valid form submitted'); // for demo
-                return false; // for demo
-            }
-        });
 
-    });
-</script>
 <script>
     $(document).ready(function(){
+
 
         load_data();
 

@@ -78,38 +78,61 @@ class fetch extends CI_Controller
 
     }
     public function fetch_users(){
-        $output = "";
-        $data = $_GET['searchData'];
+        {
+            $output = '';
+            if (isset($_POST["query"])) {
+                $this->load->model('fetch_model');
 
-        $result = $this->auth_model->fetch_users();
-        if ($result){
-            foreach ($result as $key => $value) {
-                $first_name=($value['item_name']);
-                $last_name=($value['item_id']);
+                $data['booktable']= $this->fetch_model->booktable($_POST["query"]);
 
 
 
-                echo "<div class=\"member\">
-                        <br><br>
-                        <img style=\"font-size: 20px\" src= alt=\"Click the link to see more info\"  />
-                        <div class=\"name\">
-                            <h4 style=\"font-size: 20px\" class=\"card-title\">
-                                $first_name
 
-                            </h4>
-                            <p style=\"font-size:15px\"  class=\"card-text\">$last_name</p>
-                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a>more</a></p>
-                            <button>Add to cart</button>
-                    </div>
-                        <br>
-
-
-                        </div>";
-
+            } else {
+                $data['booktable'] = $this->Auth_model->booktable1();
             }
-        }else{
-            echo "No Item Found";
+
+            if (!empty($data['booktable'])){
+                echo '<table class="table" >
+    <tr>
+     <th>User ID</th>
+     <th>User Name</th>
+     <th>First Name</th>
+     <th>Last Name</th>
+     <th>Type</th>
+     <th>New</th>
+     <th>Delete</th>
+     
+     
+    </tr>';
+                foreach ($data['booktable'] as $objects)  {
+                    $id=$objects->id;
+                    //Call the admin controller calss to get the more information about the student
+                    echo '<tr>
+    <td>'.$objects->id.'</td>
+    <td>'.$objects->username.'</td>
+    <td>'.$objects->first_name.'</td>
+    <td>'.$objects->last_name.'</td>
+    <td>'.$objects->type.'</td>
+    <td id="'.$objects->id.'">
+        <button class="btn btn-basic" data-toggle="modal" data-target="#v'.$objects->id.'"">View</button>
+    </td>
+ 
+    <td id="'.$objects->id.'">
+        <button class="btn btn-basic" data-toggle="modal" data-target="#d'.$objects->id.'"">Delete</button>
+    </td>
+    
+   </tr>';
+
+
+                }
+
+            } else {
+                echo 'Data Not Found';
+            }
+
         }
+
 
     }
 
