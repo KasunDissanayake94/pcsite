@@ -76,6 +76,9 @@ class Auth_model extends CI_Model{
         return $query;
     }
 
+    /*
+        functions for reset password >>>>
+    */
     public function email_exists($email){
         $sql = "SELECT username, email FROM users WHERE email = '{$email}' LIMIT 1";
         $result = $this->db->query($sql);
@@ -83,6 +86,7 @@ class Auth_model extends CI_Model{
 
         return ($result->num_rows() === 1 && $row->email) ? $row->username : false;
     }
+
 
     public function verify_reset_password_code($email, $code){
 
@@ -96,6 +100,23 @@ class Auth_model extends CI_Model{
             return false;
         }
     }
+
+    public function update_password(){
+        $email = $this->input->post('email');
+        $password = sha1($this->config->item('camera') . $this->input->post('password'));
+
+        $sql = "UPDATE users SET password = '{$password}' WHERE email = '$email' LIMIT 1";
+        $this->db->query($sql);
+
+        if ($this->db->affected_rows() === 1) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    
 
     public function add_customer($data){
         $this->db->insert('customer', $data);

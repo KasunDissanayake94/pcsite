@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Sign in</title>
+  <title>Sent</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -19,19 +19,14 @@
 <div class="pen-title">
   <h2>
     <?php
-      echo 'Your password has been updated! <br>You may now login to the site.';
+      echo 'A link to reset your password has been sent to '. $email ;
+      echo "If you don't see it, be sure to check your spam folders too!";
     ?>
   </h2>
-</div>
-<div>
-  <center>
-    <a href= "<?php echo base_url();?>index.php/auth/login"><h1>Login</h1></a>
-  </center>
 </div>
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script  src="<?php echo base_url();?>assets/login/js/index.js"></script>
  
 </body>
-
 </html>

@@ -523,4 +523,6 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
-$config['item'] = array('camera' => 'w2E4B057656253746174696f6e0S8t1A3t5I7O9n1', 'bot_email' => 'nimeshika94@gmail.com' );
+$config['item'] = array('camera' => 'w2E4B057656253746174696f6e0S8t1A3t5I7O9n1', 
+            'bot_email' => 'nimeshika94@gmail.com', 
+            'admin_mail' => 'kasunprageethdissanayake@gmail.com' );
