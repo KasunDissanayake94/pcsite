@@ -30,23 +30,28 @@
   </div>
   <div class="form">
     <h2>Sign in to your account</h2>
-    <form>
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
-      <button>Sign in</button>
+    <form action="<?php echo base_url();?>index.php/Auth/login_user" method="post" id="loginform">
+        <?php if(! is_null($msg)) echo $msg;?>
+        <br>
+      <input type="email" name="username" placeholder="username"/>
+      <input type="password" name="password" placeholder="Password" maxlength="10" minlength="5"/>
+      <button type="submit" value="sign in">Sign in</button>
+        <div class="cta"><a href="<?php echo base_url();?>index.php/link/go/1"">Go to Home</a></div>
+
+
     </form>
   </div>
   <div class="form">
     <h2>Create an account</h2>
-    <form>
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
-      <input type="email" placeholder="Email Address"/>
-      <input type="tel" placeholder="Phone Number"/>
-      <button>Register</button>
+    <form action="<?php echo base_url();?>index.php/Auth/register" method="post" id="createuserform">
+      <input type="text" name="name" placeholder="Fisrtname LastName"/>
+      <input type="email" name="email" placeholder="Email"/>
+      <input type="text" name="password" placeholder="Password"/>
+      <input type="text" name="repassword" maxlength="10" minlength="5" placeholder="Re-enter password"/>
+      <button type="submit" value="register">Register</button>
     </form>
   </div>
-  <div class="cta"><a href= "<?php echo base_url();?>application/views/reset_password_request">Forgot your password?</a></div>
+  <div class="cta"><a href= "<?php echo base_url();?>index.php/auth/reset_password">Forgot your password?</a></div>
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>

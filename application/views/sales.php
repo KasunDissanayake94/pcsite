@@ -99,7 +99,6 @@
             <div class="grid_12 rel">
                 <h1>
                     <a href="index.html">
-                        <img src="<?php echo base_url();?>assets/images/logo.png" alt="Logo alt">
                     </a>
                 </h1>
             </div>
@@ -196,8 +195,8 @@
                     <?php $name=$item->item_name?>
 
                     <div class="member">
-                        <br><br>
-                        <img style="font-size: 20px" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Click the link to see more info"  />
+                        <br>
+                        <img style="font-size: 5px" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Click the link to see more info"  />
                         <div class="name">
                             <h4 style="font-size: 20px" class="card-title">
                                 <?=$item->item_name;?>
@@ -205,6 +204,17 @@
                             </h4>
                             <p style="font-size: 15px"  class="card-text">Rs.<?=$item->price;?>/=</p>
                             <p style="color: #003399; font-size: 15px"  class="card-text"><a href="<?php echo base_url();?>index.php/link/getdata/<?=$item->item_id;?>">more</a></p>
+                            <button  style="padding: 15px 25px;
+                              font-size: 9px;
+                              text-align: center;
+                              cursor: pointer;
+                              outline: none;
+                              color: #fff;
+                              background-color: #00B4CC;
+                              border: none;
+                              border-radius: 15px;
+                              box-shadow: 0 9px #999;"><a href="<?php echo base_url();?>index.php/link/addcart/<?=$item->item_id;?>">Add to cart</a>
+                            </button>
                     </div>
                         <br>
 

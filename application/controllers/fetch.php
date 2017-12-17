@@ -39,8 +39,8 @@ class fetch extends CI_Controller
 
 
                 echo "<div class=\"member\">
-                        <br><br>
-                        <img style=\"font-size: 20px\" src=".$link. " alt=\"Click the link to see more info\"  />
+                        <br>
+                        <img style=\"font-size: 10px\" src=".$link. " alt=\"Click the link to see more info\"  />
                         <div class=\"name\">
                             <h4 style=\"font-size: 20px\" class=\"card-title\">
                                 $i_name
@@ -48,6 +48,17 @@ class fetch extends CI_Controller
                             </h4>
                             <p style=\"font-size:15px\"  class=\"card-text\">$price</p>
                             <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$more_link.">more</a></p>
+                            <button style=\"padding: 15px 25px;
+                              font-size: 9px;
+                              text-align: center;
+                              cursor: pointer;
+                              outline: none;
+                              color: #fff;
+                              background-color: #00B4CC;
+                              border: none;
+                              border-radius: 15px;
+                              box-shadow: 0 9px #999;\">Add to cart
+                            </button>   
                     </div>
                         <br>
 
@@ -64,6 +75,41 @@ class fetch extends CI_Controller
 
 
 
+
+    }
+    public function fetch_users(){
+        $output = "";
+        $data = $_GET['searchData'];
+
+        $result = $this->auth_model->fetch_users();
+        if ($result){
+            foreach ($result as $key => $value) {
+                $first_name=($value['item_name']);
+                $last_name=($value['item_id']);
+
+
+
+                echo "<div class=\"member\">
+                        <br><br>
+                        <img style=\"font-size: 20px\" src= alt=\"Click the link to see more info\"  />
+                        <div class=\"name\">
+                            <h4 style=\"font-size: 20px\" class=\"card-title\">
+                                $first_name
+
+                            </h4>
+                            <p style=\"font-size:15px\"  class=\"card-text\">$last_name</p>
+                            <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a>more</a></p>
+                            <button>Add to cart</button>
+                    </div>
+                        <br>
+
+
+                        </div>";
+
+            }
+        }else{
+            echo "No Item Found";
+        }
 
     }
 

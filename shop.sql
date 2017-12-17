@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 08, 2017 at 12:29 PM
+-- Generation Time: Dec 16, 2017 at 08:11 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -21,6 +21,69 @@ SET time_zone = "+00:00";
 --
 -- Database: `shop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE IF NOT EXISTS `customer` (
+  `cus_id` int(255) NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  PRIMARY KEY (`cus_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`cus_id`, `full_name`, `email`, `password`) VALUES
+(1, 'Kasun Dissanayake', 'kpdissanayake@gmail.com', '1234567'),
+(2, 'Kasun Dissanayake', 'kpdissanayake@gmail.com', '1234567'),
+(3, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(4, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(5, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(6, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(7, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(8, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(9, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(10, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(11, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(12, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(13, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(14, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(15, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(16, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(17, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(18, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(19, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(20, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(21, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(22, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(23, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(24, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(25, 'Naween Silva', 'naveen@gmail.com', '1234567'),
+(26, 'Naween Silva', 'naveen@gmail.com', '1234567');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE IF NOT EXISTS `message` (
+  `msg_id` int(30) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `phone` varchar(11) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`msg_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -58,6 +121,22 @@ INSERT INTO `sales_item` (`item_id`, `item_name`, `category`, `price`, `colour`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `shopping_cart`
+--
+
+DROP TABLE IF EXISTS `shopping_cart`;
+CREATE TABLE IF NOT EXISTS `shopping_cart` (
+  `cart_id` int(100) NOT NULL AUTO_INCREMENT,
+  `cus_id` varchar(50) NOT NULL,
+  `item_id` varchar(50) NOT NULL,
+  `quantity` int(100) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  PRIMARY KEY (`cart_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -66,17 +145,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `type` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
-(1, 'kasun', '123', 'kasunprageethdissanayake@gmail.com'),
-(2, 'KasunDissanayake', '1234567', 'wasuradananjith@gmail.com');
+INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `type`) VALUES
+(1, 'kasunprageethdissanayake@gmail.com', '1234567', 'Kasun', 'Dissanayake', 'manager'),
+(2, 'kpdissanayake@gmail.com', '1234567', 'Kalpa', 'Wijesooriya', 'shop_director'),
+(4, 'manager@gmail.com', 'manager', 'Gaveen', 'Silva', 'editor'),
+(5, 'hasith@gnail.com', '1234567', 'Hasith', 'Lakshan', 'editor');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

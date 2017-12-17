@@ -44,7 +44,7 @@
       </div>
 
       <div>
-        <input type="submit" value="Update Password" name="submit" />
+        <button type="submit" name="submit">Reset Password</button>
       </div>
     </form>
     <?php

@@ -521,3 +521,6 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+
+$config['item'] = array('camera' => 'w2E4B057656253746174696f6e0S8t1A3t5I7O9n1', 'bot_email' => 'nimeshika94@gmail.com' );

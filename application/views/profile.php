@@ -1,117 +1,178 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
+
 <head>
-    <title>About</title>
-    <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
-    <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
-    <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
-    <script src="<?php echo base_url();?>assets/js/script.js"></script>
-    <script src="<?php echo base_url();?>assets/js/superfish.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.equalheights.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
-    <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
-    <script>
-        $(window).load(function(){
-            $().UItoTop({ easingType: 'easeOutQuart' });
-            $('#stuck_container').tmStickUp({});
-        });
-    </script>
-    <!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-        </a>
-    </div>
-    <![endif]-->
-    <!--[if lt IE 9]>
-    <script src="<?php echo base_url();?>assets/js/html5shiv.js"></script>
-    <link rel="stylesheet" media="screen" href="<?php echo base_url();?>assets/css/ie.css">
-    <![endif]-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/newstyle1.css">
+    <link rel="stylesheet" type="text/css" href="../view/css/style1.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="test/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<body>
-<!--==============================
-              header
-=================================-->
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="grid_12 rel">
-                <h1>
-                    <a href="index.html">
-                        <img src="<?php echo base_url();?>assets/images/logo.png" alt="Logo alt">
-                    </a>
-                </h1>
+
+<body class="home">
+<div class="display-table">
+    <div class="row display-table-row">
+        <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+            <div class="logo">
+                <a href="home.html"><img src="../../assets/images/logo.png" alt="merkery_logo" class="hidden-xs hidden-sm">
+                    <img src="../../assets/images/logo.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
+                </a>
+            </div>
+            <div class="navi">
+                <ul>
+                    <li><a href="<?php echo base_url();?>index.php/manager/my_profile"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">My Profile</span></a></li>
+                    <li class="active"><a href="<?php echo base_url();?>index.php/manager/add_user"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Add User</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/manager/search_user"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Search User</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/manager/update_user"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Update User</span></a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <section id="stuck_container">
-        <!--==============================
-                    Stuck menu
-        =================================-->
-        <div class="container">
+        <div class="col-md-10 col-sm-11 display-table-cell v-align">
+            <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
             <div class="row">
-                <div class="grid_12 ">
-                    <div class="navigation ">
-                        <nav>
-                            <ul class="sf-menu">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="current"><a href="about.html">About</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
-                            </ul>
-                        </nav>
-                        <div class="clear"></div>
+                <header style="height:70px">
+                    <div class="col-md-7">
+
+
+
+                        <div class="title hidden-xs hidden-sm">
+                            <h3></h3>
+                        </div>
+
+                        <!-- <div class="search hidden-xs hidden-sm">
+                            <input type="text" placeholder="Search" id="search">
+                        </div> -->
                     </div>
-                    <div class="clear"></div>
+                    <div class="col-md-5">
+                        <div class="header-rightside">
+                            <ul class="list-inline header-top pull-left">
+                                <a href="#" style="color: black">Home</a>
+                                <a href="#" style="color: black">Services</a>
+                                <a href="#" style="color: black">Blog</a>
+                                <a href="#" style="color: black">Contacts</a>
+
+                            </ul>
+                            <ul class="list-inline header-top pull-right">
+                                <!-- <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li> -->
+
+                                <li>
+                                    <a href="#" class="icon-info">
+                                        <i class="fa fa-bell" aria-hidden="true"></i>
+                                        <span class="label label-primary">3</span>
+                                    </a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['type'] ?>
+                                        <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="navbar-content">
+                                                <span><?php echo $_SESSION['fname'] ?> <?php echo $_SESSION['lname'] ?></span>
+
+                                                <div class="divider">
+                                                </div>
+                                                <a href="<?php echo base_url();?>index.php/manager/logout" class="view btn-sm active">log out</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="user-dashboard">
+                <div class="modal-content">
+                    <div class="modal-header login-header">
+                        <h4 class="modal-title">Add User Form</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" action="<?php echo base_url();?>index.php/manager/add_user_details" method="post" id="myform">
+                            <?php if (isset($message)) { ?>
+                                <CENTER><h3 style="color:green;">Data inserted successfully</h3></CENTER><br>
+                            <?php } ?>
+
+
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Username :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="username" type="email" name="username" placeholder="Valid Email here" required/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">First Name :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="fname" type="text" name="fname" placeholder="First Name here" required/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Last Name :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="lname" type="text" name="lname" placeholder="Last Name here" required/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Type :</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="type">
+                                        <option value="manager">Manager</option>
+                                        <option value="shop_director">Shop Director</option>
+                                        <option value="editor">Editor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Password :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="password" type="password" name="password" placeholder="Password here" />
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="add-project" data-dismiss="modal" name="op" value="Add">Add</button>
+                            </div>
+
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-</header>
-
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-    <div class="container">
-        <div class="row">
-            <div class="grid_12">
-                <h3>Profile</h3>
-                
-
-            </div>
-                Hello <?php
-                echo $_SESSION['username'];
-                ?>
-                <br> <br>
-                <a href="<?php echo base_url(); ?>index.php/auth/logout">Logout</a>
-            </div>
-            </div>
-        </div>
     </div>
-</section>
 
-<!--==============================
-              footer
-=================================-->
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="grid_12">
-                <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<a href="#" id="toTop" class="fa fa-chevron-up"></a>
+</div>
+
+
 </body>
+
 </html>
+<script>
+    $(document).ready(function () {
+        $('#myform').validate({ // initialize the plugin
+            rules: {
+                nic: {
+                    required: true,
+                    minlength: 5
+                }
+            },
+            submitHandler: function (form) { // for demo
+                alert('valid form submitted'); // for demo
+                return false; // for demo
+            }
+        });
+
+    });
+</script>

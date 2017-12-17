@@ -37,6 +37,33 @@ class Auth_model extends CI_Model{
             return $query;
         }
     }
+    public function fetch_users(){
+
+        $output = "";
+
+        $data = $_GET['searchData'];
+        if($data == "")
+        {
+            $this->db->select ('*');
+            $this->db->from('users');
+            $query = $this->db->get();
+            $query=$query->result_array();
+            return $query;
+        }
+        else
+        {
+
+
+            $this->db->select ('*');
+            $this->db->from('users');
+            $this->db->like('first_name',$data);
+            $query = $this->db->get();
+            $query=$query->result_array();
+            return $query;
+
+
+        }
+    }
     public function find_details($name){
 
         $this->db->select ('*');
@@ -47,6 +74,7 @@ class Auth_model extends CI_Model{
         $query=$query->result();
         return $query;
     }
+<<<<<<< HEAD
 
     public function email_exists($email){
         $sql = "SELECT username, email FROM users WHERE email = '{$email}' LIMIT 1";
@@ -81,6 +109,12 @@ class Auth_model extends CI_Model{
         } else {
             return false;
         }
+=======
+    public function add_customer($data){
+        $this->db->insert('customer', $data);
+
+
+>>>>>>> 8178ae54e5ba821dee989ea8afbdd8f71b296a1e
     }
 }
 

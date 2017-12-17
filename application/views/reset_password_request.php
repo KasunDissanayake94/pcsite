@@ -18,19 +18,28 @@
   <h1>Reset Password</h1>
 </div>
 <!-- Form Module-->
-<div class="module form-module">  
-  <div class="form">
+<!--<div class="module form-module">  -->
+  <div class="form" id="reset_password_form">
+    <center>
     <h2>Send Request</h2>
-    <form>
-      <input type="email" placeholder="Email Address"/>
-      <button type="Submit">Submit</button>
+    <form action="/Auth/send_reset_password_email" method="post">
+      <input type="email" value="<?php echo set_value('email')?>" name="email" placeholder="Email Address"/>
+      <br>
+      <button type="submit" name="submit">Reset Password</button>
     </form>
+    </center>
+    <?php
+        echo validation_errors('<p class="error">');
+        if (isset($error)) {
+          echo '<p class="error">'.$error.'</p>';
+        }
+    ?>
   </div>
-</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
+<!--</div>-->
 
-    <script  src="<?php echo base_url();?>assets/login/js/index.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
+<script  src="<?php echo base_url();?>assets/login/js/index.js"></script>
 
 </body>
 </html>
