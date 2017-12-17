@@ -57,5 +57,13 @@ class manager_model extends CI_Model{
 
 
     }
+    public function find_all_users(){
+
+        $this->db->select ('*');
+        $this->db->from('users');
+        $query = $this->db->get();
+        $query=$query->result();
+        return $query;
+    }
 }
 

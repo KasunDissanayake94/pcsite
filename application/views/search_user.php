@@ -103,10 +103,10 @@
 
 
                 <div id="result">
-                    
+
                     <?php
 
-                    if (!empty($data['booktable'])){
+                    if (!empty($user_list)){
                         echo '<table class="table" >
     <tr>
      <th>User ID</th>
@@ -119,7 +119,7 @@
      
      
     </tr>';
-                        foreach ($data['booktable'] as $objects)  {
+                        foreach ($user_list as $objects)  {
                             $id=$objects->id;
                             //Call the admin controller calss to get the more information about the student
                             echo '<tr>
