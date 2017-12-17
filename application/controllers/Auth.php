@@ -77,7 +77,113 @@ class Auth extends CI_Controller
             $data['msg'] = $msg;
             $this->load->view('login1', $data);
         }
+		$this->load->view('login1');
+	}
 
+    //function for reset password
+    public function reset_password(){
+        if (isset($_POST['email']) && !empty($_POST['email'])) {
+            $this->load->library('form_validation');
+
+            //first check if its a valid email or not
+            $this->form_validation->set_rules('email','Email','trim|required|min_length[6]|max_length[50]|valid_email|xss_clean');
+
+            if ($this->form_validation->run() == FALSE) {
+                // email didn't validate, send back to reset password form and show errors
+                //this will likely never occur due to front end validation done on type="email"
+                $this->load->view('reset_password_request');
+            }else{
+                $email = trim($this->input->post('email'));
+                $result = $this->Auth_model->email_exist($email);
+
+                if ($result) {
+                    // if we found the email, $result is now their first name
+                    $this->send_reset_password_email($email,$result);
+                    $this->load->view('reset_password',array('email' => $email));
+                }else{
+                    $this->load->view('reset_password',array('error' => 'Email address not registered with WebStation' ));
+                }
+            }
+        }else{
+            $this->load->view('reset_password_request');
+        }
+    }
+
+    //function for sending reset password email
+    public function send_reset_password_email($email, $username){
+
+        $this->load->library('email');
+        $email_code = md5($this->config->item('camera').$username);
+
+        $this->email->set_mailtype('html');
+        $this->email->from($this->config->item('bot_email'),'WebStation Technology');
+        $this->email->to($email);
+        $this->email->subject('Reset your password');
+
+        //message that send to email account of users
+        $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict// EN"
+                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html>
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                    </head><body>';
+        $message .= '<p>Dear ' . $username . ',</p>';
+        $message .= '<p>We want to help you reset your password! Please <strong><a href="' . base_url() .'Auth/reset_password_form/' . $email . '/'.$email_code . '">click here</a></strong> to reset your password.</p>';
+        $message .= '<p>Thank you!</p>';
+        $message .= '<p>The Team at WebStation Technology</p>';
+        $message .= '</body></html>';
+
+        $this->email->message($message);
+        $this->email->send();
+
+    }
+
+    //function to load a page after verifying reset password code
+    public function reset_password_form($email,$email_code){
+
+        if (isset($email,$email_code)) {
+            $email = trim($email);
+            $email_hash = sha1($email . $email_code);
+            $verified = $this->Auth_model->verify_reset_password_code($email, $email_code);
+
+            if ($verified) {
+                //if the verificatio is done, load next view
+                $this->load->view('update_password_form', array('email_hash' => $email_hash, 'email_code' => $email_code, 'email' => $email));
+            }else{
+                //send back to reset_password page, not update_password, if there was a problem
+                $this->load->view('reset_password_request', array('error' => 'There was a problem with your link. Please click it again or request to reset your password again', 'email' => $email));
+            }
+        }
+    }
+
+    public function update_password(){
+
+        if (isset($_POST['email'], $_POST['email_hash']) || $_POST['email_hash'] !== sha1($_POST['email'] . $_POST['email_code'])) {
+            // either a hackeer or they changed their email in the field, just die.
+            die('Error updating your password');
+        }
+
+        $this->load->library('form_validation');
+
+        $this->form_validation->set_rules('email_hash', 'Email Hash', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[50]|matches[password_conf]|xss_clean');
+        $this->form_validation->set_rules('password_conf', 'Confirmed Password', 'trim|required|min_length[6]|max_length[50]|xss_clean');
+
+        if ($this->form_validation->run() == FALSE) {
+            // user didn't validate, send back to update password form and show errors
+            $this->load->view('update_password_form');
+        } else {
+            // successful update
+            //returns users username id successful
+
+            $result = $this->Auth_model->update_password();
+
+            if ($result) {
+                $this->load->view('update_password_success');
+            } else {
+                // this should never happen
+                $this->load->view('update_password_form', array('error' => 'Problem updating your password. Please contact' . $this->config->item('admin_email')));
+            }
+        }
     }
 
     public function logout()
@@ -251,30 +357,107 @@ class Auth extends CI_Controller
                 $link= base_url().'assets/'.$image.'.jpg';
                 $more_link=base_url().'index.php/link/getdata/'.$item_id;
                 //Call the admin controller calss to get the more information about the student
-                echo "<div class=\"member\" style='float:left;
+                echo '
+                <div class="member" style="float:left;
     width:210px;
-    height:350px;
+    height:500px;
     background:#fff;
     padding:3px;
     margin-right:3px;
     margin-left:3px;
     -moz-box-shadow: 1px 2px 2px #ccc;
     -webkit-box-shadow: 1px 2px 2px #ccc;
-    box-shadow: 1px 2px 2px #ccc;'>
+    box-shadow: 1px 2px 2px #ccc;">
     
     <br><br>
-    <img style=\"width: 200px;\" src=".$link. " alt=\"Click the link to see more info\"  />
-    <div class=\"name\">
-        <h4 style=\"font-size: 20px\" class=\"card-title\">
-        $item_name 
+    <img style="width: 200px;" src="'.$link.' " alt="Click the link to see more info"  />
+    <div class="name">
+        <h4 style="font-size: 20px;text-align: center" class="card-title">
+        '.$item_name.'
         </h4>
-        <p style=\"font-size:15px\"  class=\"card-text\">$price</p>
-        <p style=\"color: #003399; font-size: 15px\"  class=\"card-text\"><a href=".$more_link.">More </a></p>
+        <p style="font-size:15px;text-align: center"  class="card-text">'.$price.'</p>
+        <p style="color: #003399; font-size: 15px;text-align: center"  class="card-text"><a href=".$more_link.">More</a></p>
+        <input type="text" name="quantity" placeholder="Enter quantity" class="form-control quantity" id="'.$item_id.'" /><br />
+     <button type="button" style="margin-left: 50px" name="add_cart" class="btn btn-success add_cart" data-productname="\'.$row->product_name.\'" data-price="\'.$row->product_price.\'" data-productid="\'.$row->product_id.\'" />Add to Cart</button>
+
     </div>
     
 
 
-</div>";
+</div>
+<script>
+    $(document).ready(function(){
+
+        $(\'.add_cart\').click(function(){
+            var product_id = $(this).data("productid");
+            var product_name = $(this).data("productname");
+            var product_price = $(this).data("price");
+            var quantity = $(\'#\' + product_id).val();
+            if(quantity != \'\' && quantity > 0)
+            {
+                $.ajax({
+                    url:"<?php echo base_url(); ?>shopping_cart/add",
+                    method:"POST",
+                    data:{product_id:product_id, product_name:product_name, product_price:product_price, quantity:quantity},
+                    success:function(data)
+                    {
+                        alert("Product Added into Cart");
+                        $(\'#cart_details\').html(data);
+                        $(\'#\' + product_id).val(\'\');
+                    }
+                });
+            }
+            else
+            {
+                alert("Please Enter quantity");
+            }
+        });
+
+        $(\'#cart_details\').load("<?php echo base_url(); ?>shopping_cart/load");
+
+        $(document).on(\'click\', \'.remove_inventory\', function(){
+            var row_id = $(this).attr("id");
+            if(confirm("Are you sure you want to remove this?"))
+            {
+                $.ajax({
+                    url:"<?php echo base_url(); ?>shopping_cart/remove",
+                    method:"POST",
+                    data:{row_id:row_id},
+                    success:function(data)
+                    {
+                        alert("Product removed from Cart");
+                        $(\'#cart_details\').html(data);
+                    }
+                });
+            }
+            else
+            {
+                return false;
+            }
+        });
+
+        $(document).on(\'click\', \'#clear_cart\', function(){
+            if(confirm("Are you sure you want to clear cart?"))
+            {
+                $.ajax({
+                    url:"<?php echo base_url(); ?>shopping_cart/clear",
+                    success:function(data)
+                    {
+                        alert("Your cart has been clear...");
+                        $(\'#cart_details\').html(data);
+                    }
+                });
+            }
+            else
+            {
+                return false;
+            }
+        });
+
+    });
+</script>
+
+';
 
 
             }

@@ -1,268 +1,242 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
+
 <head>
-    <title>Sales</title>
-    <style>
-        .member {
-            display: inline-block;
-            width:20%;
-            vertical-align: top;
-            text-align:center;
-        }
-        .name {
-            display: inline;
-        }
-        .member img {
-            width: 250px;
-            height:180px;
-            display: block;
-        }
-    </style>
-    <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
-    <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/search.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/navigation.css">
-    <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
-    <script src="<?php echo base_url();?>assets/js/script.js"></script>
-    <script src="<?php echo base_url();?>assets/js/superfish.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.equalheights.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
-    <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/newstyle1.css">
+    <link rel="stylesheet" type="text/css" href="../view/css/style1.css">
 
-    <script>
-        $(document).ready(function()
-        {
-            $('#search').keyup(function()
-            {
-                var txt = document.getElementById('search').value;
-                var txt2 = "";
-
-                $.ajax(
-                    {
-                        url:"<?php echo base_url();?>index.php/fetch/livesearch",
-                        method:"get",
-                        data:{searchData:txt},
-                        dataType:"text",
-                        success:function(data)
-                        {
-                            $('#livesearch').html(data);
-                        }
-                    });
-
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("#nav1 li").hover(
-                function() {
-                    $(this).find('ul').slideDown();
-                },
-                function() {
-                    $(this).find('ul').slideUp();
-                });
-        });
-    </script>
-    <script>
-        $(window).load(function(){
-            $().UItoTop({ easingType: 'easeOutQuart' });
-            $('#stuck_container').tmStickUp({});
-        });
-    </script>
-    <!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-        </a>
-    </div>
-    <![endif]-->
-    <!--[if lt IE 9]>
-    <script src="<?php echo base_url();?>assets/js/html5shiv.js"></script>
-    <link rel="stylesheet" media="screen" href="<?php echo base_url();?>assets/css/ie.css">
-    <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="test/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<body>
-<!--==============================
-              header
-=================================-->
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="grid_12 rel">
-                <h1>
-                    <a href="index.html">
-                        <img src="<?php echo base_url();?>assets/images/logo.png" alt="Logo alt">
-                    </a>
-                </h1>
+
+<body class="home">
+<div class="display-table">
+    <div class="row display-table-row">
+        <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+            <div class="logo">
+                <a href="home.html"><img src="<?php echo base_url();?>index.php/assets/images/logo" alt="merkery_logo" class="hidden-xs hidden-sm">
+                    <img src="<?php echo base_url();?>index.php/assets/images/logo" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
+                </a>
+            </div>
+            <div class="navi">
+                <ul>
+                    <li><a href="<?php echo base_url();?>index.php/manager/my_profile"><span class="hidden-xs hidden-sm">Notebooks</span></a></li>
+                    <li class="active"><a href="<?php echo base_url();?>index.php/manager/add_user"><span class="hidden-xs hidden-sm">Desktops</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/manager/search_user"><span class="hidden-xs hidden-sm">Computer Accessories</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/manager/update_user"><span class="hidden-xs hidden-sm">Network Accessories</span></a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <section id="stuck_container">
-        <!--==============================
-                    Stuck menu
-        =================================-->
-        <div class="container">
+        <div class="col-md-10 col-sm-11 display-table-cell v-align">
+            <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
             <div class="row">
-                <div class="grid_12 ">
+                <header style="height:70px">
+                    <div class="col-md-7">
 
-                    <div class="navigation">
-                        <nav>
-                            <ul class="sf-menu">
-                                <li><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/2"">About</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
-                            </ul>
-                        </nav>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-</header>
-<!--==============================
-              content
-=================================-->
 
-<section class="page1_header" style="background-color: white" >
-    <h1 style="margin-top: 5px; margin-bottom: 5px">Maketing Rental</h1>
 
-    <div class="row">
-        <div class="grid_3">
-            <div class="art">
-                <div id="container">
-                    <ul id="nav1">
-                        <li><a href="#">Notebook Brands</a>
-                            <ul>
-                                <li><a href="#">HP</a></li>
-                                <li><a href="#">Dell</a></li>
-                                <li><a href="#">Lenovo</a></li>
-                                <li><a href="#">Toshiba</a></li>
-                                <li><a href="#">Asus</a></li>
-                                <li><a href="#">Aspire</a></li>
-                                <li><a href="#">Acer</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Desktop Brands</a>
-                            <ul>
-                                <li><a href="#">HP</a></li>
-                                <li><a href="#">Dell</a></li>
-                                <li><a href="#">Lenovo</a></li>
-                                <li><a href="#">Acer</a></li>
-                                <li><a href="#">Samsung</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Computer Hardware Brands</a>
-                            <ul>
-                                <li><a href="#">HP</a></li>
-                                <li><a href="#">Toshiba</a></li>
-                                <li><a href="#">Dell</a></li>
-                                <li><a href="#">Acer</a></li>
-                                <li><a href="#">Kingston</a></li>
-                                <li><a href="#">Trancend</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Projector Brands</a>
-                            <ul>
-                                <li><a href="#">Asus</a></li>
-                                <li><a href="#">View Sonic</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Camera Brands</a>
-                            <ul>
-                                <li><a href="#">HIVISION</a></li>
-                                <li><a href="#">TVT</a></li>
-                                <li><a href="#">HIKVISION</a></li>
-                                <li><a href="#">ZEUSTECH</a></li>
-                                <li><a href="#">L'VISION</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">LED TV Brands</a>
-                            <ul>
-                                <li><a href="#">32"</a></li>
-                                <li><a href="#">40"</a></li>
-                                <li><a href="#">43"</a></li>
-                                <li><a href="#">50"</a></li>
-                                <li><a href="#">55"</a></li>
-                                <li><a href="#">60"</a></li>
-                                <li><a href="#">65"</a></li>
-                                <li><a href="#">70"</a></li>
-                                <li><a href="#">75"</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="grid_9">
-            <h1>Search Item to find here</h1>
-            <br>
-            <form method="post">
-                <input type="text" class="textbox" placeholder="Search" id="search">
-                <input title="Search" value="" type="submit" class="button">
-            </form>
-            <br><br>
-            <div id="livesearch">
-
-                <!-- Item images here -->
-                <?php foreach($item_list as $item){?>
-                    <!-- insert each and every sales item in a loop -->
-                    <?php $name=$item->item_name?>
-
-                    <div class="member">
-                        <br><br>
-                        <img style="font-size: 20px" src="<?php echo base_url();?>assets/<?=$item->image;?>.jpg" alt="Click the link to see more info"  />
-                        <div class="name">
-                            <h4 style="font-size: 20px" class="card-title">
-                                <?=$item->item_name;?>
-
-                            </h4>
-                            <p style="font-size: 15px"  class="card-text">Rs.<?=$item->price;?>/=</p>
-                            <p style="color: #003399; font-size: 15px"  class="card-text"><a href="<?php echo base_url();?>index.php/link/getdata/<?=$item->item_id;?>">more</a></p>
+                        <div class="title hidden-xs hidden-sm">
+                            <h3></h3>
                         </div>
-                        <br>
 
+                        <!-- <div class="search hidden-xs hidden-sm">
+                            <input type="text" placeholder="Search" id="search">
+                        </div> -->
+                    </div>
+                    <div class="col-md-5">
+                        <div class="header-rightside">
+                            <ul class="list-inline header-top pull-left">
+                                <a href="#" style="color: black">Home</a>
+                                <a href="#" style="color: black">Services</a>
+                                <a href="#" style="color: black">Blog</a>
+                                <a href="#" style="color: black">Contacts</a>
+
+                            </ul>
+                            <ul class="list-inline header-top pull-right">
+                                <!-- <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li> -->
+
+                                <li>
+                                    <a href="#" class="icon-info">
+                                        <i class="fa fa-bell" aria-hidden="true"></i>
+                                        <span class="label label-primary">3</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="user-dashboard">
+                <div class="panel-heading">
+                    <div class="form-group">
 
                     </div>
-
-
-                <?php }?>
-            </div>
-
-        </div>
-    </div>
-
-    <br><br>
-</section>
-
-
-<!--==============================
-              footer
-=================================-->
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="grid_12">
-                <div class="copyright"><span class="brand">WebStation Technology (Pvt) Ltd</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> University of Colombo School of Computing</span></a></div>
+                    <h4>
+                        <b>Item Details</b>
+                    </h4>
+                    <label><input type="text" name="search_text" id="search_text" placeholder="Search by Item Details" class="form-control" /></label>
                 </div>
+                <div style="" id="cart_details">
+                    <h3 align="center">Cart is Empty</h3>
+                </div>
+
+
+                <div id="result">
+                    <?php foreach($item_list as $item){
+                        $item_name=($item->item_name);
+                        $item_id=($item->item_id);
+                        $price="Rs.".($item->price);
+                        $category=($item->category);
+                        $description=($item->description);
+                        $image=($item->image);
+                        $link= base_url().'assets/'.$image.'.jpg';
+                        $more_link=base_url().'index.php/link/getdata/'.$item_id;
+                        //Call the admin controller calss to get the more information about the student
+                        echo "<div class=\"member\" style='float:left;
+    width:210px;
+    height:500px;
+    background:#fff;
+    padding:3px;
+    margin-right:3px;
+    margin-left:3px;
+    -moz-box-shadow: 1px 2px 2px #ccc;
+    -webkit-box-shadow: 1px 2px 2px #ccc;
+    box-shadow: 1px 2px 2px #ccc;'>
+    
+    <br><br>
+    <img style=\"width: 200px;\" src=".$link. " alt=\"Click the link to see more info\"  />
+    <div class=\"name\">
+        <h4 style=\"font-size: 20px;text-align: center\" class=\"card-title\">
+        $item_name
+        </h4>
+        <p style=\"font-size:15px;text-align: center\"  class=\"card-text\">$price</p>
+        <p style=\"color: #003399; font-size: 15px;text-align: center\"  class=\"card-text\"><a href=".$more_link.">More</a></p>
+        <input type=\"text\" name=\"quantity\" placeholder=\"Enter quantity\" class=\"form-control quantity\" id=\"'.$item_id.'\" /><br />
+     <button style='margin-left: 50px' type=\"button\" name=\"add_cart\" class=\"btn btn-success add_cart\" data-productname=\"'.$item_name.'\" data-price=\"'.$price.'\" data-productid=\"'.$item_id.'\" />Add to Cart</button>
+
+    </div>
+    
+
+
+</div>";
+
+
+                    }?>
+                </div>
+
             </div>
         </div>
     </div>
-</footer>
-<a href="#" id="toTop" class="fa fa-chevron-up"></a>
-</body>
-</html>
 
+</div>
+
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function(){
+        $('.add_cart').click(function(){
+            var product_id = $(this).data("productid");
+            var product_name = $(this).data("productname");
+            var product_price = $(this).data("price");
+            var quantity = $('#' + product_id).val();
+            if(quantity != '' && quantity > 0)
+            {
+                $.ajax({
+                    url:"<?php echo base_url(); ?>shopping_cart/add",
+                    method:"POST",
+                    data:{product_id:product_id, product_name:product_name, product_price:product_price, quantity:quantity},
+                    success:function(data)
+                    {
+                        alert("Product Added into Cart");
+                        $('#cart_details').html(data);
+                        $('#' + product_id).val('');
+                    }
+                });
+            }
+            else
+            {
+                alert("Please Enter quantity");
+            }
+        });
+
+        $('#cart_details').load("<?php echo base_url(); ?>shopping_cart/load");
+
+        $(document).on('click', '.remove_inventory', function(){
+            var row_id = $(this).attr("id");
+            if(confirm("Are you sure you want to remove this?"))
+            {
+                $.ajax({
+                    url:"<?php echo base_url(); ?>shopping_cart/remove",
+                    method:"POST",
+                    data:{row_id:row_id},
+                    success:function(data)
+                    {
+                        alert("Product removed from Cart");
+                        $('#cart_details').html(data);
+                    }
+                });
+            }
+            else
+            {
+                return false;
+            }
+        });
+
+        $(document).on('click', '#clear_cart', function(){
+            if(confirm("Are you sure you want to clear cart?"))
+            {
+                $.ajax({
+                    url:"<?php echo base_url(); ?>shopping_cart/clear",
+                    success:function(data)
+                    {
+                        alert("Your cart has been clear...");
+                        $('#cart_details').html(data);
+                    }
+                });
+            }
+            else
+            {
+                return false;
+            }
+        });
+
+        load_data();
+
+        function load_data(query)
+        {
+            $.ajax({
+                url:"<?php echo base_url();?>index.php/auth/ajaxsearch",
+                method:"POST",
+                data:{query:query},
+                success:function(data)
+                {
+                    $('#result').html(data);
+                }
+            });
+        }
+        $('#search_text').keyup(function(){
+            var search = $(this).val();
+            if(search != '')
+            {
+                load_data(search);
+            }
+            else
+            {
+                load_data();
+            }
+        });
+    });
+</script>
 
