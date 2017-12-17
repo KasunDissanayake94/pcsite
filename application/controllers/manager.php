@@ -10,7 +10,16 @@ class manager extends CI_Controller{
         $this->load->view('profile');
     }
     public function search_user(){
-        $this->load->view('search_user');
+        $this->load->model('manager_model');
+        $result = $this->manager_model->find_all_users();
+        $data['user_list'] = null;
+        if ($result){
+            $data['user_list'] = $result;
+            $this->load->view('search_user',$data);
+        }
+        else{
+            echo "Page Not Found";
+        }
     }
     public function update_user(){
         $this->load->view('update_user');
