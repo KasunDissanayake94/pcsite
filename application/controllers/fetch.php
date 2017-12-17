@@ -122,7 +122,87 @@ class fetch extends CI_Controller
         <button class="btn btn-basic" data-toggle="modal" data-target="#d'.$objects->id.'"">Delete</button>
     </td>
     
-   </tr>';
+   </tr>
+   
+     <!-- View Modal -->
+    <div  id="v'.$objects->id.'" class="modal fade" role="dialog">
+                <div class="modal-content">
+                    <div class="modal-header login-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">View Form</h4>
+                </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" action="../controller/admin_controller.php" method="post">
+                            
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">User ID :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="username" value="'.$objects->id.'" type="text" name="username" placeholder="Type Student ID here" required disabled/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">First Name :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="firstname" value="'.$objects->first_name.'" type="text" name="firstname" placeholder="Type first name here" required disabled/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Last Name :</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="lastname" value="'.$objects->last_name.'" type="text" name="lastname" placeholder="Type last name here" required disabled/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="area" value="'.$objects->username.'" name="area" placeholder="Enter area here" required disabled/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="email">Type:</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" value="'.$objects->type.'" name="email" placeholder="Enter email here" required disabled/>
+                                </div>
+                            </div>                          
+                            
+
+                            <div class="modal-footer">
+                                <button type="button" class="cancel" data-dismiss="modal">Close</button> 
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+   
+       <!-- Delete Modal -->
+           <div class="modal fade" id="d'.$objects->id.'" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header login-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Delete Form</h4>
+                </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete this data?</p>
+            </div>
+            <div class="modal-footer">
+            <a href="../controller/admin_controller.php?delete_user_id='.$objects->id.'"><button type="button" class="add-project" >Yes</button> </a>
+                                               
+                        <button type="button" class="cancel" data-dismiss="modal">No</button>                        
+                    </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+   ';
 
 
                 }
