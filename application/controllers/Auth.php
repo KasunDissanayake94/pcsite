@@ -194,6 +194,16 @@ class Auth extends CI_Controller
         redirect("auth/login", "refresh");
 
     }
+    public function proceed(){
+        if(isset($_SESSION['email'])){
+            $this->load->view('billing');
+        }
+        else{
+            $msg = '<font color=green>Sign in first.</font><br />';
+            $data['msg'] = $msg;
+            $this->load->view('login1', $data);
+        }
+    }
 
     public function register()
     {
@@ -209,6 +219,7 @@ class Auth extends CI_Controller
             $repassword = $_POST['repassword'];
             if ($password == $repassword) {
                 $_SESSION['full_name'] = $name;
+                $_SESSION['email'] = $email;
                 $data = array(
                     'full_name' => $name,
                     'email' => $email,

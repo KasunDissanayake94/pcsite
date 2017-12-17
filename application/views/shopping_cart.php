@@ -1,40 +1,79 @@
 <html>
 <head>
-    <title>Codeigniter Shopping Cart with Ajax JQuery</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/newstyle1.css">
+    <link rel="stylesheet" type="text/css" href="../view/css/style1.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="test/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <br /><br />
+<body class="home">
+<div class="display-table">
+    <div class="row display-table-row">
 
-    <div class="col-lg-6 col-md-6">
-        <div class="table-responsive">
-            <h3 align="center">Codeigniter Shopping Cart with Ajax JQuery</h3><br />
-            <?php
-            foreach($product as $row)
-            {
-                echo '
-    <div class="col-md-4" style="padding:16px; background-color:#f1f1f1; border:1px solid #ccc; margin-bottom:16px; height:400px" align="center">
-     <img src="'.base_url().'assets/'.$row->image.'" class="img-thumbnail" /><br />
-     <h4>'.$row->item_name.'</h4>
-     <h3 class="text-danger">$'.$row->price.'</h3>
-     <input type="text" name="quantity" class="form-control quantity" id="'.$row->item_id.'" /><br />
-     <button type="button" name="add_cart" class="btn btn-success add_cart" data-productname="'.$row->item_name.'" data-price="'.$row->price.'" data-productid="'.$row->item_id.'" />Add to Cart</button>
-    </div>
-    ';
-            }
-            ?>
+        <div class="col-md-12 col-sm-12 display-table-cell v-align">
+            <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+            <div class="row">
+                <header style="height:70px">
+                    <div class="col-md-7">
 
-        </div>
-    </div>
-    <div class="col-lg-6 col-md-6">
-        <div id="cart_details">
-            <h3 align="center">Cart is Empty</h3>
+
+
+                        <div class="title hidden-xs hidden-sm">
+                            <h3></h3>
+                        </div>
+
+                        <!-- <div class="search hidden-xs hidden-sm">
+                            <input type="text" placeholder="Search" id="search">
+                        </div> -->
+                    </div>
+                    <div class="col-md-5">
+                        <div class="header-rightside">
+                            <ul class="list-inline header-top pull-left">
+                                <a href="#" style="color: black">Home</a>
+                                <a href="#" style="color: black">Services</a>
+                                <a href="#" style="color: black">Blog</a>
+                                <a href="#" style="color: black">Contacts</a>
+
+                            </ul>
+                            <ul class="list-inline header-top pull-right">
+                                <!-- <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li> -->
+
+                                <li>
+                                    <a href="<?php echo base_url();?>index.php/manager/logout" class="view btn-sm active">log out</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="user-dashboard">
+
+                <div style="" id="cart_details">
+                    <h3 align="center">Cart is Empty</h3>
+
+                </div>
+                <a href="<?php echo base_url();?>index.php/Auth/proceed"><button type="button"  class="btn btn-success">Proceed to Checkout </button></a>
+
+
+
+
+
+            </div>
         </div>
     </div>
 
 </div>
+
+
+</body>
 </body>
 </html>
 <script>
