@@ -46,6 +46,21 @@ class manager extends CI_Controller{
         $this->load->view('profile', $data);
 
     }
+    public function delete($id){
+        $this->load->model('manager_model');
+        $result = $this->manager_model->delete($id);
+        if($result){
+            $this->search_user();
+        }
+        else{
+            $this->search_user();
+        }
+
+
+
+
+
+    }
 
     public function logout(){
 

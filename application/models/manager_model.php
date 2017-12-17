@@ -65,5 +65,9 @@ class manager_model extends CI_Model{
         $query=$query->result();
         return $query;
     }
+    public function delete($id){
+        $this->db->where('id', $id);
+        $this->db->delete('users');
+    }
 }
 

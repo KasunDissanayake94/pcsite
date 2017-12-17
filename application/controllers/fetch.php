@@ -192,7 +192,7 @@ class fetch extends CI_Controller
               <p>Are you sure you want to delete this data?</p>
             </div>
             <div class="modal-footer">
-            <a href="../controller/admin_controller.php?delete_user_id='.$objects->id.'"><button type="button" class="add-project" >Yes</button> </a>
+            <a href="http://localhost/pcsite/index.php/manager/delete/'.$objects->id.'"><button type="button" class="add-project" >Yes</button> </a>
                                                
                         <button type="button" class="cancel" data-dismiss="modal">No</button>                        
                     </div>
