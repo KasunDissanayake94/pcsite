@@ -163,6 +163,19 @@ class Auth_model extends CI_Model{
         }
 
     }
+      public function send_message(){
+        // echo "hasith lakshan";
+        $message_array = array(
+            'name' => $this->input->post('name',TRUE),
+            'email' => $this->input->post('email',TRUE),
+            'phone' => $this->input->post('mno',TRUE), 
+            'message' => $this->input->post('message',TRUE),
+        );
+        // print_r($message_array);
+        // die();
+       return $this->db->insert('message',$message_array);
+
+    }
 
 }
 

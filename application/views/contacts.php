@@ -8,6 +8,10 @@
     <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/contact-form.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/messageForm.css">
     <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
@@ -37,38 +41,7 @@
     <link rel="stylesheet" media="screen" href="<?php echo base_url();?>assets/css/ie.css">
     <![endif]-->
 
-<title>Contact Us</title>
-<meta charset="utf-8">
-<meta name="format-detection" content="telephone=no" />
-<link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
-<link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
-<link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
-<script src="<?php echo base_url();?>assets/jquery.js"></script>
-<script src="<?php echo base_url();?>assets/jquery-migrate-1.1.1.js"></script>
-<script src="<?php echo base_url();?>assets/jquery.easing.1.3.js"></script>
-<script src="<?php echo base_url();?>assets/script.js"></script>
-<script src="<?php echo base_url();?>assets/superfish.js"></script>
-<script src="<?php echo base_url();?>assets/jquery.equalheights.js"></script>
-<script src="<?php echo base_url();?>assets/jquery.mobilemenu.js"></script>
-<script src="<?php echo base_url();?>assets/tmStickUp.js"></script>
-<script src="<?php echo base_url();?>assets/jquery.ui.totop.js"></script>
-<script>
-  $(window).load(function(){
-    $().UItoTop({ easingType: 'easeOutQuart' });
-    $('#stuck_container').tmStickUp({});  
- }); 
-</script>
-<!--[if lt IE 8]>
- <div style=' clear: both; text-align:center; position: relative;'>
-   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-   </a>
-</div>
-<![endif]-->
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<link rel="stylesheet" media="screen" href="css/ie.css">
-<![endif]-->
+
 
 </head>
 <body>
@@ -116,17 +89,35 @@
           Content
 ======================-->
 <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-    <div class="container">
-        <div class="row">
-            <div class="grid_12">
+    <div class="container"><!-- startr container -->
+        <div class="row"><!-- start row of map and bellow detils -->
+            <div class="grid_12"><!-- get the 12 gride and put in the map -->
                 <h3>Contacts</h3>
-                <div class="map">
+              <!--   <div class="map">
                     <figure class="">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
                     </figure>
-                </div>
-            </div>
-            <div class="grid_3">
+                </div> -->
+                <div id="map" style="width:1300px;height:400px;background:yellow"></div>
+
+                    <script>
+                    function myMap() {
+                    var mapOptions = {
+                        center: new google.maps.LatLng(6.8797667,79.9249122),
+                        zoom: 15,
+                        mapTypeId: google.maps.MapTypeId.HYBRID
+                    }
+                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                    }
+                    </script>
+
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqUjBqRBBLDzYkF6krNZjOmi2MswG3yK4&callback=myMap"></script>
+
+
+                
+
+        </div>
+            <div class="grid_3"><!-- other details start -->
                 <h3 class="head__1">Address:</h3>
                 <address class="text3">
                     <a href="https://www.google.lk/maps/place/Battaramulla/@6.9000592,79.9117393,15z/data=!3m1!4b1!4m5!3m4!1s0x3ae25755e928e7ff:0x85482fe919ac9ca1!8m2!3d6.8979941!4d79.9222869">Webstation Technology,<br>No:30,<br>Wickramasighepura,<br>Battaramulla.</a>
@@ -150,16 +141,121 @@
                 <div class="text3">
                     <a href="#"></a><br><a href="#">Download</a>
                 </div>
+            </div><!-- end of other details -->
+        </div><!-- end of the map and other details row -->
+        <br>
+        <br>
+        <hr>
+
+        <!-- set flash data msg -->
+        <?php
+          if($this->session->flashdata('msg')){
+            echo "<h3>".$this->session->flashdata('msg')."</h3>";
+            $this->session->set_flashdata('msg','');
+
+          }
+
+        ?>
+     
+        
+     <!--  message box -->  
+  <section id="contact">
+    <div class="row">
+      <div class="section-content">
+        <h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+        <h3>support is available for all</h3>
+
+        
+       <!-- <?php// if($_SESSION['sendmessage']==false){
+
+      //           echo "message is not send";
+      //           unset($_SESSION['sendmessage']);
+      //   } elseif ($_SESSION['sendmessage']==true) {
+      //          echo "message send successfuly";
+      //          $_SESSION['sendmessage']='';
+      //   } ?>
+
+         -->
+
+
+
+
+
+
+
+
+      </div>
+      <div class="contact-section">
+      <div class="container">
+
+        <?php echo validation_errors();?>
+       <?php echo form_open('sendMessage/send');?>
+
+          <div class="grid_6 form-line">
+              <div class="form-group">
+                <label for="exampleInputUsername">Your Name</label><br>
+                <input type="text" class="form-control" style="width: 500px" id="" placeholder=" Enter Name" name="name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail">Email Address</label><br>
+                <input type="email" class="form-control" style="width: 500px" id="exampleInputEmail" placeholder=" Enter Email id" name="email">
+              </div>  
+              <div class="form-group">
+                <label for="telephone">Mobile No.</label><br>
+                <input type="tel" class="form-control" style="width: 500px" id="telephone" placeholder=" Enter 10-digit mobile no." name="mno">
+              </div>
             </div>
 
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for ="description">Message</label><br>
+                <textarea  class="form-control" style="height:150px; width: 500px" id="description" placeholder="Enter Your Message" name="message"></textarea>
+              </div>
+              <div>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+              </div>
+            </div>
+
+
+        <?php echo form_close();?>
+      </div>
+    </div>
+    </section>
+      <!-- <div class="row">
+        
             <div class="grid_12">
-                <h3 class="head__1">Miscellaneous information:</h3>
-                <div class="fwn">
-                    <p>24/7 support is available for all <a href="http://www.templatemonster.com/" rel="nofollow" class="color1">premium themes</a>.</p>
-                    <p>If you have problems with customization of freebies, ask guys from <a href="http://www.templatetuning.com/" rel="nofollow" class="color1">TemplateTuning</a> to help you.</p>
-                    Aliquam nibh ante, egestas id dictum a, commodo luctus liberoret. Praesenter faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequa.
+                <?php echo form_open('sendmessage/sendmessage');?>
+                <div class="form-group">
+
+                      <div class="grid_2">
+                        <label class="name">
+                                <input type="text" name="name" placeholder="Name:" value="" data-constraints="@Required @JustLetters"  />      
+                        </label>
+                      </div>
+
+                      <div class="grid_4">
+                         <label class="email">
+                                <input type="text" name="email" placeholder="E-mail:" value="" data-constraints="@Required @Email" />
+                            
+                          </label>
+                      </div>
+
+                      <div class="grid_2">
+                         <label class="phone">
+                            <input type="text" name="phone" placeholder="Phone:" value="" data-constraints="@Required @JustNumbers" />
+                            
+                        </label>
+                      </div>
+
                 </div>
-                <form id="contact-form">
+                <?php echo form_close();?>
+            </div>
+      </div> -->
+               
+                <!-- <form id="contact-form">
+
                     <div class="contact-form-loader"></div>
                     <fieldset>
                         <label class="name">
@@ -189,173 +285,13 @@
                             <a href="#" class="btn" data-type="submit">Send e-mail</a>
                         </div>
                     </fieldset>
-                    <div class="modal fade response-message">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title">Modal title</h4>
-                                </div>
-                                <div class="modal-body">
-                                    You message has been sent! We will be in touch soon.
-                                </div>
-                            </div>
-=======
-  <div class="container">
-    <div class="row">
-      <div class="grid_12">
-        <h3>Contact Us</h3>
-        <div class="map">
-          <figure class="">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
-          </figure>
-        </div>
-      </div>
-      <div class="grid_5">
-        <h3 class="head__1">Address:</h3>
-        <address class="text3">
-          No:30 <br>Wickramasighepura <br>Battaramulla
-        </address>
-      </div>
-      <div class="grid_4">
-        <h3 class="head__1">Phone:</h3>
-        <div class="text3">
-          +94 77 723 9580 <br>+94 77 555 0223 <br>+94 11 208 2097 (Fax)
-        </div>
-      </div>
-      <div class="grid_3">
-        <h3 class="head__1">E-mail:</h3>
-        <div class="text3">
-          <a href="#">webstation@gmail.com</a><br><!--<a href="#">Download</a>-->
-        </div>
-      </div>
-      <div class="grid_12">
-        <h3 class="head__1">Drop a Message:</h3>
-        <div class="fwn">
-        <!--
-          <p>Keep intouch!</p>
-          <p>If you want our service, contact us.</p>
-        -->
-        </div>
-              <form id="contact-form">
-                  <br>
-                  <br>
-                  <table>
-                    <div class="contact-form-loader"></div>
-                    <fieldset>
-                      <tr>
-                        <td>
-                          <label class="name"> Name :
-                        </td>
-                        <td>
-                          <input type="text" name="name" placeholder="Name:" value="" data-constraints="@Required @JustLetters"  />
-                        </td>
-                        <td>
-                          <span class="empty-message">*This field is required.</span>
-                          <!--
-                          <span class="error-message">*This is not a valid name.</span>
-                          -->
-                        </td>
-                        </label>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>        
-                      <tr></tr>
-                      <tr></tr>
-                      <tr>
-                        <td>
-                          <label class="email"> Email :
-                        </td>
-                        <td>
-                          <input type="text" name="email" placeholder="E-mail:" value="" data-constraints="@Required @Email" />
-                        </td>
-                        <td>
-                          <span class="empty-message">*This field is required.</span>
-                          <!--
-                          <span class="error-message">*This is not a valid email.</span>
-                          -->
-                        </td>
-                        </label>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>        
-                      <tr></tr>
-                      <tr></tr>
-                      <tr>
-                        <td>
-                          <label class="phone"> Phone :
-                        </td>
-                        <td>
-                          <input type="text" name="phone" placeholder="Phone:" value="" data-constraints="@Required @JustNumbers" />
-                        </td>
-                        <td>
-                          <span class="empty-message">*This field is required.</span>
-                          <!--
-                          <span class="error-message">*This is not a valid phone.</span>
-                          -->
-                        </td>
-                        </label>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>        
-                      <tr></tr>
-                      <tr></tr>
-                      <tr>
-                        <td>
-                          <label class="message"> Message :
-                        </td>
-                        <td>
-                          <textarea name="message" placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
-                        </td>
-                        <td>
-                          <span class="empty-message">*This field is required.</span>
-                          <!--
-                          <span class="error-message">*The message is too short.</span>
-                          -->
-                        </td>
-                        </label>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>        
-                      <tr></tr>
-                      <tr></tr>
-                      <tr>
-                        <div class="clear"></div>
-                      </tr>
-                      <tr></tr>
-                      <tr></tr>        
-                      <tr></tr>
-                      <tr></tr>
-                      <tr></tr>
-                      <tr></tr>
-                      <tr>
-                        
-                          <a href="#" class="btn" data-type="submit">Send e-mail</a>
-                        
-                      </tr>
-                    </fieldset>
-                  </table>
+                  </form> -->
+                  
+          
+                 
 
-<!--
-                  <div class="modal fade response-message">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title">Modal title</h4>
->>>>>>> Stashed changes:application/views/contacts.html
-                        </div>
-                    </div>
-<<<<<<< Updated upstream:application/views/contacts.php
-                </form>
-            </div>
-        </div>
-=======
-                  </div>
--->
-                </form>   
-      </div>
->>>>>>> Stashed changes:application/views/contacts.html
+       
+
     </div>
 </section>
 <!--==============================
