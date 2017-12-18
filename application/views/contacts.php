@@ -103,11 +103,17 @@
                     <script>
                     function myMap() {
                     var mapOptions = {
-                        center: new google.maps.LatLng(6.8797667,79.9249122),
+                        center: new google.maps.LatLng(6.8819751,79.9363298),
                         zoom: 15,
                         mapTypeId: google.maps.MapTypeId.HYBRID
                     }
                     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                     var marker = new google.maps.Marker({
+                      position: {lat: 6.8819751, lng: 79.9363298},
+                      map: map,
+                      title: 'Hello World!'});
+
                     }
                     </script>
 
@@ -159,7 +165,7 @@
      
         
      <!--  message box -->  
-  <section id="contact">
+  <section id="contact" style="width: 1300px">
     <div class="row">
       <div class="section-content">
         <h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
