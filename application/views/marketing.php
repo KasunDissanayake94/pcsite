@@ -28,10 +28,10 @@
             </div>
             <div class="navi">
                 <ul>
-                    <li><a href="<?php echo base_url();?>index.php/manager/my_profile"><span class="hidden-xs hidden-sm">Notebooks</span></a></li>
-                    <li class="active"><a href="<?php echo base_url();?>index.php/manager/add_user"><span class="hidden-xs hidden-sm">Desktops</span></a></li>
-                    <li><a href="<?php echo base_url();?>index.php/manager/search_user"><span class="hidden-xs hidden-sm">Computer Accessories</span></a></li>
-                    <li><a href="<?php echo base_url();?>index.php/manager/update_user"><span class="hidden-xs hidden-sm">Network Accessories</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/marketing/go/notebook"><span class="hidden-xs hidden-sm">Notebooks</span></a></li>
+                    <li class="active"><a href="<?php echo base_url();?>index.php/marketing/go/desktop"><span class="hidden-xs hidden-sm">Desktops</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/marketing/go/computer_accessories"><span class="hidden-xs hidden-sm">Computer Accessories</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/marketing/go/network_accessories"><span class="hidden-xs hidden-sm">Network Accessories</span></a></li>
                 </ul>
             </div>
         </div>
@@ -52,7 +52,7 @@
                         </div> -->
                     </div>
                     <div class="col-md-5">
-                        <div class="header-rightside">
+                        <div class="header-rightside"
                             <ul class="list-inline header-top pull-left">
                                 <a href="#" style="color: black">Home</a>
                                 <a href="#" style="color: black">Services</a>
@@ -86,9 +86,6 @@
                     </h4>
                     <label><input type="text" name="search_text" id="search_text" placeholder="Search by Item Details" class="form-control" /></label>
                 </div>
-                <div style="" id="cart_details">
-                    <h3 align="center">Cart is Empty</h3>
-                </div>
 
 
                 <div id="result">
@@ -120,9 +117,8 @@
         $item_name
         </h4>
         <p style=\"font-size:15px;text-align: center\"  class=\"card-text\">$price</p>
-        <p style=\"color: #003399; font-size: 15px;text-align: center\"  class=\"card-text\"><a href=".$more_link.">More</a></p>
-        <input type=\"text\" name=\"quantity\" placeholder=\"Enter quantity\" class=\"form-control quantity\" id=\"'.$item_id.'\" /><br />
-     <button style='margin-left: 50px' type=\"button\" name=\"add_cart\" class=\"btn btn-success add_cart\" data-productname=\"'.$item_name.'\" data-price=\"'.$price.'\" data-productid=\"'.$item_id.'\" />Add to Cart</button>
+        <p style=\"color: #003399; font-size: 15px;text-align: center\"  class=\"card-text\"><a href=".$more_link.">More</a></p><br />
+     
 
     </div>
     
@@ -144,99 +140,3 @@
 </body>
 
 </html>
-<script>
-    $(document).ready(function(){
-        $('.add_cart').click(function(){
-            var product_id = $(this).data("productid");
-            var product_name = $(this).data("productname");
-            var product_price = $(this).data("price");
-            var quantity = $('#' + product_id).val();
-            if(quantity != '' && quantity > 0)
-            {
-                $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/add",
-                    method:"POST",
-                    data:{product_id:product_id, product_name:product_name, product_price:product_price, quantity:quantity},
-                    success:function(data)
-                    {
-                        alert("Product Added into Cart");
-                        $('#cart_details').html(data);
-                        $('#' + product_id).val('');
-                    }
-                });
-            }
-            else
-            {
-                alert("Please Enter quantity");
-            }
-        });
-
-        $('#cart_details').load("<?php echo base_url(); ?>shopping_cart/load");
-
-        $(document).on('click', '.remove_inventory', function(){
-            var row_id = $(this).attr("id");
-            if(confirm("Are you sure you want to remove this?"))
-            {
-                $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/remove",
-                    method:"POST",
-                    data:{row_id:row_id},
-                    success:function(data)
-                    {
-                        alert("Product removed from Cart");
-                        $('#cart_details').html(data);
-                    }
-                });
-            }
-            else
-            {
-                return false;
-            }
-        });
-
-        $(document).on('click', '#clear_cart', function(){
-            if(confirm("Are you sure you want to clear cart?"))
-            {
-                $.ajax({
-                    url:"<?php echo base_url(); ?>shopping_cart/clear",
-                    success:function(data)
-                    {
-                        alert("Your cart has been clear...");
-                        $('#cart_details').html(data);
-                    }
-                });
-            }
-            else
-            {
-                return false;
-            }
-        });
-
-        load_data();
-
-        function load_data(query)
-        {
-            $.ajax({
-                url:"<?php echo base_url();?>index.php/auth/ajaxsearch",
-                method:"POST",
-                data:{query:query},
-                success:function(data)
-                {
-                    $('#result').html(data);
-                }
-            });
-        }
-        $('#search_text').keyup(function(){
-            var search = $(this).val();
-            if(search != '')
-            {
-                load_data(search);
-            }
-            else
-            {
-                load_data();
-            }
-        });
-    });
-</script>
-
