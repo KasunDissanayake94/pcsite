@@ -8,8 +8,7 @@ class detail_model extends CI_Model{
 
 
 
-    //live search
-    public function find_items($category){        
+    public function find_items($category){
         $query = $this
             ->db
             ->select('*')
@@ -27,6 +26,7 @@ class detail_model extends CI_Model{
         }
 
     }
+
 
 }
 

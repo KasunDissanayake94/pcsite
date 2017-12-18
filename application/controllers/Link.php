@@ -72,7 +72,15 @@ class Link extends CI_Controller{
         }
         elseif ($x=="brands"){
 
-            $this->load->view('brands');
+            $result = $this->auth_model->find_all_items();
+            $data['item_list'] = null;
+            if ($result){
+                $data['item_list'] = $result;
+                $this->load->view('brands.php',$data);
+            }
+            else{
+                echo "Page Not Found";
+            }
         }
 
 
