@@ -1,6 +1,6 @@
 <?php
 
-class Link extends CI_Controller{
+class marketing extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
@@ -18,8 +18,8 @@ class Link extends CI_Controller{
     public function go($x){
 
         if ($x=="notebook"){
-
-            $result = $this->detail_model->find_all_items($x);
+            $this->load->model('detail_model');
+            $result = $this->detail_model->find_items($x);
             $data['item_list'] = null;
             if ($result){
                 $data['item_list'] = $result;

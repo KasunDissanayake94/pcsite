@@ -1,5 +1,5 @@
 <?php
-class fetch_model extends CI_Model{
+class detail_model extends CI_Model{
 
     public function __construct(){
 
