@@ -26,7 +26,7 @@ class Link extends CI_Controller{
         }
         elseif ($x==3){
 
-            $this->load->view('service.php');
+            $this->load->view('services.php');
         }
         elseif ($x==4){
 
