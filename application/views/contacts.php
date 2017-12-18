@@ -69,12 +69,12 @@
                 <div class="grid_12 ">
                     <div class="navigation ">
                         <nav>
-                            <ul class="sf-menu">
-                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/2">About</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
+                            <ul class="list-inline header-top pull-left">
+                                <a href="<?php echo base_url();?>index.php/link/go/1" style="color: white; margin: 20px">Home</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/2" style="color: white; margin: 20px">About</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/3" style="color: white; margin: 20px">Services</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/5" style="color: white; margin: 20px">Contacts</a>
+
                             </ul>
                         </nav>
                         <div class="clear"></div>
@@ -145,7 +145,7 @@
             <div class="grid_3">
                 <h3 class="head__1">Gmail: </h3>
                 <div class="text3">
-                    <a href="#"></a><br><a href="#">Download</a>
+                    <a href="#"></a><br><a href="#">chathuranga@webstation.lk</a>
                 </div>
             </div><!-- end of other details -->
         </div><!-- end of the map and other details row -->

@@ -12,7 +12,7 @@
     <script type="text/javascript" src="test/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<body>
+<body background="banner3.jpg">
 <body class="home">
 <div class="display-table">
     <div class="row display-table-row">
@@ -57,7 +57,7 @@
             </div>
             <div class="user-dashboard">
                 <article class="content_gray offset__2">
-        <div class="container">
+        <div class="container" background="assets/images/banner3.jpg">
             <div class="row">
                 <div class="grid_4">
                 <center>

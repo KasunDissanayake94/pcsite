@@ -114,14 +114,13 @@
 
                     <div class="navigation">
                         <nav>
-                            <ul class="sf-menu">
-                                <li><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/2"">About</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/6">Sales1</a></li>
-                           </ul>
+                            <ul class="list-inline header-top pull-left">
+                                <a href="<?php echo base_url();?>index.php/link/go/1" style="color: white; margin: 20px">Home</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/2" style="color: white; margin: 20px">About</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/3" style="color: white; margin: 20px">Services</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/5" style="color: white; margin: 20px">Contacts</a>
+
+                            </ul>
                         </nav>
                         <div class="clear"></div>
                     </div>
