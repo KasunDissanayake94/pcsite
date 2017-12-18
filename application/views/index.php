@@ -44,7 +44,7 @@
                     </a>
                 </h1>
                 <ul class="sf-menu">
-                    <li style="float: right;height: 70px;width: 70px;margin-left: 20px"><a href="<?php echo base_url();?>index.php/auth/cart"><img src="<?php echo base_url();?>assets/images/shopping_cart1.png" alt="Logo alt"></a></li>
+                    <li style="float: right;height: 50px;width: 50px;margin-left: 20px"><a href="<?php echo base_url();?>index.php/auth/cart"><img src="<?php echo base_url();?>assets/images/shopping_cart1.png" alt="Logo alt"></a></li>
 
                     <li style="float: right;margin-left: 20px"><a href="<?php echo base_url();?>index.php/auth/login"> Login </a></li>
 
