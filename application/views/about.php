@@ -78,14 +78,15 @@
 <!--=====================
           Content
 ======================-->
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
+<section id="content"><div class="ic"></div>
     <div class="container">
         <div class="row">
             <div class="grid_12">
                 <h3>About Us</h3>
                 <img src="<?php echo base_url();?>assets/images/page2_img.jpg" alt="" class="img_inner fleft">
                 <div class="extra_wrapper">
-                    <p class="fwn"><a href="#">This is a Company engaged in the business of selling and hiring of computer solutions. This company, WEBSTATION TECHNOLOGY, is located,at #30, Wickramasighepura, Battaramulla.</a></p>
+                    <p class="fwn">WebStation Technologies is the newly established company in Battaramulla. Mainly we are focusing on selling and renting Computer Hardware, PCs and Laptops. At the same time we are working on fitting CCTV cameras.</p>
+                    <p>We are anxious to build-up business relations with your esteemed organization and would be much thankful if you could consider our company on the services. Our well trained and technically qualified staff focus on your need and act promptly to the entire satisfaction.</p>
                     
                 </div>
             </div>
