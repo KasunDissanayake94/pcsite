@@ -1,131 +1,88 @@
 
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Services</title>
-    <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico">
-    <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" />
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
-    <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery-migrate-1.1.1.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
-    <script src="<?php echo base_url();?>assets/js/script.js"></script>
-    <script src="<?php echo base_url();?>assets/js/superfish.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.equalheights.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.mobilemenu.js"></script>
-    <script src="<?php echo base_url();?>assets/js/tmStickUp.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery.ui.totop.js"></script>
-    <script>
-        $(window).load(function(){
-            $().UItoTop({ easingType: 'easeOutQuart' });
-            $('#stuck_container').tmStickUp({});
-        });
-    </script>
-    <!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-        </a>
-    </div>
-    <![endif]-->
-    <!--[if lt IE 9]>
-    <script src="<?php echo base_url();?>assets/js/html5shiv.js"></script>
-    <link rel="stylesheet" media="screen" href="<?php echo base_url();?>assets/css/ie.css">
-    <![endif]-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/newstyle1.css">
+    <link rel="stylesheet" type="text/css" href="../view/css/style1.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="test/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-<!--==============================
-              header
-=================================-->
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="grid_12 rel">
-                <h1>
-                    <a href="index.html">
-                        <img src="<?php echo base_url();?>assets/images/logo.png" alt="Logo alt">
-                    </a>
-                </h1>
+<body class="home">
+<div class="display-table">
+    <div class="row display-table-row">
+
+        <div class="col-md-12 col-sm-12 display-table-cell v-align">
+            <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+            <div class="row">
+                <header style="height:70px">
+                    <div class="col-md-7">
+
+
+
+                        <div class="title hidden-xs hidden-sm">
+                            <h3></h3>
+                        </div>
+
+                        <!-- <div class="search hidden-xs hidden-sm">
+                            <input type="text" placeholder="Search" id="search">
+                        </div> -->
+                    </div>
+                    <div class="col-md-5">
+                        <div class="header-rightside">
+                            <ul class="list-inline header-top pull-left">
+                                <a href="#" style="color: black">Home</a>
+                                <a href="#" style="color: black">Services</a>
+                                <a href="#" style="color: black">Blog</a>
+                                <a href="#" style="color: black">Contacts</a>
+
+                            </ul>
+                            <ul class="list-inline header-top pull-right">
+                                <!-- <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li> -->
+
+                                <li>
+                                    <a href="<?php echo base_url();?>index.php/manager/logout" class="view btn-sm active">log out</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </header>
             </div>
-        </div>
-    </div>
-    <section id="stuck_container">
-        <!--==============================
-                    Stuck menu
-        =================================-->
+            <div class="user-dashboard">
+                <article class="content_gray offset__2">
         <div class="container">
             <div class="row">
-                <div class="grid_12 ">
-                    <div class="navigation ">
-                        <nav>
-                            <ul class="sf-menu">
-                                <li><a href="<?php echo base_url();?>index.php/link/go/1">Home</a></li>
-                                <li class="current"><a href="<?php echo base_url();?>index.php/link/go/2"">About</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/3">Services</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/4">Blog</a></li>
-                                <li><a href="<?php echo base_url();?>index.php/link/go/5">Contacts</a></li>
-                            </ul>
-                        </nav>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-</header>
-<!--==============================
-              content
-=================================-->
-
-      <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-          <div class="container">
-              <div class="row">
-                  <div class="grid_12">
-                      <h3>Services</h3>
-                  </div>
-
-                  <?php if (isset($_SESSION['success'])){
-
-                      ?>
-                      <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-                      <?php
-                  }
-                  ?>
-                  <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-                  <div class="grid_12">
-                    <h4>
-                      <ul style="list-style-type:square">
+                <div class="grid_4">
+                    <h3>Services List</h3>
+                    <ul class="list-1">
                         <li>All Kinds of Computers Service and Maintenance</li>
                         <li>Server Repair and Maintenance</li>
                         <li>CCTV Camera Configuration and Installation</li>
                         <li>Door Lock Systems Configuration and Installation</li>
                         <li>Security Alarm System Configuration and Installation</li>
                         <li>GPS Trackers Configuration and Installation</li>
-                      </ul>
-                    </h4>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-<!--==============================
-              footer
-=================================-->
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="grid_12">
-                <div class="copyright"><span class="brand">WebStation Technology (Pvt) Ltd</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-                    <div class="sub-copy">Website designed by <a class="fwn" href="http://ucsc.cmb.ac.lk/" rel="nofollow"><span class="brand"> University of Colombo School of Computing</span></a></div>
+                    </ul>
                 </div>
             </div>
         </div>
+    </article>
+            </div>
+        </div>
     </div>
-</footer>
-<a href="#" id="toTop" class="fa fa-chevron-up"></a>
+
+</div>
+
+
+</body>
 </body>
 </html>
+
+
+
