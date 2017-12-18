@@ -53,13 +53,13 @@
                     </div>
                     <div class="col-md-5">
                         <div class="header-rightside"
-                            <ul class="list-inline header-top pull-left">
-                                <a href="#" style="color: black">Home</a>
-                                <a href="#" style="color: black">Services</a>
-                                <a href="#" style="color: black">Blog</a>
-                                <a href="#" style="color: black">Contacts</a>
+                        <ul class="list-inline header-top pull-left">
+                            <a href="<?php echo base_url();?>index.php/link/go/1" style="color: white; margin: 20px">Home</a>
+                            <a href="<?php echo base_url();?>index.php/link/go/2" style="color: white; margin: 20px">About</a>
+                            <a href="<?php echo base_url();?>index.php/link/go/3" style="color: white; margin: 20px">Services</a>
+                            <a href="<?php echo base_url();?>index.php/link/go/5" style="color: white; margin: 20px">Contacts</a>
 
-                            </ul>
+                        </ul>
                             <ul class="list-inline header-top pull-right">
                                 <!-- <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li> -->
 
