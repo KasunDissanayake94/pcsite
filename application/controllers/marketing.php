@@ -30,7 +30,7 @@ class marketing extends CI_Controller{
             }
         }
         elseif ($x=="desktop"){
-
+            $this->load->model('detail_model');
             $result = $this->detail_model->find_items($x);
             $data['item_list'] = null;
             if ($result){
@@ -43,7 +43,7 @@ class marketing extends CI_Controller{
         }
 
         elseif ($x=="computer_accessories"){
-
+            $this->load->model('detail_model');
             $result = $this->detail_model->find_items($x);
             $data['item_list'] = null;
             if ($result){
@@ -55,7 +55,7 @@ class marketing extends CI_Controller{
             }
         }
         elseif ($x=="network_accessories"){
-
+            $this->load->model('detail_model');
             $result = $this->detail_model->find_items($x);
             $data['item_list'] = null;
             if ($result){

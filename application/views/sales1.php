@@ -25,10 +25,10 @@
             </div>
             <div class="navi">
                 <ul>
-                    <li><a href="<?php echo base_url();?>index.php/manager/my_profile"><span class="hidden-xs hidden-sm">Notebooks</span></a></li>
-                    <li class="active"><a href="<?php echo base_url();?>index.php/manager/add_user"><span class="hidden-xs hidden-sm">Desktops</span></a></li>
-                    <li><a href="<?php echo base_url();?>index.php/manager/search_user"><span class="hidden-xs hidden-sm">Computer Accessories</span></a></li>
-                    <li><a href="<?php echo base_url();?>index.php/manager/update_user"><span class="hidden-xs hidden-sm">Network Accessories</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/marketing/go/notebook"><span class="hidden-xs hidden-sm">Notebooks</span></a></li>
+                    <li class="active"><a href="<?php echo base_url();?>index.php/marketing/go/desktop"><span class="hidden-xs hidden-sm">Desktops</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/marketing/go/computer_accessories"><span class="hidden-xs hidden-sm">Computer Accessories</span></a></li>
+                    <li><a href="<?php echo base_url();?>index.php/marketing/go/network_accessories"><span class="hidden-xs hidden-sm">Network Accessories</span></a></li>
                 </ul>
             </div>
         </div>
