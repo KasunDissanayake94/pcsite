@@ -36,10 +36,10 @@
                     <div class="col-md-5">
                         <div class="header-rightside">
                             <ul class="list-inline header-top pull-left">
-                                <a href="#" style="color: black">Home</a>
-                                <a href="#" style="color: black">Services</a>
-                                <a href="#" style="color: black">Blog</a>
-                                <a href="#" style="color: black">Contacts</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/1" style="color: white; margin: 20px">Home</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/2" style="color: white; margin: 20px">About</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/3" style="color: white; margin: 20px">Services</a>
+                                <a href="<?php echo base_url();?>index.php/link/go/5" style="color: white; margin: 20px">Contacts</a>
 
                             </ul>
                             <ul class="list-inline header-top pull-right">
@@ -60,15 +60,22 @@
         <div class="container">
             <div class="row">
                 <div class="grid_4">
-                    <h3>Services List</h3>
-                    <ul class="list-1">
-                        <li>All Kinds of Computers Service and Maintenance</li>
-                        <li>Server Repair and Maintenance</li>
-                        <li>CCTV Camera Configuration and Installation</li>
-                        <li>Door Lock Systems Configuration and Installation</li>
-                        <li>Security Alarm System Configuration and Installation</li>
-                        <li>GPS Trackers Configuration and Installation</li>
-                    </ul>
+                <center>
+                <br>
+                <br>
+                <br>
+                    <h1><font color="#0066ff"><b>What We Offer</b></font></h1>
+                    <br>
+                    <br>
+                    <table>
+                        <tr><td><h4>All Kinds of Computers Service and Maintenance</h4></td></tr>
+                        <tr><td><h4>Server Repair and Maintenance</h4></td></tr>
+                        <tr><td><h4>CCTV Camera Configuration and Installation</h4></td></tr>
+                        <tr><td><h4>Door Lock Systems Configuration and Installation</h4></td></tr>
+                        <tr><td><h4>Security Alarm System Configuration and Installation</h4></td></tr>
+                        <tr><td><h4>GPS Trackers Configuration and Installation</h4></td></tr>   
+                    </table>
+                </center>
                 </div>
             </div>
         </div>
